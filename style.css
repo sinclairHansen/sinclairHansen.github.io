@@ -1,7 +1,7 @@
 
   body{
     background-color: rgba(0, 0, 0, 0.233);
-    background-image:url(gradient.jpeg);
+    background-image: <img src="gradient.jpeg"
     background-size:cover;
     background-position: center;
     
