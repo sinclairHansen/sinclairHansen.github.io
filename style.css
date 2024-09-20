@@ -87,8 +87,9 @@ h5{
 }
 .image{
   text-align: center;
-  padding-top: 10px;
+  padding-top: 100px;
   margin-left: auto;
   margin-right: auto;
+  width:1024px;
 }
   }
