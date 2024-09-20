@@ -46,7 +46,6 @@ p{
   margin-left: auto;
   margin-right: auto;
   width:1024px;
-  border: 10px solid #555;
   font-size: 20px;
 
  }
@@ -84,12 +83,5 @@ h5{
 .wrapper2{
   width:85%
 
-}
-.image{
-  text-align: center;
-  padding-top: 100px;
-  margin-left: auto;
-  margin-right: auto;
-  width:1024px;
 }
   }
