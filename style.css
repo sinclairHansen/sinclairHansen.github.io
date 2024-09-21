@@ -88,5 +88,18 @@ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin-right: auto;
   width: 100%;
 }
+.button
+{
+    display: inline-block;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    background-color: rgb(43, 90, 55);
+    padding: 1px 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 15px;
+    
+}
 
 }
