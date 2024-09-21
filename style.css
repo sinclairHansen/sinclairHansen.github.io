@@ -38,6 +38,8 @@ width:50%
 h1{
   text-align: center;
   font-size: 50 px;
+  margin-left: auto;
+  margin-right: auto;
   color:white;
 
 }
