@@ -14,7 +14,7 @@ h2{
   color:white;
   margin-left:25%;
   margin-right:25%;
-  text-align:center;
+  text-align:center;}
 .ai{
   color:green;
   text-align:center;
@@ -74,19 +74,6 @@ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 
 
-
-
-.box {
-  width: 40%;
-  height: 20%;
-  border: 2% solid rgb(41, 76, 20);
-
-  padding-left: 30%;
-  padding-right: 30%;
-  margin: 10%;
-  align-items: center;
-  text-align: center;
-}
 .container{
   margin-left: auto;
   margin-right: auto;
