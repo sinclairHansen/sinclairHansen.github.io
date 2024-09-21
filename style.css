@@ -14,7 +14,7 @@ h2{
   color:green;
 }
 header{
-height: 50px;
+height: 50%;
 background-color:rgb(5, 5, 5);
 }
 main{
@@ -38,7 +38,7 @@ h1{
 }
 section{
 text-align: center;
-padding-top: 100px;
+padding-top: 100%;
 margin-left: auto;
 margin-right: auto;
 width:100%;
@@ -73,10 +73,10 @@ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 .box {
   width: 40%;
   height: 20%;
-  border: 5px solid rgb(41, 76, 20);
+  border: 2% solid rgb(41, 76, 20);
 
   padding-left: 30%;
-  padding-right: 25%;
+  padding-right: 30%;
   margin: 10%;
   align-items: center;
   text-align: center;
