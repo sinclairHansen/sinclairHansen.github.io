@@ -5,15 +5,15 @@ body{
   background-size:cover;
   background-position: center;
   font-size:120%;
+  margin-left:25%;
+  margin-right:25%;
+  text-align:center;
   
 
 
 
 h2{
   color:white;
-  text-align:center;
-  margin-left:25%
-  margin-right:25%}
 .ai{
   color:green;
   text-align:center;
