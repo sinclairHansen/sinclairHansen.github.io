@@ -26,8 +26,9 @@ main{
 font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 color: rgb(0, 0, 0);
 text-align: center;
-margin-left: auto;
-margin-right: auto;
+margin-left: 25%;
+margin-right: 25%;
+width: 50%;
 
 
 }
@@ -40,8 +41,7 @@ width:50%
 h1{
   text-align: center;
   font-size: 70 px;
-  margin-left: auto;
-  margin-right: auto;
+
   color:white;
 
 }
