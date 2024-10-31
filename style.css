@@ -33,7 +33,7 @@ p{
 text-align: center;
 margin-left: 25%;
 margin-right: 25%;
-width:50%
+width:80%
 font-size: 75%;
 }
 h1{
@@ -99,6 +99,7 @@ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .aboutText{
   color: white;
+  width: 80%;
 }
 
 }
