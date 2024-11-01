@@ -98,6 +98,8 @@ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     
 }
 .aboutText{
+  margin-left: auto;
+  margin-right: auto;
   color: white;
   text-align: center;
   font-size: 150%;
