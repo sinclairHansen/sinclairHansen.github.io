@@ -369,7 +369,14 @@ li a:hover:not(.active) {
             }
             }
             
-
+footer{
+              background-color: rgb(255, 255, 255);
+              text-align: center;
+              font-size: 150%;
+              color:black;
+              padding-top: 10%;
+              
+    }
 
 
 }
