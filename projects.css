@@ -1,0 +1,267 @@
+
+
+/* This is for the animation after the logo */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900&display=swap');*
+{
+  margin: 0;
+  padding: 0;
+}
+section{
+  padding-top: 10%;
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  overflow: hidden;
+}
+section div
+{
+  position: relative;
+  width: 50%;
+  background: #70aec8;
+  overflow: hidden;
+
+}
+section div:nth-child(1)
+{
+  position: relative;
+  width: 50%;
+  background: url(MountainPhoto.jpg);
+  background-size: cover;
+  overflow: hidden;
+
+}
+section div:nth-child(1) h2{
+  -webkit-text-stroke: 2px;
+  -webkit-text-stroke-color: white;
+  -webkit-text-fill-color: transparent;
+  left: 100%;
+  color: #fff;
+}
+section div h2{
+  position: absolute;
+  white-space: nowrap;
+  font-size: 6em;
+  line-height: 50vh; 
+  animation: animate 15s linear infinite;
+  color: white;
+}
+@keyframes animate
+{
+  0%
+  {
+    transform: translateX(0);
+  }
+  100%
+  {
+    transform: translateX(-100%);
+  }
+
+}
+
+
+
+body{
+    background-color: rgb(255, 255, 255);
+    background-size:cover;
+    background-position: center;
+    font-family:'Calibri', 'Lucida Grande', sans-serif;}
+    
+
+
+  .container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+ 
+    main{
+    color: #70aec8;
+    text-align: center;
+    align-items: center;
+
+
+    }
+
+  /* Style the navigation menu */
+  .topnav {
+  width: 100%;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);;
+  position: relative;
+  }
+    /* Hide the links inside the navigation menu (except for logo/home) */
+    .topnav #myLinks {
+    display: none;
+    }
+
+    /* Style navigation menu links */
+    .topnav a {
+  color: rgb(0, 0, 0);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+    }
+
+    /* Style the hamburger menu */
+    .topnav a.icon {
+  background: rgb(255, 145, 55);
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+    }
+
+    /* Add a grey background color on mouse-over */
+    .topnav a:hover {
+  background-color: #b5b5b5;
+  color: rgb(255, 255, 255);
+    }
+
+    /* Style the active link (or home/logo) */
+    .active {
+  background-color: #70aec8;
+  color: rgb(253, 253, 253);
+    }
+
+
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+    }
+
+    li {
+  float: left;
+  border-right:1px solid #bbb;
+    }
+
+    li:last-child {
+  border-right: none;
+    }
+
+    li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+  background-color: #111;
+    }
+
+
+    .aboutImage{
+    padding-top: 5%;
+    align-items: center;
+    height: 20rem;
+    width: rem;
+    }
+    .active {
+    background-color: #70aec8;
+    color: white;
+    }
+
+
+        @media screen and (max-width: 880px) {
+          .header2{
+            display:none;
+          }
+           
+        
+          }
+          @media screen and (min-width: 880px) {
+            header{
+              display:none;
+            }
+             
+          
+            }
+        
+        
+    
+
+    h3{
+              margin-left: 15%;
+              margin-right: 25%;
+              text-align: left;
+            
+            
+              color: #000000; 
+              width:80%;
+              font-size: .8rem;
+    }
+            
+            
+    
+    h2{
+                color:white;
+        }
+    header{
+              height: 50 px;
+              background-color:rgb(5, 5, 5);
+    }
+             
+    p{
+              text-align: center;
+              margin-left: auto;
+              margin-right: auto;
+              width:60%;
+              font-size: 1.25rem;
+              color: black;
+    }
+    h1{
+                padding-top: 50%;
+                text-align: center;
+              
+              
+                color:white;
+              
+    }
+             
+              
+    
+    h4{
+              margin-left: 25%;
+              margin-right: 25%;
+              width: 50%;
+              font-size: 150%;
+              color:black;
+              font-style: bold;
+    }
+              
+            
+    footer{
+              background-color: rgb(255, 255, 255);
+              text-align: center;
+              font-size: 150%;
+              color:black;
+              padding-top: 10%;
+              
+    }
+
+    .section2{
+    align-items: center;
+    text-align: center;
+    width:50%;
+    font-size: 100%;
+
+        }
+.button
+{
+    display:inline;
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    background-color: #70aec8;
+    padding: 1px 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+            
+}

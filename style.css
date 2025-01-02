@@ -1,109 +1,375 @@
 
-body{
-  background-color: rgba(0, 0, 0, 0.233);
-  background-image:url(gradient.jpeg);
-  background-size:cover;
-  background-position: center;
-  font-size:50 px;
-  width:100%;
 
-
-h2{
-  color:white;
-}
-.ai{
-  color: green;
-}
-header{
-height: 50 px;
-background-color:rgb(5, 5, 5);
-}
-main{
-font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-color: rgb(0, 0, 0);
-text-align: center;
-margin-left: 25%;
-margin-right: 25%;
-width: 50%;
-font-size: 150%;
-
-
-}
-p{
-text-align: center;
-margin-left: 25%;
-margin-right: 25%;
-width:80%
-font-size: 75%;
-}
-h1{
-  padding-top: 50%;
-  text-align: center;
-
-
-  color:white;
-
+/* This is for the animation after the logo */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900&display=swap');*
+{
+  margin: 0;
+  padding: 0;
 }
 section{
-text-align: center;
-padding-top: 25px;
-margin-left: auto;
-margin-right: auto;
-width:100%;
-font-size: 100%;
-font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-}
-h4{
-margin-left: 25%;
-margin-right: 25%;
-width: 50%;
-font-size: 100%;
-color:black;
-font-style: bold;
-}
-
-figure{
-opacity:0.5;
-
-}
-footer{
-background-color: rgba(128, 128, 128, 0.322);
-text-align: center;
-font-size: 30px;
-color:black;
-font-style: bold;
-font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-}
-
-
-
-.container{
-  margin-left: auto;
-  margin-right: auto;
+  padding-top: 10%;
+  position: relative;
   width: 100%;
+  height: 50vh;
+  display: flex;
+  overflow: hidden;
 }
-.button
+section div
 {
-    display: inline-block;
-    color: white;
-    font-size: 25px;
-    text-decoration: none;
-    background-color: rgb(43, 90, 55);
-    padding: 1px 32px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 10px;
-    
+  position: relative;
+  width: 50%;
+  background: #70aec8;
+  overflow: hidden;
+
 }
-.aboutText{
-  margin-left: auto;
-  margin-right: auto;
+section div:nth-child(1)
+{
+  position: relative;
+  width: 50%;
+  background: url(MountainPhoto.jpg);
+  background-size: cover;
+  overflow: hidden;
+
+}
+section div:nth-child(1) h2{
+  -webkit-text-stroke: 2px;
+  -webkit-text-stroke-color: white;
+  -webkit-text-fill-color: transparent;
+  left: 100%;
+  color: #fff;
+}
+section div h2{
+  position: absolute;
+  white-space: nowrap;
+  font-size: 6em;
+  line-height: 50vh; 
+  animation: animate 15s linear infinite;
+  color: white;
+}
+@keyframes animate
+{
+  0%
+  {
+    transform: translateX(0);
+  }
+  100%
+  {
+    transform: translateX(-100%);
+  }
+
+}
+
+.button{
+  padding-top:10%;
+  display: inline-block;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  background-color: rgb(243, 171, 54);
+  padding: 1px 32px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 15px;
+  
+}
+
+.section2{
+  color: white;
+  padding-top: 10%;
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  overflow: hidden;
+}
+.section2 div
+{
+  position: relative;
+  width: 50%;
+  background:  #70aec8;
+  overflow: hidden;
+
+}
+
+
+body{
+    background-color: rgb(255, 255, 255);
+    background-size:cover;
+    background-position: center;
+    font-family:'Calibri', 'Lucida Grande', sans-serif;
+    
+
+
+  .container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+ header{
+  height: 25%;
+  width: 100%;
+  display: inline;
+  background-color: blue;
+ }
+main{
+  color: rgb(237, 181, 75);
+  text-align: center;
+
+
+}
+
+.photo{
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: center;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  display: block;
+  width: 50%;
+  height: auto;
+  image-rendering: left;
+}
+
+.overlay-text {
+  padding-top: 1%;
+  padding-left: 3%;
+  text-align: center;
+  color: #000000; 
+  width:95%;
+  font-size: 1.25rem;
+}
+@media screen and (max-width: 950px) {
+  .overlay-text {
+    padding-top:10%;
+    text-align:center;
+    color: #000000; 
+    width:95%;
+    font-size: 1.25rem;
+
+  }
+}
+
+/*Adjusts font size based on screen size*/
+
+
+.overlay-text2 {
+  left: 50%; 
+  padding-top:10%;
+  font-size:2rem;
+  color: rgb(0, 0, 0);
+  font-style: bold;
+
+}
+
+
+
+
+
+/* Style the navigation menu */
+.topnav {
+  width: 100%;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: rgb(0, 0, 0);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: rgb(255, 145, 55);
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: #b5b5b5;
+  color: rgb(255, 255, 255);
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #70aec8;
+  color: rgb(253, 253, 253);
+}
+
+footer{
+padding-top: 10%;
+width: 100%;
+
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
   color: white;
   text-align: center;
-  font-size: 150%;
-  width: 80%;
+  padding: 14px 16px;
+  text-decoration: none;
 }
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+
+.aboutImage{
+  padding-top: 10%;
+  align-items: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  height: 30%;
+  width: 20%;
+}
+.names
+{
+  padding-top: 3%;
+  left: 50%; 
+  text-align: left;
+  font-size:2rem;
+  color: rgb(255, 255, 255);
+  font-style: bold;
+  padding-top: 5%;
+}
+.active {
+  background-color: #70aec8;
+}
+
+
+        @media screen and (max-width: 880px) {
+          .header2{
+            display:none;
+          }
+           
+        
+          }
+          @media screen and (min-width: 880px) {
+            header{
+              display:none;
+            }
+             
+          
+            }
+        
+        
+        
+
+            @media screen and (max-width: 950px) {
+              .meetTheTeam {
+                margin-left: 15%;
+                margin-right: 25%;
+                text-align: left;
+                color: #000000; 
+                width:70%;
+                font-size: .9rem;
+            
+              }
+              .section2{
+                padding-top: 10%;
+                position: relative;
+                width: 100%;
+                height: 70vh;
+                display: flex;
+                overflow: hidden;
+              }
+              .section2 div
+              {
+                position: relative;
+                width: 50%;
+                background: #70aec8;
+                overflow: hidden;
+              
+              }
+              .aboutText2 {
+                margin-left: 15%;
+                margin-right: 25%;
+                text-align: left;
+                color: #000000; 
+                width:70%;
+                font-size: 1.25rem;
+            
+              }
+              .aboutImage {
+                align-items: center;
+                margin-left: 25%;
+                margin-right: 25%;
+                height: 40%;
+                width: 30%;
+            
+              } 
+            
+            .names
+            {
+              padding-top: 3%;
+              left: 50%; 
+              padding-left: 15%;
+              text-align: left;
+              font-size:1rem;
+              color: rgb(0, 0, 0);
+              font-style: bold;
+              padding-top: 5%;
+            }
+            .aboutText{
+              margin-left: 15%;
+              margin-right: 25%;
+              text-align: left;
+              padding-top:5%;
+            
+              color: #000000; 
+              width:80%;
+              font-size: 1.25rem;
+            }
+            h3{
+              margin-left: 15%;
+              margin-right: 25%;
+              text-align: left;
+            
+            
+              color: #000000; 
+              width:80%;
+              font-size: .8rem;
+            }
+            }
+            
+
+
 
 }

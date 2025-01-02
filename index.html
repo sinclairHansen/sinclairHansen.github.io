@@ -3,123 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sinclair Codes | Portfolio</title>
-  <meta name="description" content="Hello! I'm Sinclair Hansen and I am a Computer Science major currently studying at Schoolcraft College">
+  <title>Sinclair Hansen </title>
+  <meta name="description" content="Sinclair Hansen's Epic Portfolio">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
+
+<header2 class = "header2">
+
+  <ul>
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li></a></li>
+  </ul>
+
+</header2>
+
+
+
+<header>
+  <!-- Top Navigation Menu -->
+  <div class="topnav">
+    <a href="index.html" class="active">Sinclair's Portfolio</a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+      <a href="experience.html">Experience</a>
+      <a href="projects.html">Projects</a>
+    </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+   </a>
+  </div>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+       x.style.display = "block";
+      }
+    }
+    </script>
+</header>
+
+
+  
   <body>
-
-    <div class="container" style="clear: both">
-      <header>
-
-        <h2 style="float: left"> print("Sincl</h2>
-        <h2 class="ai" style="float: left">AI</h2>
-        <h2 style="float: left">r Codes")</h2>
-      </header>
       
       <main>
-        <h1  >
-          Sincl<span style="color: green">AI</span>r Codes
-        </h1>
+
+
+        <section>
+          <div>
+            <h2>
+              Hello! My name is Sinclair Hansen
+            </h2>
+          </div>
+          <div>
+            <h2>
+              Hello! My name is Sinclair Hansen
+            </h2>
+          </div>
+        </section>
+        <img class = "aboutImage" src="SinclairPhoto.jpg" alt="Sinclair Photo">
+
+        
+
+        <div class="image-container">
+
+
+
+
+          <div class="overlay-text2">Overview</div>
+
+          <div class="overlay-text">  🎓I am a Sophomore CS students studying at Schoolcraft College with plans to transfer to a 4-year next Fall 
+          </div>
+          <div class="overlay-text"> 💡 I have three years of coding experience in Python and C++ with goals to make impactful coding solutions
+          </div>
+          <div class="overlay-text"> 👨‍💻 My longterm goal is to get a masters in AI and pursue a career in AI/ML development 
+          </div>
+          <div class="overlay-text"> 😇 I always remember to thank my chatbots
+          </div>
+        </div>
+
+       
+
+
+
+
       </main>
+          
+    <footer>
 
-
-      <figure>
-        <img src="matrix3.gif" alt="Matrix Background"
-        height=100%
-        width=100%
-        opacity: 0.5;>
-      </figure>
-
-
-      <section>
-        <h5 class = "aboutText">About Me</h5>
-        <img src="PersonalPhoto.jpg"
-        height="30%"
-        width="30%">
-        <h5 class = "aboutText">Hello! My name is Sinclair Hansen and I'm a Computer Science student at Schoolcraft College preparing to 
-          transfer to a four-year university next Fall. I possess skills in Python and C++ (OOP) from coursework.
-          I also actively engage with HTML, CSS, and Pytorch in my free time. My aim is to specialize in AI and ML. In my free time 
-        I'm an active member on campus. I am the student leader of the math and physics club and a math tutor at Schoolcraft's 
-        learning center. I consistently strive to learn more about programming, so feel free to check out my current projects!</h5>
-      </section>
-
-
-
-
-      <section>
-          <h4>Here are some of my current projects!</h4>
-          <img src="FutureCodersLogo.png"   alt="futureCoders Logo"
-          height = "30%"
-          width = "30%"
-          >
-          <p> Future Coders Foundation is a non-profit I am currently co-developing, with the goal of providing
-          coding resources to students that don't have them. Website is under construction; </p>
-          <a class = "button" href="https://futurecodersfoundation.github.io"targets="_blank" rel="noopener noreferrer">Future Coders Website</a>
-          <a class = "button" href = "https://linkedin.com/company/future-coders-foundation/"target="_blank" rel="noopener noreferrer">Future Coders Foundation LinkedIn</a>
-      </section>
-            
-      <section>
-          <img src="cardSort.jpg"   alt="Card Sort Logo"
-          height = "30%"
-          width = "30%"
-          >
-          <p> This is a Machine Learning program I made using Pytorch. The program identifies playing cards and displays results using
-          matplotlib and numpy. </p>
-          <a class = "button" href = "https://github.com/sinclairHansen/Card-Sort"target="_blank" rel="noopener noreferrer">Card Sort Repository</a>
-      </section>
-      
-      <section>
-          <img src="WeatherLogo.png"   alt="Weather Logo Logo"
-          height = "30%"
-          width = "30%"
-          >
-          <p> This python program uses the OpenWeather API to retrieve current weather data. The program asks user for a 
-          city and outputs current weather conditions and temperature. The goal going forward for the program is to improve the UI using css styling and to output weekly weather information.
-          </p>
-          <a class = "button" href = "https://github.com/sinclairHansen/weatherApp"target="_blank" rel="noopener noreferrer">Weather App Repository</a>
-      </section>
-         
-      <section>
-          <img src="Not Too Shabby.png"   alt="shabby Logo"
-          height = "30%"
-          width = "30%"
-            
-          >
-          <p> This is a portfolio website that I developed for a small buisiness called 'Not Too Shabby'. It showcases
-          furniture projects and utilizes basic website nagivation. My goal going forward with this project is to make it
-          more mobile-friendly.</p>
-          <a class = "button" href = "https://design-not2shabby.github.io/"target="_blank" rel="noopener noreferrer">  Not Too Shabby Portfolio </a>
-
-      </section>
-
-
-
-      
-
-      <footer>
-
-        <h4>Feel free to reach out!</h4>
-
-        
-        <a class = "button" href="https://github.com/sinclairHansen"targets="blank" rel="noopener noreferrer">GitHub</a>
-        <a class = "button" href="mailto:sinclairCHansen@gmail.com"targets="blank" rel="noopener noreferrer">Email</a>
-        <a class = "button" href="https://www.linkedin.com/in/sinclair-hansen-b1b3b4310/"target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      </footer>
-        
-
-    </div>
-  
-
-
-
+    </footer>
 
 
 
   </body>
-
-
 
 
 
