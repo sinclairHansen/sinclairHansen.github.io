@@ -336,6 +336,7 @@ li a:hover:not(.active) {
                 margin-right: 25%;
                 height: 40%;
                 width: 30%;
+                border-radius: 50%;
             
               } 
             
