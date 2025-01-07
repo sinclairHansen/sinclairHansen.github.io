@@ -254,6 +254,7 @@ li a:hover:not(.active) {
 .aboutImage{
   height: 30%;
   width: 20%;
+  border-radius: 50%;
   padding-top: 10%;
   align-items: center;
   margin-left: 25%;
