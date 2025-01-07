@@ -257,6 +257,8 @@ li a:hover:not(.active) {
   align-items: center;
   margin-left: 25%;
   margin-right: 25%;
+  height: 30%;
+  width: 20%;
 
 }
 .names
