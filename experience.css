@@ -109,7 +109,7 @@ li a:hover:not(.active) {
     }
     
     body {
-      background-color: white;
+      background-color: #474e5d;
       font-family: 'Calibri', 'Trebuchet MS', sans-serif, sans-serif;
     }
     
@@ -125,7 +125,7 @@ li a:hover:not(.active) {
       content: '';
       position: absolute;
       width: 6px;
-      background-color: #70aec8;
+      background-color: white;
       top: 0;
       bottom: 0;
       left: 50%;
@@ -147,7 +147,7 @@ li a:hover:not(.active) {
       width: 25px;
       height: 25px;
       right: -17px;
-      background-color: #70aec8;
+      background-color: white;
       border: 4px solid #FF9F55;
       top: 15px;
       border-radius: 50%;
