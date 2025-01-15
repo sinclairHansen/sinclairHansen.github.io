@@ -239,7 +239,7 @@ li a:hover:not(.active) {
     }
 h1{
   text-align: center;
-  color: white;
+  color: black;
   font-family:'Calibri', 'Trebuchet MS', sans-serif, 'sans-serif';
   font-size: 200%;
   padding-top: 5%;
