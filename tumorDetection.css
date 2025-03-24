@@ -3,6 +3,7 @@
 .hang {
 text-indent: -3em;
 margin-left: 3em;
+width:80%;
 } 
 body{
     background-color: rgb(255, 255, 255);
