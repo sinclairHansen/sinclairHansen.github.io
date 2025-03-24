@@ -155,13 +155,6 @@ body{
       text-align:center;
     }
 
-    .floatImage{
-      float:right;
-      margin-right:15%;
-      height: 20rem;
-      width: rem;
-      padding-bottom: 3%;
-      }
     @media screen and (max-width: 950px) {
     .floatImage{
       align-items: center;
@@ -169,8 +162,16 @@ body{
       padding-top:5%;
       width:70%;
       height:50%;
-      padding-bottom:5%;;
+      padding-bottom:5%;
     }
+    @media screen and (min-width: 950px) {
+    .floatImage{
+      float:right;
+      margin-right:15%;
+      height: 20rem;
+      width: rem;
+      padding-bottom: 3%;
+      }
     }
     .centerImage{
       align-items: center;
