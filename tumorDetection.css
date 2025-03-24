@@ -188,7 +188,7 @@ body{
       height:70%;
       padding-bottom:5%;
     }}
-    @media screen and (min-width: 1150px) and (max-width: 1250px){
+    @media screen and (min-width: 1150px) and (max-width: 1450px){
     .certainty{
       float:right;
       margin-right:15%;
@@ -197,7 +197,7 @@ body{
       padding-bottom: 3%;
       }
     }
-    @media screen and (min-width: 1250px){
+    @media screen and (min-width: 1450px){
     .certainty{
       float:right;
       margin-right:15%;
