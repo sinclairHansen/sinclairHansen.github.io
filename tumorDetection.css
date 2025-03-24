@@ -3,7 +3,7 @@
 .hang {
 text-indent: -3em;
 margin-left: 3em;
-width:80%;
+width:60%;
 margin-right:10%;
 } 
 body{
@@ -160,7 +160,7 @@ body{
     @media screen and (max-width: 1050px) {
     .floatImage{
       align-items: center;
-
+      margin-left:25%;
       padding-top:5%;
       width:50%;
       height:50%;
