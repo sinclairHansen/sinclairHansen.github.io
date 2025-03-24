@@ -4,6 +4,7 @@
 text-indent: -3em;
 margin-left: 3em;
 width:80%;
+margin-right:10%;
 } 
 body{
     background-color: rgb(255, 255, 255);
@@ -156,7 +157,7 @@ body{
       text-align:center;
     }
 
-    @media screen and (max-width: 950px) {
+    @media screen and (max-width: 1050px) {
     .floatImage{
       align-items: center;
       margin-left:15%;
@@ -165,7 +166,7 @@ body{
       height:50%;
       padding-bottom:5%;
     }
-    @media screen and (min-width: 950px) {
+    @media screen and (min-width: 1050px) {
     .floatImage{
       float:right;
       margin-right:15%;
