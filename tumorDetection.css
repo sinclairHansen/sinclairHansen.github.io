@@ -165,6 +165,11 @@ body{
       height:50%;
       padding-bottom:5%;
     }
+    .arnoldImage{
+    align-items: center;
+    padding-top: 5%;
+
+    }
     .headerImage{
       align-items: center;
       margin-left:25%;
