@@ -161,13 +161,13 @@ body{
     @media screen and (max-width: 1050px) {
     .floatImage{
       align-items: center;
-      margin-left:25%;
+      margin-left:15%;
       padding-top:5%;
       width:50%;
       height:50%;
       padding-bottom:5%;
     }}
-    @media screen and (min-width: 1050px){
+    @media screen and (min-width: 1051px){
     .floatImage{
       float:right;
       margin-right:15%;
