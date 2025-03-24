@@ -162,7 +162,7 @@ body{
     @media screen and (max-width: 1050px) {
     .floatImage{
       align-items: center;
-      margin-left:15%;
+      margin-left:25%;
       padding-top:5%;
       width:50%;
       height:50%;
