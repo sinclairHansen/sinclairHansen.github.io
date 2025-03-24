@@ -132,7 +132,20 @@ the model adjusts its answers until it has a high accuracy or it runs through al
   then no tumor with about 35% certainty, and lastly a glioma with a sliver of certainty. The google slides below show the results from the testing set and from outside sources.
 </h3>
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTEedjWJ6z7WWp4fTSWR9g6Syq_Fp4UK5n-94EOqt7LG6aYOTju9p1CaHk9LvH1cSs3tbdqFyaOP09E/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
+<h2>Why does AI have Difficulty Reading Some Images? </h2>
+<h3>When looking at images uploaded from outside sources, it is evident that the model has 
+  difficulty reading some of the scans. Many of the scans that were correct had lower certainty levels.
+In the book "Artificial Intelligence: A Guide for Thinking Humans" by Dr. Melanie Mitchell, she discusses 
+  this issue through a model named AlexNet. In 2012, this program was the best AI for image classification, winning the 
+  ImageNet challenge. It blew away the competition with an accuracy rate of 85%.
+After the competition finished, researchers studied the way AlexNet deciphered images. They realized that if images were 
+  distorted slightly, while remaining unnoticeable to humans, AlexNet could no longer identify the image properly. 
+  This issue was not unique to AlexNet, many competitors in the ImageNet competition were susceptible to having difficulties 
+  identifying images outside of the training dataset.
+The model in this program is a small scale version of programs like AlexNet. When being trained, it relies on the consistency
+  of the dataset. This is why the predictions on images from the initial dataset have high accuracy. The accuracy decreases 
+  significantly when pulling images from outside sources due to there potentially being differences in the images that we as humans 
+  cannot see. </h3>
 <h2>Issues with AI</h2>
 <h3>Although AI brings many benefits to the table, it does come with a few setbacks. As my model shows, AI has a hard time 
   applying its knowledge to images outside of its training set. This can cause many setbacks in the medical field when we consider the fact that 
