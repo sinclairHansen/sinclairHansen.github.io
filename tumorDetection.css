@@ -179,16 +179,16 @@ body{
     }
 
     /* This is for the certainty graphs */
-    @media screen and (max-width: 1050px) {
+    @media screen and (max-width: 1060px) {
     .certainty{
       align-items: center;
-      margin-left:25%;
+      margin-left:15%;
       padding-top:5%;
       width:70%;
       height:70%;
       padding-bottom:5%;
     }}
-    @media screen and (min-width: 1051px){
+    @media screen and (min-width: 1060px){
     .certainty{
       float:right;
       margin-right:15%;
