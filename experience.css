@@ -109,6 +109,7 @@ li a:hover:not(.active) {
     }
     
     body {
+        font-family:'Calibri', 'Lucida Grande', sans-serif;
         background-image: url("blueGradient.jpg");
         background-size:cover;
         background-repeat: no-repeat;
