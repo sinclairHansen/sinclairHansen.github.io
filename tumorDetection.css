@@ -165,7 +165,7 @@ body{
       width:50%;
       height:50%;
       padding-bottom:5%;
-    })
+    }}
     @media screen and (min-width: 1050px){
     .floatImage{
       float:right;
