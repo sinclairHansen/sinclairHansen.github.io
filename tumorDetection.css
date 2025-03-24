@@ -188,7 +188,7 @@ body{
       height:60%;
       padding-bottom:5%;
     }}
-    @media screen and (min-width: 1150px) and (max-width: 1550px){
+    @media screen and (min-width: 1150px) and (max-width: 1650px){
     .certainty{
       float:right;
       margin-right:15%;
