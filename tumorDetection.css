@@ -166,8 +166,9 @@ body{
       padding-bottom:5%;
     }
     .arnoldImage{
-    align-items: center;
-    padding-top: 5%;
+        margin-left:15%;
+        align-items: center;
+        padding-top: 5%;
 
     }
     .headerImage{
