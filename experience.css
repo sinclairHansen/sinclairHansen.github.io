@@ -109,8 +109,9 @@ li a:hover:not(.active) {
     }
     
     body {
-      background-color: #ededed;
-      font-family: 'Calibri', 'Trebuchet MS', sans-serif, sans-serif;
+        background-image: url("blueGradient.jpg");
+        background-size:cover;
+        background-repeat: no-repeat;
     }
     
     /* The actual timeline (the vertical ruler) */
