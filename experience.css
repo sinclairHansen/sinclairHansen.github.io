@@ -1,3 +1,13 @@
+
+/*Adjusts font size based on screen size*/
+.overlay-text2 {
+  left: 50%; 
+  padding-top:10%;
+  font-size:2rem;
+  color: rgb(0, 0, 0);
+  font-style: bold;
+
+}
 /* Style the navigation menu */
 .topnav {
   width: 100%;
@@ -40,6 +50,8 @@
   background-color: #70aec8;
   color: rgb(253, 253, 253);
 }
+
+
 
 footer{
 padding-top: 10%;
@@ -161,6 +173,7 @@ li a:hover:not(.active) {
       left: 0;
     }
     
+    
     /* Place the container to the right */
     .right {
       left: 50%;
@@ -238,6 +251,12 @@ li a:hover:not(.active) {
       .right {
       left: 0%;
       }
+
+
+
+
+
+      
     }
 h1{
   text-align: center;
