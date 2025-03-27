@@ -209,10 +209,11 @@ main{
   color: rgb(253, 253, 253);
 }
 
-footer{
-padding-top: 10%;
-width: 100%;
-
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
 }
 
 
@@ -249,7 +250,7 @@ li a:hover:not(.active) {
 .aboutImage{
   height: 30%;
   width: 30%;
-  border-radius: 50%;
+
   padding-top: 10%;
   align-items: center;
   margin-left: 25%;

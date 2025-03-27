@@ -236,13 +236,11 @@ body{
     }
               
             
-    footer{
-              background-color: rgb(255, 255, 255);
-              text-align: center;
-              font-size: 150%;
-              color:black;
-              padding-top: 10%;
-              
+    .footer {
+      padding: 20px;
+      text-align: center;
+      background: #ddd;
+      margin-top: 20px;
     }
 
     .section2{
