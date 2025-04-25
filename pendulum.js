@@ -4,7 +4,7 @@ class Pendulum{
     this.angle1 = angle1;
     this.angle2 = angle2;
     this.x0 = width/2;
-    this.y0 = height/3;
+    this.y0 = height/2;
     this.angleV1 = 0;
     this.angleV2 = 0;
     this.angleA1 = 0;
@@ -23,6 +23,7 @@ class Pendulum{
   this.y2 = this.y1 + this.length2 * cos(this.angle2);
       
   //Drawing the pendulum after calculating
+  stroke(this.c);
   line(this.x0,this.y0,this.x1,this.y1);
   line(this.x1,this.y1,this.x2,this.y2);
   noStroke();

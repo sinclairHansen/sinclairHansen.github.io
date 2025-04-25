@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Double Pendulum Simulation </title>
+
     <script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/addons/p5.sound.min.js"></script>
     <link rel="stylesheet" type="text/css" href="pendulum.css">
@@ -15,9 +17,22 @@
   
   <body>
     <main class="simBox">
+    <h3 class="cancelBox">Welcome to the Double Pendulum Simulator! This program provides a visual demonstration of 
+      key concepts in chaos theory. Each pendulum starts with a slightly different 
+      initial angle—theta₁ increases by just 0.01 degrees with each new pendulum. At 
+      first, their motion appears synchronized, but over time, their paths diverge 
+      dramatically, revealing the sensitive dependence on initial conditions that defines 
+      chaotic systems.
+    </h3>
+    <h3 class="cancelBox">Instructions</h3>
+    <h3 class="cancelBox">Use the sliders to adjust the pendulum parameters.</h3>
+
+    <h3 class="cancelBox">Press the Run button to update the simulation and reflect the changes on the canvas.</h3>
+    </main>
+
     <script src="sketch.js"></script>
     <script src="pendulum.js"></script>
-    </main>
+
 
 
 <!--This div is to change the variable values-->
@@ -62,6 +77,8 @@
   
   
   <p onclick="setup()" style="text-align: center;"><input type="button" class="button" value="Run"></p>
+  <!--<p onclick="addPendulum()" style="text-align: center;"><input type="button" class="button" value="Add One"></p>
+-->
 
 </div>
 

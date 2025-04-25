@@ -2,7 +2,10 @@ let g = 1;
 let pendulums = [];
 let width = 500;
 let height = 500;
-let colorPalette = ['#4a4e4d','#0e9aa7','#3da4ab','#f6cd61','#fe8a71'];
+//let add = 1;
+let colorPalette = ['#4a4e4d','#0e9aa7','#3da4ab','#f6cd61','#fe8a71','#07407b',
+  '#f6b26b','#e69138','#07407b'
+];
 
 
 //This function creates the sliders on user interface
@@ -27,6 +30,18 @@ let colorPalette = ['#4a4e4d','#0e9aa7','#3da4ab','#f6cd61','#fe8a71'];
   }
 
   );
+
+    //function addPendulum()
+    //{
+      //let L1 = parseFloat(document.getElementById("L1").value);
+      ///let L2 = parseFloat(document.getElementById("L2").value);
+     // let m1 = parseFloat(document.getElementById("m1").value);
+     // let m2 = parseFloat(document.getElementById("m2").value); 
+     // let theta1 = PI/2;
+     // let theta2 = PI/4;
+     // pendulums[add] = new Pendulum(theta1,theta2, L1, L2, m1, m2);
+     // draw();
+    //}
 
 
 

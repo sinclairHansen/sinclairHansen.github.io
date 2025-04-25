@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sinclair Hansen </title>
+  <meta name="description" content="Sinclair Hansen's Epic Portfolio">
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/addons/p5.sound.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="chaosTheory.css">
+</head>
+
+
+<header2 class = "header2">
+
+  <ul>
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="boredomBlog.html">Boredom Blog</a></li>
+    <li></a></li>
+  </ul>
+
+</header2>
+
+
+
+<header>
+  <!-- Top Navigation Menu -->
+  <div class="topnav">
+    <a href="index.html" class="active">Sinclair's Portfolio</a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+      <a href="experience.html">Experience</a>
+      <a href="projects.html">Projects</a>
+      <a href="boredomBlog.html">Boredom Blog</a>
+    </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+   </a>
+  </div>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+       x.style.display = "block";
+      }
+    }
+    </script>
+</header>
+
+<body>
+
+    <h1>Introduction to Chaos Theory</h1>
+    <h3 class="center">How a 0.001 degree change can lead to chaos </h3>
+    <h4><a class = "button" href = "pendulum.html" target="_blank" rel="noopener noreferrer">Pendulum Simulator</a></h4>
+<main>
+  <script src="pendulum.js"></script>
+  <script>setup()</script>
+</main>
+
+
+
+
+<div class="footer">
+    <a class = "button" href="https://github.com/sinclairHansen"target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class = "button" href="mailto:sinclairCHansen@gmail.com"target="_blank" rel="noopener noreferrer">Email</a>
+    <a class = "button" href="https://www.linkedin.com/in/sinclair-hansen-b1b3b4310/"target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+
+
+<script>
+
+
+
+let g = 1;
+let pendulums = [];
+let width = 500;
+let height = 500;
+let num = 10;
+let colorPalette = ['#0e9aa7','#3da4ab','#f6cd61','#fe8a71','#07407b',
+  '#f6b26b','#e69138','#07407b'
+];
+    function setup()
+    {
+      createCanvas(width,height);
+      
+
+          //This grabs the values the user sets in the sliders
+          let L1 = 100;
+          let L2 = 100;
+          let m1 = 1;
+          let m2 = 1;
+
+          let theta2 = PI/4;
+          for(i = 0; i<num; i++){
+            let theta1 = PI/2 + (0.01)*i;
+            pendulums[i] = new Pendulum(theta1,theta2, L1, L2, m1, m2);
+          }
+
+          draw();
+        }
+
+
+  
+
+
+  function draw()
+  {
+    //If I do background(0,30) it will make a trail along the pendulums
+    //due to it changing the transparancy
+    //Maybe make it an option later on.--> background(0,x)
+      background(0,50);
+      for(i = 0; i<num; i++)
+        {
+          pendulums[i].update();
+          pendulums[i].display();
+        }
+        
+  }
+
+
+
+
+
+
+
+
+
+
+</script>
