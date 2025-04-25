@@ -1,0 +1,129 @@
+body{
+    background-color: #4a4e4d;
+    font-family: 'Courier New', Courier, monospace;
+    h1{
+      padding-top:5%;
+    }
+  .center{
+    align-items: center;
+    margin-left:25%;
+    float:center;
+  }
+    .simBox{
+        float:left;
+        width: 500px;
+        border: 15px solid #3da4ab;
+        margin-left:10%;
+        align-items: center;
+        background-color: white;
+      }
+
+      .valueBox{
+        float:right;
+        width: 40%;
+        height:30%;
+        border: 15px solid #fe8a71;
+        padding-bottom:2%;
+        align-items: center;
+        background-color: white;
+      }
+      /* This is going to change the sizing and orientation of boxes based on
+      screen size */
+      @media screen and (max-width: 1150px) {
+        .simBox{
+          width: 500px;
+          float:center;
+          
+        }
+        .valueBox{
+          width:90%;
+          float:left;
+          padding-left:5%;
+
+        }
+      }
+      @media screen and (max-width: 1000px) {
+        .simBox{
+          width:100%;
+          align-items:left;
+          width: 0px;
+          float:left;
+          border:none;
+          padding-right:10%;
+          padding-left:0%;
+          
+        }
+
+      }
+      h2{
+        text-align: center;
+        color: #4a4e4d;
+      }
+      h3{margin-left: 2%;
+      color: #4a4e4d;}
+      .button {
+        background-color: #3da4ab;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        margin-left: 25%;
+        margin-right: 25%;
+      }
+      p{
+        text-align: center;
+        align-items: center;
+      }
+      .slidecontainer {
+        width: 100%; /* Width of the outside container */
+      }
+      
+      /* The slider itself */
+      .slider {
+        -webkit-appearance: none;  /* Override default CSS styles */
+        appearance: none;
+        width: 100%; /* Full-width */
+        height: 25px; /* Specified height */
+        background: #d3d3d3; /* Grey background */
+        outline: none; /* Remove outline */
+        opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+        -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+        transition: opacity .2s;
+      }
+      
+      /* Mouse-over effects */
+      .slider:hover {
+        opacity: 1; /* Fully shown on mouse-over */
+      }
+      
+      /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+      .slider::-webkit-slider-thumb {
+        -webkit-appearance: none; /* Override default look */
+        appearance: none;
+        width: 25px; /* Set a specific slider handle width */
+        height: 25px; /* Slider handle height */
+        background: #3da4ab; /* Green background */
+        cursor: pointer; /* Cursor on hover */
+      }
+      
+      .slider::-moz-range-thumb {
+        width: 25px; /* Set a specific slider handle width */
+        height: 25px; /* Slider handle height */
+        background: #3da4ab; /* Green background */
+        cursor: pointer; /* Cursor on hover */
+      }
+
+
+
+
+header{
+    text-align: center;
+  h1{
+        color: white;
+        padding-bottom:5%;
+    }
+  }
+  
+      }

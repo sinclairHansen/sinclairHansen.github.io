@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="pendulum.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <header>
+    <h1>Double Pendulum Simulation</h1>
+  </header>
+  
+  
+  
+  <body>
+    <main class="simBox">
+    <script src="sketch.js"></script>
+    <script src="pendulum.js"></script>
+    </main>
+
+
+<!--This div is to change the variable values-->
+<div class="valueBox">
+  <h2>Change Pendulum Values</h2>
+
+  <h3>Length L1</h3>
+  <div class="slidecontainer">
+    <input type="range" min="10" max="150" value="100" class="slider" id="L1">
+    <p>Value: <span id="output1"></span></p>
+  </div>
+
+
+  <h3>Length L2</h3>
+  <div class="slidecontainer">
+    <input type="range" min="10" max="150" value="100" class="slider" id="L2">
+    <p>Value: <span id="output2"></span></p>
+  </div>
+
+  <h3>Mass of Ball 1</h3>
+  <div class="slidecontainer">
+    <input type="range" min="1" max="20" value="5" class="slider" id="m1">
+    <p>Value: <span id="output3"></span></p>
+  </div>
+
+  <h3>Mass of Ball 2</h3>
+  <div class="slidecontainer">
+    <input type="range" min="1" max="20" value="5" class="slider" id="m2">
+    <p>Value: <span id="output4"></span></p>
+  </div>
+  
+  <h3>Number of Pendulums</h3>
+  <div class="slidecontainer">
+    <input type="range" min="1" max="150" value="10" class="slider" id="num">
+    <p>Value: <span id="output5"></span></p>
+  </div>
+  <h3>Change Trail Length (250 is no trail)</h3>
+  <div class="slidecontainer">
+    <input type="range" min="0" max="250" value="30" class="slider" id="trail">
+    <p>Value: <span id="output6"></span></p>
+  </div>
+  
+  
+  <p onclick="setup()" style="text-align: center;"><input type="button" class="button" value="Run"></p>
+
+</div>
+
+
+  </body>
+</html>
