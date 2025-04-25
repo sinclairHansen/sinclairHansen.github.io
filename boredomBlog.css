@@ -256,6 +256,12 @@ body {
   height:100%;
   padding: 20px;
 }
+.chaosImage {
+  background-image: url('chaosTheoryBanner.png');
+  width: 100%;
+  height:100%;
+  padding: 20px;
+}
 .rubiksCubeImage {
   background-image: url('RubiksCubeBanner.jpg');
   width: 100%;
