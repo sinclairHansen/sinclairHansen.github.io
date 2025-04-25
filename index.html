@@ -1,70 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/addons/p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sinclair Hansen </title>
+  <meta name="description" content="Sinclair Hansen's Epic Portfolio">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-  </head>
-  <header>
-    <h1>Double Pendulum Simulation</h1>
-  </header>
-  
-  
+
+<header2 class = "header2">
+
+  <ul>
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="boredomBlog.html">Boredom Blog</a></li>
+    <li></a></li>
+  </ul>
+
+</header2>
+
+
+
+<header>
+  <!-- Top Navigation Menu -->
+  <div class="topnav">
+    <a href="index.html" class="active">Sinclair's Portfolio</a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+      <a href="experience.html">Experience</a>
+      <a href="projects.html">Projects</a>
+      <a href="boredomBlog.html">Boredom Blog</a>
+    </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+   </a>
+  </div>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+       x.style.display = "block";
+      }
+    }
+    </script>
+</header>
+
+
   
   <body>
-    <main class="simBox">
-    <script src="sketch.js"></script>
-    <script src="pendulum.js"></script>
-    </main>
+      
+      <main>
 
 
-<!--This div is to change the variable values-->
-<div class="valueBox">
-  <h2>Change Pendulum Values</h2>
+        <section>
+          <div>
+            <h2>
+              Hello! My name is Sinclair Hansen
+            </h2>
+          </div>
+          <div>
+            <h2>
+              Hello! My name is Sinclair Hansen
+            </h2>
+          </div>
+        </section>
 
-  <h3>Length L1</h3>
-  <div class="slidecontainer">
-    <input type="range" min="10" max="150" value="100" class="slider" id="L1">
-    <p>Value: <span id="output1"></span></p>
-  </div>
+        <img class = "aboutImage" src="SinclairPhoto.jpg" alt="Sinclair Photo">
+
+        
+
+        <div class="image-container">
+          
 
 
-  <h3>Length L2</h3>
-  <div class="slidecontainer">
-    <input type="range" min="10" max="150" value="100" class="slider" id="L2">
-    <p>Value: <span id="output2"></span></p>
-  </div>
 
-  <h3>Mass of Ball 1</h3>
-  <div class="slidecontainer">
-    <input type="range" min="1" max="20" value="5" class="slider" id="m1">
-    <p>Value: <span id="output3"></span></p>
-  </div>
+          <div class="overlay-text">Hi! I'm Sinclair</div>
+          <div class="overlay-text2">Overview</div>
 
-  <h3>Mass of Ball 2</h3>
-  <div class="slidecontainer">
-    <input type="range" min="1" max="20" value="5" class="slider" id="m2">
-    <p>Value: <span id="output4"></span></p>
-  </div>
-  
-  <h3>Number of Pendulums</h3>
-  <div class="slidecontainer">
-    <input type="range" min="1" max="150" value="10" class="slider" id="num">
-    <p>Value: <span id="output5"></span></p>
-  </div>
-  <h3>Change Trail Length (250 is no trail)</h3>
-  <div class="slidecontainer">
-    <input type="range" min="0" max="250" value="30" class="slider" id="trail">
-    <p>Value: <span id="output6"></span></p>
-  </div>
-  
-  
-  <p onclick="setup()" style="text-align: center;"><input type="button" class="button" value="Run"></p>
+          <div class="overlay-text">  🎓I am a sophomore CS student studying at Schoolcraft College who is transferring to The University of Michigan in the Fall
+          </div>
+          <div class="overlay-text"> 💡 I have three years of coding experience in Python and C++ with goals to make impactful coding solutions
+          </div>
+          <div class="overlay-text"> 👨‍💻 My long term goal is to get a masters in AI and pursue a career in AI/ML development 
+          </div>
+          <div class="overlay-text"> 😇 I always remember to thank my chatbots
+          </div>
+        </div>
 
-</div>
+       
+
+
+
+
+      </main>
+          
+      <div class="footer">
+        <a class = "button" href="https://github.com/sinclairHansen"target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class = "button" href="mailto:sinclairCHansen@gmail.com"target="_blank" rel="noopener noreferrer">Email</a>
+        <a class = "button" href="https://www.linkedin.com/in/sinclair-hansen-b1b3b4310/"target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+
 
 
   </body>
+
+
+
 </html>

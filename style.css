@@ -1,129 +1,309 @@
-body{
-    background-color: #4a4e4d;
-    font-family: 'Courier New', Courier, monospace;
-    h1{
-      padding-top:5%;
-    }
-  .center{
-    align-items: center;
-    margin-left:25%;
-    float:center;
+
+
+/* This is for the animation after the logo */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900&display=swap');*
+{
+  margin: 0;
+  padding: 0;
+}
+section{
+  padding-top: 10%;
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  overflow: hidden;
+}
+section div
+{
+  position: relative;
+  width: 50%;
+  background: #70aec8;
+  overflow: hidden;
+
+}
+section div:nth-child(1)
+{
+  position: relative;
+  width: 50%;
+  background: url(MountainPhoto.jpg);
+  background-size: cover;
+  overflow: hidden;
+
+}
+section div:nth-child(1) h2{
+  -webkit-text-stroke: 2px;
+  -webkit-text-stroke-color: white;
+  -webkit-text-fill-color: transparent;
+  left: 100%;
+  color: #fff;
+}
+section div h2{
+  position: absolute;
+  white-space: nowrap;
+  font-size: 6em;
+  line-height: 50vh; 
+  animation: animate 15s linear infinite;
+  color: white;
+}
+@keyframes animate
+{
+  0%
+  {
+    transform: translateX(0);
   }
-    .simBox{
-        float:left;
-        width: 500px;
-        border: 15px solid #3da4ab;
-        margin-left:10%;
-        align-items: center;
-        background-color: white;
-      }
-
-      .valueBox{
-        float:right;
-        width: 40%;
-        height:30%;
-        border: 15px solid #fe8a71;
-        padding-bottom:2%;
-        align-items: center;
-        background-color: white;
-      }
-      /* This is going to change the sizing and orientation of boxes based on
-      screen size */
-      @media screen and (max-width: 1150px) {
-        .simBox{
-          width: 500px;
-          float:center;
-          
-        }
-        .valueBox{
-          width:90%;
-          float:left;
-          padding-left:5%;
-
-        }
-      }
-      @media screen and (max-width: 1000px) {
-        .simBox{
-          width:100%;
-          align-items:left;
-          width: 0px;
-          float:left;
-          border:none;
-          padding-right:10%;
-          padding-left:0%;
-          
-        }
-
-      }
-      h2{
-        text-align: center;
-        color: #4a4e4d;
-      }
-      h3{margin-left: 2%;
-      color: #4a4e4d;}
-      .button {
-        background-color: #3da4ab;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        margin-left: 25%;
-        margin-right: 25%;
-      }
-      p{
-        text-align: center;
-        align-items: center;
-      }
-      .slidecontainer {
-        width: 100%; /* Width of the outside container */
-      }
-      
-      /* The slider itself */
-      .slider {
-        -webkit-appearance: none;  /* Override default CSS styles */
-        appearance: none;
-        width: 100%; /* Full-width */
-        height: 25px; /* Specified height */
-        background: #d3d3d3; /* Grey background */
-        outline: none; /* Remove outline */
-        opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-        -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-        transition: opacity .2s;
-      }
-      
-      /* Mouse-over effects */
-      .slider:hover {
-        opacity: 1; /* Fully shown on mouse-over */
-      }
-      
-      /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
-      .slider::-webkit-slider-thumb {
-        -webkit-appearance: none; /* Override default look */
-        appearance: none;
-        width: 25px; /* Set a specific slider handle width */
-        height: 25px; /* Slider handle height */
-        background: #3da4ab; /* Green background */
-        cursor: pointer; /* Cursor on hover */
-      }
-      
-      .slider::-moz-range-thumb {
-        width: 25px; /* Set a specific slider handle width */
-        height: 25px; /* Slider handle height */
-        background: #3da4ab; /* Green background */
-        cursor: pointer; /* Cursor on hover */
-      }
-
-
-
-
-header{
-    text-align: center;
-  h1{
-        color: white;
-        padding-bottom:5%;
-    }
+  100%
+  {
+    transform: translateX(-100%);
   }
+
+}
+
+.button{
+  padding-top:10%;
+  display: inline-block;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  background-color: #70aec8;
+  padding: 1px 32px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 15px;
   
-      }
+}
+
+.section2{
+  color: white;
+  padding-top: 10%;
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  overflow: hidden;
+}
+.section2 div
+{
+  position: relative;
+  width: 50%;
+  background:  #70aec8;
+  overflow: hidden;
+
+}
+
+
+body{
+    background-color: rgb(255, 255, 255);
+    background-size:cover;
+    background-position: center;
+    font-family:'Calibri', 'Lucida Grande', sans-serif;
+    
+
+
+  .container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+ header{
+  height: 25%;
+  width: 100%;
+  display: inline;
+  background-color: blue;
+ }
+main{
+  text-align: center;
+
+
+}
+
+
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  display: block;
+  width: 50%;
+  height: auto;
+  image-rendering: left;
+}
+
+.overlay-text {
+  padding-top: 1%;
+  padding-left: 3%;
+  text-align: center;
+  color: #000000; 
+  width:95%;
+  font-size: 1.25rem;
+}
+@media screen and (max-width: 950px) {
+  .overlay-text {
+    padding-top:10%;
+    text-align:center;
+    color: #000000; 
+    width:95%;
+    font-size: 1.25rem;
+
+  }
+}
+
+/*Adjusts font size based on screen size*/
+
+
+.overlay-text2 {
+  left: 50%; 
+  padding-top:10%;
+  font-size:2rem;
+  color: rgb(0, 0, 0);
+  font-style: bold;
+
+}
+
+
+
+
+
+/* Style the navigation menu */
+.topnav {
+  width: 100%;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: rgb(0, 0, 0);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: rgb(255, 145, 55);
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: #b5b5b5;
+  color: rgb(255, 255, 255);
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #70aec8;
+  color: rgb(253, 253, 253);
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+
+.aboutImage{
+  height: 30%;
+  width: 30%;
+
+  padding-top: 10%;
+  align-items: center;
+  margin-left: 25%;
+  margin-right: 25%;
+
+
+}
+
+.active {
+  background-color: #70aec8;
+}
+
+
+        @media screen and (max-width: 880px) {
+          .header2{
+            display:none;
+          }
+           
+        
+          }
+          @media screen and (min-width: 880px) {
+            header{
+              display:none;
+            }
+             
+          
+            }
+        
+        
+        
+            /* For the Home Personal Image */
+            @media screen and (max-width: 950px) {
+              .meetTheTeam {
+                margin-left: 15%;
+                margin-right: 25%;
+                text-align: left;
+                color: #000000; 
+                width:70%;
+                font-size: .9rem;
+            
+              }
+
+
+            }
+            
+footer{
+              background-color: rgb(255, 255, 255);
+              text-align: center;
+              font-size: 150%;
+              color:black;
+              padding-top: 10%;
+              
+    }
+
+
+}
