@@ -26,7 +26,7 @@ section div:nth-child(1)
 {
   position: relative;
   width: 50%;
-  background: url(MountainPhoto.jpg);
+  background: url(Images/MountainPhoto.jpg);
   background-size: cover;
   overflow: hidden;
 
