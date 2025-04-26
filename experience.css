@@ -90,14 +90,7 @@ li a:hover:not(.active) {
 }
 
 
-.aboutImage{
-  padding-top: 10%;
-  align-items: center;
-  margin-left: 25%;
-  margin-right: 25%;
-  height: 30%;
-  width: 20%;
-}
+
 
 .active {
   background-color: #70aec8;
@@ -122,7 +115,7 @@ li a:hover:not(.active) {
     
     body {
         font-family:'Calibri', 'Lucida Grande', sans-serif;
-        background-image: url("blueGradient.jpg");
+        background-image: url("Images/blueGradient.jpg");
         background-size:cover;
         background-repeat: no-repeat;
     }

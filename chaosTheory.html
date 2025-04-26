@@ -55,8 +55,8 @@
 
 <body>
 
-    <h1>Introduction to Chaos Theory</h1>
-    <h3 class="center">How a 0.001 degree difference can change the future</h3>
+    <h1>Welcome to the Chaos</h1>
+    <h3 class="center">How a 0.001° Shift Changes Everything</h3>
 
 <main>
   <script src="pendulum.js"></script>
@@ -80,7 +80,7 @@
   <p>One common example of a chaotic system is a double pendulum. Now, a 
     double pendulum is an example of deterministic chaos. When calculating how a double 
     pendulum moves, we are able to calculate exactly where each of the masses will be located
-     at any given time, it's deterministic. When inputting the same inputs into our equations, 
+     at any given time, it's deterministic. When plugging the same inputs into our equations, 
      we get the same outputs. So why is it an example of a chaotic system? Well, in real life, it is
       extremely difficult to get perfect measurements. The slightest change in a measurement or even a
        change in significant figures will result in the position of the double pendulum completely 
@@ -99,7 +99,8 @@
   figures, but when running through them again he used three. One would expect this decimal change to be
    insignificant, but that was far from the truth. The two weather sequences were vastly different, 
    showing that seemingly negligible factors can completely change outcomes (Halton). </p>
-   <img class ="floatImage" src="lorenzAttractor.gif"   alt="Lorenz Attractor">
+
+
 <p>Lorenz is also known for the famous Lorenz Attractor. 
   This model is commonly associated with the Butterfly Effect, given it
    looks like… a butterfly. This phenomenon occurs when we graph the position of a 
@@ -109,7 +110,7 @@
   <p class="center">z' = xy - bz </p>
   <p>When given an arbitrary first point, future points are 
     calculated based on the previous. What is neat about this model is 
-    the point never touches the same point twice. If it did, it would no longer
+    the point never touches the same spot twice. If it did, it would no longer
      be chaotic as there is evidence of a pattern forming. Going further, let's say
       we initialize 100 points with different starting values. Points on the edges will
        speed off into different directions, but points within a certain radius will form an 
@@ -117,6 +118,10 @@
         retrace their steps or cross pathways. Difference in their starting point results in difference
          in their futures (Kastorf).</p>
 </body>
+<script src="Lorenz.js"></script>
+<script> const attractor = new Lorenz();
+  attractor.setup(1);
+</script>
 
 
 
@@ -129,36 +134,32 @@
 
 
 <script>
+  //PENDULUM CODE
+  let g = 1;
+  let pendulums = [];
+  let width = 500;
+  let height = 500;
+  let num = 10;
+  let colorPalette = ['#0e9aa7','#3da4ab','#f6cd61','#fe8a71','#07407b',
+    '#f6b26b','#e69138','#07407b'
+  ];
+    function setup(){
 
-
-
-let g = 1;
-let pendulums = [];
-let width = 500;
-let height = 500;
-let num = 10;
-let colorPalette = ['#0e9aa7','#3da4ab','#f6cd61','#fe8a71','#07407b',
-  '#f6b26b','#e69138','#07407b'
-];
-    function setup()
-    {
       createCanvas(width,height);
-      
+      //This grabs the values the user sets in the sliders
+      let L1 = 100;
+      let L2 = 100;
+      let m1 = 1;
+      let m2 = 1;
 
-          //This grabs the values the user sets in the sliders
-          let L1 = 100;
-          let L2 = 100;
-          let m1 = 1;
-          let m2 = 1;
-
-          let theta2 = PI/4;
-          for(i = 0; i<num; i++){
-            let theta1 = PI/2 + (0.01)*i;
-            pendulums[i] = new Pendulum(theta1,theta2, L1, L2, m1, m2);
-          }
+      let theta2 = PI/4;
+      for(i = 0; i<num; i++){
+          let theta1 = PI/2 + (0.01)*i;
+          pendulums[i] = new Pendulum(theta1,theta2, L1, L2, m1, m2);
+        }
 
           draw();
-        }
+      }
 
 
   
@@ -175,16 +176,8 @@ let colorPalette = ['#0e9aa7','#3da4ab','#f6cd61','#fe8a71','#07407b',
           pendulums[i].update();
           pendulums[i].display();
         }
+      }
         
-  }
 
 
-
-
-
-
-
-
-
-
-</script>
+  </script>

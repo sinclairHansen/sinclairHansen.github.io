@@ -226,7 +226,7 @@ body {
   padding: 30px;
   font-size: 40px;
   text-align: center;
-  background-image: url('blueGradient.jpg');
+  background-image: url('Images/blueGradient.jpg');
 }
 
 /* Create two unequal columns that floats next to each other */
@@ -245,25 +245,25 @@ body {
 
 /* Fake image */
 .fakeimg {
-  background-image: url('blueGradient.jpg');
+  background-image: url('Images/blueGradient.jpg');
   width: 100%;
   height:100%;
   padding: 20px;
 }
 .pixelsToProgImage {
-  background-image: url('MRIBanner.webp');
+  background-image: url('Images/MRIBanner.webp');
   width: 100%;
   height:100%;
   padding: 20px;
 }
 .rubiksCubeImage {
-  background-image: url('RubiksCubeBanner.jpg');
+  background-image: url('Images/RubiksCubeBanner.jpg');
   width: 100%;
   height:100%;
   padding: 20px;
 }
 .chaosImage {
-  background-image: url('chaosTheoryBanner.webp');
+  background-image: url('Images/chaosTheoryBanner.webp');
   width: 100%;
   height:100%;
   padding: 20px;
