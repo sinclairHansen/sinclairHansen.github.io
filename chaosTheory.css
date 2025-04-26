@@ -128,6 +128,12 @@
                   
                     }
     body{
+      p{
+        width: 80%;
+        float:center;
+        margin-left:10%;
+        margin-right:10%;
+      }
             background-color: rgb(255, 255, 255);
             background-position: center;
             font-family:'Calibri', 'Lucida Grande', sans-serif;
@@ -238,6 +244,7 @@
         {
             text-align: center;
             text-anchor: middle;
+            width: 80%;
         }
         .footer {
 
