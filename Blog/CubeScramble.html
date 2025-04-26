@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sinclair Hansen </title>
+  <meta name="description" content="Sinclair Hansen's Epic Portfolio">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="CubeScramble.css">
+</head>
+
+
+<header2 class = "header2">
+
+  <ul>
+    <li><a class="active" href="../index.html">Home</a></li>
+    <li><a href="../experience.html">Experience</a></li>
+    <li><a href="../projects.html">Projects</a></li>
+    <li><a href="boredomBlog.html">Boredom Blog</a></li>
+    <li></a></li>
+  </ul>
+
+</header2>
+
+
+
+<header>
+  <!-- Top Navigation Menu -->
+  <div class="topnav">
+    <a href="../index.html" class="active">Sinclair's Portfolio</a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+      <a href="../experience.html">Experience</a>
+      <a href="../projects.html">Projects</a>
+      <a href="boredomBlog.html">Boredom Blog</a>
+    </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+   </a>
+  </div>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+       x.style.display = "block";
+      }
+    }
+    </script>
+</header>
+
+<body>
+  <img class ="headerImage" src="../Images/RubiksCubeLogo.jpeg"   alt="Brain Image">
+
+    <h1>How Many Ways Can You Scramble a Rubik's Cube?</h1>
+    <h3>The math behind rubik’s cube scrambles</h3>
+
+    <h3>The Rubik’s Cube is one of the most popular puzzles in the world. People’s experiences with this toy range from solving it in under three seconds to scrambling it and leaving it on a shelf because it's too difficult. Whether or not you can solve it, there's a lot of fascinating math behind this puzzle.
+        I've been solving Rubik’s Cubes since I was ten years old and sometimes I would sit in one spot and solve the cube hundreds of times. This got to the point where I was at one point worried that I would run through all the possibilities. 
+        This brings up an interesting question: How many possible scrambles are there?
+        </h3>
+    <img class ="floatImage" src="../Images/2x2Image.webp"   alt="2x2 Image">
+
+      <h2>Starting with the 2x2 Rubik’s Cube</h2>
+      <h3>To break this problem down, let's start with a simpler example: the 2x2 Rubik’s Cube. To calculate the total number of possible scrambles, we first need to understand how the pieces can be arranged.
+        A 2x2 Rubik’s Cube consists of eight corner pieces, but most models have one fixed piece attached to the core. This means that only seven corners can be moved freely. When placing these seven corners, the first piece has seven available slots, the second has six, the third has five, and so on. This follows the factorial pattern, giving us:
+        </h3>
+        <h3 class="center">7! = 7 × 6 × 5 × 4 × 3 × 2 × 1 = 5,040</h3> 
+    <h3>However, placing the pieces isn’t enough—we also need to consider orientation. Each of the seven movable corner pieces can be twisted into three different orientations. This gives us:</h3>
+
+    <h3 class="center">3 <sup>7</sup> = 2,187</h3>
+
+    <h3>Multiplying these together, we get the total number of ways to arrange and orient the cube:</h3>
+    <h3 class="center">5,040 × 2,187 = 11,022,480</h3>
+
+
+
+
+
+      <h2>Accounting for Cube Limitations</h2>
+      <h3>At first glance, 11,022,480 seems like the total number 
+        of scrambles. However, not all of these configurations are possible
+         if we start from a solved cube and make legal moves.</h3>
+      <h3>If you've ever solved a Rubik’s Cube, 
+        you may know how frustrating it is when a single corner 
+        piece twists out of place. That’s because a valid scramble cannot 
+        have just one incorrectly rotated corner—twisting one corner requires 
+        another to twist as well. Because of this restriction, the last corner's 
+        orientation is determined by the previous seven, meaning it has only one valid state.</h3>
+      <h3>This reduces the number of orientations from 3<sup>7</sup> to 3<sup>6</sup>, giving us the corrected number of possible scrambles for a 2x2 Rubik’s Cube:</h3>
+        <h3 class="center"> 7! * 3<sup>6</sup> = 3,674,160</h3>
+
+
+
+      <h2>Looking at the 3x3 Rubik’s Cube</h2>
+      <h3>Now, let’s apply what 
+        we’ve learned to the 3x3 Rubik’s Cube. 
+        Like the 2x2, the 3x3 has eight corners, but unlike the 
+        2x2, none of them are fixed to the core. Additionally, the 3x3 has 12 
+        edge pieces that can be arranged in different ways. </h3>
+        <h3 class="center">Corner Arrangements: 8!</h3>
+        <h3 class="center">Edge Arrangements: 12!</h3>
+        <h3 class="center">Corner Orientations: 3<sup>8</sup></h3>
+        <h3 class="center">Edge Orientations: 2<sup>12</sup></h3>
+        <h3 class="center">8! * 12! * 3<sup>8</sup> * 2<sup>12</sup> = 519,024,039,293,878,272,000</h3>
+
+    <h2>Limitations of the 3x3</h2>
+    <h3>Just like the 2x2, not 
+        every arrangement is solvable.
+         Some configurations—such as a cube with just one flipped 
+         edge—are impossible to reach through legal moves. These restrictions 
+         slightly reduce the total count, ensuring that all scrambles are achievable 
+         from a solved state. On top of the corner rule, a Rubik’s Cube is unsolvable if 
+         1 or 2 edge pieces are flipped. This results in the exponent for corner orientations
+          being reduced by one and the edge orientation exponent being reduced by two.  </h3>
+
+    <h3 class="center">Accounting for limitations</h3>
+    <h3 class="center">Corner Arrangements: 8!</h3>
+    <h3 class="center">Edge Arrangements: 12!</h3>
+    <h3 class="center">Corner Orientations: 3<sup>7</sup></h3>
+    <h3 class="center">Edge Orientations: 2<sup>10</sup></h3>
+
+    <h2 class="center">Our Final Calculation</h2>
+    <h3 class="center">8! * 12! * 3<sup>7</sup> * 2<sup>10</sup> = 43,252,003,274,489,856,000</h3>
+
+
+
+<h2>What's Next?</h2>
+
+<h3>With over 43 quintillion possible scrambles, 
+    it's clear that no two randomly scrambled cubes are likely to be 
+    the same. One last thought, how long would it take for me to go through all
+     43 quintillion? I average about 12 seconds per solve, meaning it would take 
+     about 215 quintillion seconds or 6.8 trillion years!!
+</h3>
+<img class ="headerImage" src="../Images/3x3Image.webp"   alt="3x3 Image">
+
+
+<div class="footer">
+    <a class = "button" href="https://github.com/sinclairHansen"target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class = "button" href="mailto:sinclairCHansen@gmail.com"target="_blank" rel="noopener noreferrer">Email</a>
+    <a class = "button" href="https://www.linkedin.com/in/sinclair-hansen-b1b3b4310/"target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
