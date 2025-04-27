@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sinclair Hansen </title>
+  <link rel="icon" type="image/x-icon" href="../Images/Favicon.png">
+
   <meta name="description" content="Sinclair Hansen's Epic Portfolio">
   <script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/addons/p5.sound.min.js"></script>
@@ -55,38 +57,46 @@
 
 <body>
 
-    <h1>Welcome to the Chaos</h1>
+    <h1>Embrace the Chaos</h1>
     <h3 class="center">How a 0.001° Shift Changes Everything</h3>
 
 <main>
-  <script src="pendulum.js"></script>
+  <script src="Pendulum/pendulum.js"></script>
   <script>setup()</script>
 </main>
 <body class="center">
-  <h4><a class = "button" href = "pendulum.html" target="_blank" rel="noopener noreferrer">Pendulum Simulator</a></h4>
-  <h4><a class = "button" href = "https://github.com/sinclairHansen/doublePendulum" target="_blank" rel="noopener noreferrer">Pendulum Repository</a></h4>
+  <h2><a class = "button" href = "Pendulum/pendulum.html" target="_blank" rel="noopener noreferrer">Pendulum Simulator</a></h2>
+  <h2><a class = "button" href = "https://github.com/sinclairHansen/doublePendulum" target="_blank" rel="noopener noreferrer">Pendulum Repository</a></h2>
   <h3>“The flap of a butterfly’s wings in Brazil can lead to a hurricane in Texas.”</h3>
   <p>While not meant to be taken literally, 
-    this metaphor captures the essence of chaos theory: small 
+    this metaphor captures the essence of <b>chaos theory</b>: small 
     changes in the initial conditions of a system can lead to large and 
     unpredictable outcomes. This idea, often referred to as the butterfly effect, 
     lies at the heart of chaos theory and highlights the sensitive dependence on initial 
     conditions seen in many natural and mathematical systems.</p>
-  <p>“Chaos theory states that within the apparent randomness of 
-    chaotic complex systems, there are underlying patterns, interconnection, 
-    constant feedback loops, repetition, self-similarity, fractals and self-organization.
-    ” Basically, complex systems are very difficult to predict and small changes in initial 
-    values result in completely different results as time increases. </p>
-  <p>One common example of a chaotic system is a double pendulum. Now, a 
-    double pendulum is an example of deterministic chaos. When calculating how a double 
-    pendulum moves, we are able to calculate exactly where each of the masses will be located
-     at any given time, it's deterministic. When plugging the same inputs into our equations, 
-     we get the same outputs. So why is it an example of a chaotic system? Well, in real life, it is
-      extremely difficult to get perfect measurements. The slightest change in a measurement or even a
-       change in significant figures will result in the position of the double pendulum completely 
-       changing. This can be shown in the double pendulum at the top of the article. Ten pendulums are displayed,
-       with the only difference being the theta 1 value being 0.001 degrees off. Within a few seconds we see that all the pendulums break off into completely different pathways. 
-       A quote that describes this well comes from Edward Lorenz, a mathematician that laid the foundations of chaos theory:</p>
+  <p class="space">Chaos Theory states that within the apparent 
+    randomness of chaotic, complex systems, there are 
+    underlying patterns, interconnectedness, constant feedback loops,
+     repetition, self-similarity, fractals, and self-organization. In simple
+      terms, even though these systems may appear unpredictable, they follow
+       deeper rules. Small changes in initial conditions can lead to drastically
+        different outcomes as time progresses, making long-term prediction 
+        extremely difficult.</p>
+  <p>One common example of a chaotic system is a 
+    double pendulum. A double pendulum’s position can be found 
+    using deterministic equations. When given a set of initial
+     values, we can predict where it will be at any given time. 
+     So why is it an example of a chaotic system? A double pendulum
+      is an example of deterministic chaos. We would be able to calculate 
+      its position if we had precise data, but that can be hard to come by. 
+      The position of the double pendulum is extremely sensitive, and a change
+       in significant figures can completely change its trajectory. This can be
+        shown in the double pendulum at the top of the article. Ten pendulums 
+        are displayed, with the only difference is each theta value increases 
+        by 0.001º. Within a few seconds we see that all the pendulums break off 
+        into completely different pathways. A quote that describes this well
+         comes from Edward Lorenz, a mathematician that laid the foundations of
+          chaos theory:</p>
 
 
 <h3>Chaos: When the present determines the future but the approximate present does not approximately determine the future.</h3>
@@ -100,35 +110,69 @@
    insignificant, but that was far from the truth. The two weather sequences were vastly different, 
    showing that seemingly negligible factors can completely change outcomes (Halton). </p>
 
+ <h2>The Lorenz Attractor</h2>
+ <h4><a class = "button" href = "LorenzAttractor/lorenz.html" target="_blank" rel="noopener noreferrer">3D Lorenz Attractor</a></h4>
 
-<p>Lorenz is also known for the famous Lorenz Attractor. 
-  This model is commonly associated with the Butterfly Effect, given it
-   looks like… a butterfly. This phenomenon occurs when we graph the position of a 
-   particle based on these three differential equations:</p>
+<p>Lorenz is well known for the 
+  famous Lorenz Attractor, a model often associated 
+  with the Butterfly Effect, appropriately named because its
+   shape resembles a butterfly. What makes this set of equations
+    notable is its extreme sensitivity to initial conditions. 
+    The three differential equations are:</p>
    <img class ="floatImage" src="../Images/lorenzAttractor.gif"   alt="Lorenz Attractor">
+  <div class="space">
+    <p class="center"><b>x' = σ(y - x)</b></p>
+    <p class="center"><b>y' = (ρ - z) - y</b></p>
+    <p class="center"><b>z' = xy - ßz</b> </p>
+  </div>
 
-  <p class="center">x' = σ(y - x)</p>
-  <p class="center">y' = (ρ - z) - y</p>
-  <p class="center">z' = xy - ßz </p>
 
-  <p>When given an arbitrary first point, future points are 
-    calculated based on the previous. What is neat about this model is 
-    the point never touches the same spot twice. If it did, it would no longer
-     be chaotic as there is evidence of a pattern forming. Going further, let's say
-      we initialize 100 points with different starting values. Points on the edges will
-       speed off into different directions, but points within a certain radius will form an 
-       attractor. Although the points in the attractor follow a similar formation, none of the points
-        retrace their steps or cross pathways. Difference in their starting point results in difference
-         in their futures (Kastorf).</p>
-  <h4><a class = "button" href = "lorenz.html" target="_blank" rel="noopener noreferrer">3D Lorenz Attractor</a></h4>
+  <p>The values <b>σ </b>(sigma),  <b>ρ </b>(rho), and <b>ß</b> (beta), 
+    are constants that can be changed, but picking random numbers
+     will likely result in the particles flying towards infinity. 
+     The most common constants, picked by Lorenz himself are:</p>
 
-  <h2>Applications of Chaos Theory</h2>
+  <div class="space">
+    <p class="center"><b>σ = 10 ρ = 28  ß = ⁠8/3</b></p>
+  </div>
+
+  <p>Starting from an arbitrary point, 
+    future points are calculated based on the previous. 
+    It is important to note that not all inputs in this equation 
+    result in a chaotic output. For example, having initial values 
+    (0,0,0) will result in all derivatives equaling 0. The point will
+     forever stay at the origin. On the flip side, inputting large values
+      will result in the particle shooting towards infinity. The most
+       interesting behavior happens when we pick starting points in a certain 
+       "sweet spot."</p>
+  <p>As part of my research, I programmed a 3D 
+    model of the Lorenz Attractor, viewable through 
+    the button below. I initialized the point at (0.01, 0, 0)
+     to ensure non zero derivatives and a true chaotic attractor.</p>
+    <p class="space">What’s fascinating about this model is that 
+      the trajectory never exactly retraces its steps. If it 
+      did, the motion would no longer be chaotic; it would become 
+      periodic or predictable. Even more interestingly, if we start 100
+       points close together, some will eventually diverge widely, but many
+        will stay trapped in the attractor’s general shape. Even though they 
+        follow similar patterns, no two paths are identical. A tiny difference
+         in starting points leads to drastically different futures (Kastorf).</p>
+
+
+
+    <h2 class="center">Math Behind the Double Pendulum</h2>
+    <p>The orientation of a double pendulum can be shown on the right. When doing calculations, we have several variables we will be working with:</p>
+
+
+
+  <h2 class="center">Applications of Chaos Theory</h2>
   <p>The findings in Chaos Theory have many real world applications. 
     Many of the systems we use in our day-to-day lives are chaotic, unpredictable, and 
     reliant on initial conditions. Examples include weather patterns, economics, and artificial 
     intelligence. The goal of using Chaos Theory in these fields is to find order in messy systems 
     (Geeks for Geeks).</p>
 </body>
+
 
 
 

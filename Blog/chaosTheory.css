@@ -1,5 +1,4 @@
 
-
 .hang {
     padding-left:20%;
     text-indent: -3em;
@@ -9,10 +8,9 @@
     font-size: 50%;
     } 
     body{
-        background-color: rgb(255, 255, 255);
-        background-size:cover;
-        background-position: center;
-        font-family:'Calibri', 'Lucida Grande', sans-serif;}
+
+      background-position: center;
+      font-family:'Calibri', 'Lucida Grande', sans-serif;}
         
     
     
@@ -23,6 +21,7 @@
       }
      
         main{
+
         color: #70aec8;
         text-align: center;
         align-items: center;
@@ -129,10 +128,9 @@
                     }
     body{
       p{
-        width: 80%;
+        width: 60%;
         float:center;
-        margin-left:10%;
-        margin-right:10%;
+        margin:auto;
       }
             background-color: rgb(255, 255, 255);
             background-position: center;
@@ -142,8 +140,10 @@
             background-repeat: no-repeat;
     
         h1{
+            margin:auto;
             text-align: center;
             padding-top:5%;
+            width:60%;
         }
         iframe{
             align-items: center;
@@ -152,9 +152,11 @@
             height: 30em;
             }
         h3{
-          width: 80%;
-          margin-left: 10%;
-          margin-right: 10%;
+          width: 60%;
+          margin:auto;
+          text-align: center;
+          padding-bottom:3%;
+          padding-top:3%;
         }
         h2{
           text-align: center;
@@ -162,6 +164,7 @@
         }
         h4{
           text-align:center;
+          font-size: 1.5em;
         }
     
         @media screen and (max-width: 1050px) {
@@ -242,9 +245,8 @@
               }
         .center
         {
-            text-align: center;
-            text-anchor: middle;
-            width: 80%;
+          margin:auto;
+          width:40%;
         }
         .footer {
 
@@ -252,6 +254,10 @@
             text-align: center;
             background: #ddd;
             margin-top: 20px;
+          }
+          .space{
+            padding-top: 3%;
+            padding-bottom: 3%;
           }
 
     
