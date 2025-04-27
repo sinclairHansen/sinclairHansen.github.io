@@ -1,71 +1,59 @@
+let x = 0.01;
+let y = 0;
+let z = 0;
 
-class Lorenz{
-  constructor()
-  {
-    this.a = 10;
-    this.b = 28;
-    this.c = 8.0/3.0;
-    this.x = 0.01;
-    this.y = 0;
-    this.z = 0;
+let a = 10;
+let b = 28;
+let c = 8.0/3.0;
 
-    this.a = 10;
-    this.b = 28;
-    this.c = 8.0/3.0;
-
-    this.points = new Array();
-  }
+let points = new Array();
 
 
+function setup() {
+  createCanvas(800, 600, WEBGL);
+  colorMode(HSB);
 
-
-
-  setup() {
-    createCanvas(400, 400, WEBGL);
-    colorMode(HSB);
-    this.draw();
-  }
-
-  draw() {
-    background(0);
-    
-    this.dt = 0.01
-    this.dx = (this.a * (this.y-this.x)) * this.dt;
-    this.dy = (this.x*(this.b-this.z)-y) * this.dt;
-    this.dz = (this.x*this.y - this.c*this.z) * this.dt;
-    this.x = this.x + this.dx;
-    this.y = this.y + this.dy;
-    this.z = this.z + this.dz;
-    
-    this.points.push(new p5.Vector(this.x, this.y, this.z));
-    
-    this.camX = map(mouseX, 0, width, -200, 200);
-    this.camY = map(mouseY, 0, height, -200, 200);
-    camera(this.camX, this.camY, (height / 2.0) / tan(PI * 30.0 / 180.0), 0, 0, 0, 0, 1, 0);
-    
   
-    scale(2);
-    stroke(255);
-    noFill();
-    
-    this.color = 0;
-    
-    beginShape();
-    
-    for(this.v of this.points)
-      {
-        stroke(this.color,255,255);
-        vertex(this.v.x,this.v.y,this.v.z);
-        this.color += 1;
-        if(this.color > 255)
-          {
-            this.color = 0;
-          }
-      }
-    endShape();
+}
+
+function draw() {
+  background(0);
+  
+  let dt = .01
+  let dx = (a * (y-x)) * dt;
+  let dy = (x*(b-z)-y) * dt;
+  let dz = (x*y - c*z) * dt;
+  x = x + dx;
+  y = y + dy;
+  z = z + dz;
+  
+  points.push(new p5.Vector(x, y, z));
+  
+  let camX = map(mouseX, 0, width, -200, 200);
+  let camY = map(mouseY, 0, height, -200, 200);
+  camera(camX, camY, (height / 2.0) / tan(PI * 30.0 / 180.0), 0, 0, 0, 0, 1, 0);
+  
+  
+  scale(4);
+  stroke(255);
+  noFill();
+  
+  let color = 0;
+  
+  beginShape();
+  
+  for(let v of points)
+    {
+      stroke(color,255,255);
+      vertex(v.x,v.y,v.z);
+      color += 1;
+      if(color > 255)
+        {
+          color = 0;
+        }
+    }
+  endShape();
   
 
   
-  }
-
 }

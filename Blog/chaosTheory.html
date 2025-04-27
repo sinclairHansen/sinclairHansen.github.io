@@ -105,9 +105,12 @@
   This model is commonly associated with the Butterfly Effect, given it
    looks like… a butterfly. This phenomenon occurs when we graph the position of a 
    particle based on these three differential equations:</p>
+   <img class ="floatImage" src="../Images/lorenzAttractor.gif"   alt="Lorenz Attractor">
+
   <p class="center">x' = σ(y - x)</p>
-  <p class="center">y' = x(r - z) - y</p>
-  <p class="center">z' = xy - bz </p>
+  <p class="center">y' = (ρ - z) - y</p>
+  <p class="center">z' = xy - ßz </p>
+
   <p>When given an arbitrary first point, future points are 
     calculated based on the previous. What is neat about this model is 
     the point never touches the same spot twice. If it did, it would no longer
@@ -117,11 +120,15 @@
        attractor. Although the points in the attractor follow a similar formation, none of the points
         retrace their steps or cross pathways. Difference in their starting point results in difference
          in their futures (Kastorf).</p>
+  <h4><a class = "button" href = "lorenz.html" target="_blank" rel="noopener noreferrer">3D Lorenz Attractor</a></h4>
+
+  <h2>Applications of Chaos Theory</h2>
+  <p>The findings in Chaos Theory have many real world applications. 
+    Many of the systems we use in our day-to-day lives are chaotic, unpredictable, and 
+    reliant on initial conditions. Examples include weather patterns, economics, and artificial 
+    intelligence. The goal of using Chaos Theory in these fields is to find order in messy systems 
+    (Geeks for Geeks).</p>
 </body>
-<script src="Lorenz.js"></script>
-<script> const attractor = new Lorenz();
-  attractor.setup(1);
-</script>
 
 
 
