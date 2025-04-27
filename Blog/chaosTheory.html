@@ -134,7 +134,7 @@
      The most common constants, picked by Lorenz himself are:</p>
 
   <div class="space">
-    <p class="center"><b>σ = 10 ρ</b></p>
+    <p class="center"><b>σ = 10</b></p>
     <p class="center"><b>ρ = 28</b></p>
     <p class="center"><b>ß = ⁠8/3</b></p>
   </div>
@@ -163,9 +163,49 @@
 
 
 
-    <h2 class="center">Math Behind the Double Pendulum</h2>
-    <p>The orientation of a double pendulum can be shown on the right. When doing calculations, we have several variables we will be working with:</p>
+    <h2>Math Behind the Double Pendulum</h2>
+    <img class ="floatImage" src="../Images/dbl_pendulum_Image.gif"   alt="Dbl Pendulum diagram">
 
+    <p>The orientation of a double pendulum can be shown on the right. When doing calculations, we have several variables we will be working with:</p>
+      <p class="equation">L<sub>1</sub>: Length of the first string</p>
+      <p class="equation">L<sub>2</sub>: Length of the second string</p>
+      <p class="equation">Θ<sub>1</sub>: The angle between L<sub>1</sub> and a line perpendicular to the ground</p>
+      <p class="equation">Θ<sub>2</sub>: The angle between L<sub>2</sub> and a line perpendicular to the ground</p>
+      <p class="equation">m<sub>1</sub>: mass of the first ball</p>
+      <p class="equation">m<sub>2</sub>: mass of the second ball</p>
+
+      <p>We can also state that the location of the first ball is (x<sub>1</sub>,y<sub>1</sub>) and the location of the second ball is (x<sub>2</sub>, y<sub>2</sub>). The point the pendulum is hanging from is (x<sub>0</sub>,y<sub>0</sub>). We are also going to assume that x<sub>0</sub>, y<sub>0</sub> = 0 (this part is more important when programming it). Using basic trigonometry, we are able to write these points as the following:</p>
+      <p class="equation"> x<sub>1</sub> = L<sub>1</sub>sinΘ<sub>1</sub></p>
+      <p class="equation">y<sub>1</sub> = -L<sub>1</sub>cosΘ<sub>1</sub></p>
+      <p class="equation">x<sub>2</sub> = x<sub>1</sub> + L<sub>2</sub>sinΘ<sub>2</sub></p>
+      <p class = "equation">y<sub>2</sub> = y<sub>1</sub> - L<sub>2</sub>cosΘ<sub>2</sub></p>
+      <p>Now we will need the derivatives of each coordinate. Derivative is denoted with an apostrophe:
+      </p>
+      <p class="equation">x<sub>1</sub>’ = L<sub>1</sub>cosΘ<sub>1</sub></p>
+      <p class="equation">y<sub>1</sub>’ = L<sub>1</sub>sinΘ<sub>1</sub></p>
+      <p class="equation">x<sub>2</sub>’ = x<sub>1</sub>’ + L<sub>2</sub>cosΘ<sub>2</sub></p>
+      <p class="equation">y<sub>2</sub>’ = y<sub>1</sub>’ +  L<sub>2</sub>sinΘ<sub>2</sub></p>
+      <p>In order to calculate the change in the Θ values, we are going to be using a Lagrangian. The Lagrangian describes a system in terms of its kinetic and potential energy, and is founded on the principle of least action. The formula for the Lagrangian is written as:</p>
+      <p class="equation"><b>L = T - V</b></p>
+      <p>In words, the Lagrangian equals the kinetic energy (T) minus the potential energy (V) within the system. This means the next step is to solve for T and V:</p>
+      <p class="equation space">T = 1/2m<sub>1</sub>(x<sub>1</sub>'<sup>2</sup>+y<sub>1</sub>'<sup>2</sup>) + 1/2m<sub>2</sub>(x<sub>2</sub>'<sup>2</sup>+y<sub>2</sub>'<sup>2</sup>)</p>
+      <p class="space">Simplify.</p>
+      <p class="equation">T = 1/2ML<sub>1</sub><sup>2</sup>Θ<sub>1</sub><sup>2</sup> + 1/2m<sub>2</sub> L<sub>2</sub><sup>2</sup>Θ<sub>2</sub><sup>2</sup>∆Θ</p>
+      <p class="equation space">where M = m<sub>1</sub> + m<sub>2</sub> and ∆Θ = Θ<sub>1</sub> - Θ<sub>2</sub></p>
+      <p class="equation">V = m<sub>1</sub>gy<sub>1</sub> + m<sub>2</sub>gy<sub>2</sub></p>
+      <p>This reduces to:</p>
+      <p class="equation">V = -MgL<sub>1</sub>cosΘ<sub>1</sub> - m<sub>2</sub>gL<sub>2</sub>cosΘ<sub>2</sub></p>
+      <p>Now lets sub this information into the Lagrangian (L = T - V):</p>
+      <p class="equation space">L =  1/2ML<sub>1</sub><sup>2</sup>Θ<sub>1</sub>'<sup>2</sup>+ 1/2m<sub>2</sub>L<sub>2</sub><sup>2</sup>Θ<sub>2</sub>'<sup>2</sup>+ m<sub>2</sub>L<sub>2</sub>L<sub>2</sub>Θ<sub>1</sub>'Θ<sub>2</sub>'cos∆Θ+MgL<sub>1</sub>cosΘ<sub>1</sub>  + m<sub>2</sub>gL<sub>2</sub>cosΘ<sub>2</sub> </p>
+      <p>We will now apply the Euler-Lagrange equations with respect to  Θ1 and Θ2. This will allow us to get the angular acceleration. This equation will be one of the most important components of the program. </p>
+      <p class="equation space">ML<sub>1</sub>Θ<sub>1</sub>'' + m<sub>2</sub>L<sub>2</sub>Θ<sub>2</sub>''cos∆Θ+m<sub>2</sub>L<sub>2</sub>Θ'<sup>2</sup>sin∆Θ+MgsinΘ<sub>1</sub> = 0</p>
+      <p class="equation space">L<sub>1</sub>Θ<sub>1</sub>''cos∆Θ+L<sub>2</sub>Θ<sub>2</sub>''-L<sub>1</sub>Θ<sub>1</sub><sup>2</sup>sin∆Θ+gsinΘ<sub>2</sub>=0</p>
+      <p>These equations cannot be solved like a linear equation. We can break it down by setting m2=0, L2=0 and Θ1 = Θ2. After rearranging, we can get the angular acceleration for both theta values. </p>
+      <p class="equation space">Θ<sub>1</sub>''=[-sin∆Θ(m<sub>2</sub>L<sub>2</sub>Θ<sub>1</sub>'<sup>2</sup>cos∆Θ+m<sub>2</sub>L2Θ<sub>2</sub><sup>2</sup>)-g(MsinΘ<sub>1</sub>-m<sub>2</sub>sinΘ<sub>2</sub>cos∆Θ)]/L<sub>1</sub>ɑ</p>
+      <p class="equation space">Θ<sub>2</sub>'' = [+sin∆Θ(ML<sub>1</sub>Θ<sub>1</sub>’<sup>2</sup>+m<sub>2</sub>L<sub>2</sub>Θ<sub>2</sub>'<sup>2</sup>cos∆Θ)+g(MsinΘ<sub>1</sub>cos∆Θ-MsinΘ<sub>2</sub>)]/L<sub>2</sub>ɑ</p>
+      <p>where ɑ = m<sub>1</sub> + m<sub>2</sub>sin<sup>2</sup>∆Θ</p>
+      <p>These are now all the equations that were used for the program, with the primary being the Euler-Lagrange equations for the angular acceleration.</p>
+      <h2>How my Program Works</h2>
 
 
   <h2 class="center">Applications of Chaos Theory</h2>

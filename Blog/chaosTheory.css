@@ -247,6 +247,7 @@
         {
           margin:auto;
           width:40%;
+          text-align: center;
         }
         .footer {
 
@@ -258,6 +259,13 @@
           .space{
             padding-top: 3%;
             padding-bottom: 3%;
+          }
+          .equation{
+            text-align: center;
+            margin:auto;
+            width:80%;
+            padding-top:2%;
+            padding-bottom:2%;
           }
 
     
