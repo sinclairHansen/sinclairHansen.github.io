@@ -231,8 +231,8 @@
   //PENDULUM CODE
   let g = 1;
   let pendulums = [];
-  let width = 500;
-  let height = 500;
+  let width = 400;
+  let height = 400;
   let num = 10;
   let colorPalette = ['#0e9aa7','#3da4ab','#f6cd61','#fe8a71','#07407b',
     '#f6b26b','#e69138','#07407b'
@@ -241,14 +241,14 @@
 
       createCanvas(width,height);
       //This grabs the values the user sets in the sliders
-      let L1 = 100;
-      let L2 = 100;
+      let L1 = 80;
+      let L2 = 80;
       let m1 = 1;
       let m2 = 1;
 
       let theta2 = PI/4;
       for(i = 0; i<num; i++){
-          let theta1 = PI/2 + (0.01)*i;
+          let theta1 = PI/3 + (0.01)*i;
           pendulums[i] = new Pendulum(theta1,theta2, L1, L2, m1, m2);
         }
 
