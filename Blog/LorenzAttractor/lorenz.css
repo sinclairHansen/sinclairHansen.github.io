@@ -1,0 +1,47 @@
+body {
+  background-image:url('../../Images/blueGradient.jpg');
+  align-items: center;
+  float:center;
+  text-align: center;
+  align-items: center;
+  padding: 0;
+  font-family:'Calibri', 'Lucida Grande', sans-serif;
+
+
+}
+canvas {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 800px;
+  padding-bottom:10%;
+}
+p{
+  width:80%;
+  font-size: 1.5em;
+  margin:auto;
+}
+h1{
+  padding-top:8%;
+}
+.button
+{
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
+  background-color: #476d7d;
+  padding: 1px 32px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+          
+        }
+        .footer {
+
+          padding: 20px;
+          text-align: center;
+          background: #ddd;
+          margin-top: 20px;
+        }        
