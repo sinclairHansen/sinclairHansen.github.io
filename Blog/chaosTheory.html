@@ -87,11 +87,12 @@
     using deterministic equations. When given a set of initial
      values, we can predict where it will be at any given time. 
      So why is it an example of a chaotic system? A double pendulum
-      is an example of deterministic chaos. We would be able to calculate 
+      is an example of <b>deterministic chaos</b>. We would be able to calculate 
       its position if we had precise data, but that can be hard to come by. 
       The position of the double pendulum is extremely sensitive, and a change
        in significant figures can completely change its trajectory. This can be
-        shown in the double pendulum at the top of the article. Ten pendulums 
+        shown in the double pendulum at the top of the article (you can refresh the 
+        page to reset the simulation). Ten pendulums 
         are displayed, with the only difference is each theta value increases 
         by 0.001º. Within a few seconds we see that all the pendulums break off 
         into completely different pathways. A quote that describes this well
@@ -101,7 +102,7 @@
 
 <h3>Chaos: When the present determines the future but the approximate present does not approximately determine the future.</h3>
 <h2>The History of Chaos Theory</h2>
-<p>The idea of Chaos Theory stems from mathematician 
+<p>The idea of Chaos Theory stems from the previously mentioned mathematician 
   and meteorologist Edward Lorenz in the 1960s. Throughout his work 
   as a meteorologist, he came to the conclusion that weather patterns are nonlinear 
   and can be volatile. This was enforced when one day he decided to go back and recreate a 
@@ -117,12 +118,12 @@
   famous Lorenz Attractor, a model often associated 
   with the Butterfly Effect, appropriately named because its
    shape resembles a butterfly. What makes this set of equations
-    notable is its extreme sensitivity to initial conditions. 
-    The three differential equations are:</p>
+    notable is its extreme sensitivity to initial conditions. </p>
+    <p>The three differential equations are:</p>
    <img class ="floatImage" src="../Images/lorenzAttractor.gif"   alt="Lorenz Attractor">
   <div class="space">
     <p class="center"><b>x' = σ(y - x)</b></p>
-    <p class="center"><b>y' = (ρ - z) - y</b></p>
+    <p class="center"><b>y' = x(ρ - z) - y</b></p>
     <p class="center"><b>z' = xy - ßz</b> </p>
   </div>
 
@@ -133,7 +134,9 @@
      The most common constants, picked by Lorenz himself are:</p>
 
   <div class="space">
-    <p class="center"><b>σ = 10 ρ = 28  ß = ⁠8/3</b></p>
+    <p class="center"><b>σ = 10 ρ</b></p>
+    <p class="center"><b>ρ = 28</b></p>
+    <p class="center"><b>ß = ⁠8/3</b></p>
   </div>
 
   <p>Starting from an arbitrary point, 
@@ -147,13 +150,13 @@
        "sweet spot."</p>
   <p>As part of my research, I programmed a 3D 
     model of the Lorenz Attractor, viewable through 
-    the button below. I initialized the point at (0.01, 0, 0)
+    the button above. I initialized the point at (0.01, 0, 0)
      to ensure non zero derivatives and a true chaotic attractor.</p>
     <p class="space">What’s fascinating about this model is that 
       the trajectory never exactly retraces its steps. If it 
       did, the motion would no longer be chaotic; it would become 
       periodic or predictable. Even more interestingly, if we start 100
-       points close together, some will eventually diverge widely, but many
+       points close together, some will diverge to infinity, and some
         will stay trapped in the attractor’s general shape. Even though they 
         follow similar patterns, no two paths are identical. A tiny difference
          in starting points leads to drastically different futures (Kastorf).</p>
