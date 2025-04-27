@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Double Pendulum Simulation </title>
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.js"></script>
+    <link rel="icon" type="image/x-icon" href="../Images/Favicon.png">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="pendulum.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <header>
+    <h1>Double Pendulum Simulation</h1>
+  </header>
+  
+  
+  
+  <body>
+    <main class="simBox" class="cancelBox">
+    <h3 class="cancelBox">Welcome to the Double Pendulum Simulator! This program provides a visual demonstration of 
+      key concepts in chaos theory. Each pendulum starts with a slightly different 
+      initial angle—theta₁ increases by just 0.001 degrees with each new pendulum. At 
+      first, their motion appears synchronized, but over time, their paths diverge 
+      dramatically, revealing the sensitive dependence on initial conditions that defines 
+      chaotic systems.
+    </h3>
+    <h3 class="cancelBox">Instructions</h3>
+    <h3 class="cancelBox">Use the sliders to adjust the pendulum parameters.</h3>
+
+    <h3 class="cancelBox">Press the Run button to update the simulation and reflect the changes on the canvas.</h3>
+    </main>
+
+    <script src="sketch.js"></script>
+    <script src="pendulum.js"></script>
+
+
+
+<!--This div is to change the variable values-->
+<div class="valueBox">
+  <h2>Change Pendulum Values</h2>
+
+  <h3>Length L1</h3>
+  <div class="slidecontainer">
+    <input type="range" min="10" max="150" value="100" class="slider" id="L1">
+    <p>Value: <span id="output1"></span></p>
+  </div>
+
+
+  <h3>Length L2</h3>
+  <div class="slidecontainer">
+    <input type="range" min="10" max="150" value="100" class="slider" id="L2">
+    <p>Value: <span id="output2"></span></p>
+  </div>
+
+  <h3>Mass of Ball 1</h3>
+  <div class="slidecontainer">
+    <input type="range" min="1" max="20" value="5" class="slider" id="m1">
+    <p>Value: <span id="output3"></span></p>
+  </div>
+
+  <h3>Mass of Ball 2</h3>
+  <div class="slidecontainer">
+    <input type="range" min="1" max="20" value="5" class="slider" id="m2">
+    <p>Value: <span id="output4"></span></p>
+  </div>
+  
+  <h3>Number of Pendulums</h3>
+  <div class="slidecontainer">
+    <input type="range" min="1" max="150" value="10" class="slider" id="num">
+    <p>Value: <span id="output5"></span></p>
+  </div>
+  <h3>Change Trail Length (250 is no trail)</h3>
+  <div class="slidecontainer">
+    <input type="range" min="0" max="250" value="30" class="slider" id="trail">
+    <p>Value: <span id="output6"></span></p>
+  </div>
+  
+  
+  <p onclick="setup()" style="text-align: center;"><input type="button" class="button" value="Run"></p>
+  <!--<p onclick="addPendulum()" style="text-align: center;"><input type="button" class="button" value="Add One"></p>
+-->
+
+</div>
+
+
+  </body>
+</html>
