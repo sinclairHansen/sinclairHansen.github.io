@@ -140,17 +140,23 @@
                   
                     }
     body{
+      background-color: rgb(255, 255, 255);
+      background-position: center;
+      font-family:'Calibri', 'Lucida Grande', sans-serif;
+      background-image: url("blueGradient.jpg");
+      background-size:cover;
+      background-repeat: no-repeat;
       p{
         width: 60%;
         float:center;
         margin:auto;
       }
-            background-color: rgb(255, 255, 255);
-            background-position: center;
-            font-family:'Calibri', 'Lucida Grande', sans-serif;
-            background-image: url("blueGradient.jpg");
-            background-size:cover;
-            background-repeat: no-repeat;
+      @media screen and (max-width: 880px) {
+        p{
+          width:80%;
+        }
+      }
+
     
         h1{
             margin:auto;
