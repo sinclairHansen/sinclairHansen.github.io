@@ -3,7 +3,7 @@ let pendulums = [];
 let width = 500;
 let height = 500;
 //let add = 1;
-let colorPalette = ['#4a4e4d','#0e9aa7','#3da4ab','#f6cd61','#fe8a71','#07407b',
+let colorPalette = ['#0e9aa7','#3da4ab','#f6cd61','#fe8a71','#07407b',
   '#f6b26b','#e69138','#07407b'
 ];
 

@@ -64,7 +64,7 @@ body{
         transition: opacity .2s;
 
       }
-      @media screen and (max-width: 800px) {
+      @media screen and (max-width: 1000px) {
 
           .slider{
             height: 3rem;
@@ -116,6 +116,7 @@ header{
     }
   }
   canvas {
+    align-items: center;
     padding-top:3%;
     padding-bottom:3%;
     padding-left: 0;
