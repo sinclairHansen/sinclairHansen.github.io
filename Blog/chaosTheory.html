@@ -64,9 +64,11 @@
   <script src="Pendulum/pendulum.js"></script>
   <script>setup()</script>
 </main>
+
 <body class="center">
   <h2><a class = "button" href = "Pendulum/pendulum.html" target="_blank" rel="noopener noreferrer">Pendulum Simulator</a></h2>
   <h2><a class = "button" href = "https://github.com/sinclairHansen/doublePendulum" target="_blank" rel="noopener noreferrer">Pendulum Repository</a></h2>
+  <h2>Introduction to Chaos Theory</h2>
   <h3>“The flap of a butterfly’s wings in Brazil can lead to a hurricane in Texas.”</h3>
   <p>While not meant to be taken literally, 
     this metaphor captures the essence of <b>chaos theory</b>: small 
@@ -74,10 +76,10 @@
     unpredictable outcomes. This idea, often referred to as the butterfly effect, 
     lies at the heart of chaos theory and highlights the sensitive dependence on initial 
     conditions seen in many natural and mathematical systems.</p>
-  <p class="space">Chaos Theory states that within the apparent 
+  <p class="space">Chaos Theory states that "within the apparent 
     randomness of chaotic, complex systems, there are 
     underlying patterns, interconnectedness, constant feedback loops,
-     repetition, self-similarity, fractals, and self-organization. In simple
+     repetition, self-similarity, fractals, and self-organization" (Fractal Foundation). In simple
       terms, even though these systems may appear unpredictable, they follow
        deeper rules. Small changes in initial conditions can lead to drastically
         different outcomes as time progresses, making long-term prediction 
@@ -185,7 +187,7 @@
       <p class="equation">y<sub>1</sub>’ = L<sub>1</sub>sinΘ<sub>1</sub></p>
       <p class="equation">x<sub>2</sub>’ = x<sub>1</sub>’ + L<sub>2</sub>cosΘ<sub>2</sub></p>
       <p class="equation">y<sub>2</sub>’ = y<sub>1</sub>’ +  L<sub>2</sub>sinΘ<sub>2</sub></p>
-      <p>In order to calculate the change in the Θ values, we are going to be using a Lagrangian. The Lagrangian describes a system in terms of its kinetic and potential energy, and is founded on the principle of least action. The formula for the Lagrangian is written as:</p>
+      <p>In order to calculate the change in the Θ values, we are going to be using a <b>Lagrangian</b>. The Lagrangian describes a system in terms of its kinetic and potential energy, and is founded on the principle of least action. The formula for the Lagrangian is written as:</p>
       <p class="equation"><b>L = T - V</b></p>
       <p>In words, the Lagrangian equals the kinetic energy (T) minus the potential energy (V) within the system. This means the next step is to solve for T and V:</p>
       <p class="equation space">T = 1/2m<sub>1</sub>(x<sub>1</sub>'<sup>2</sup>+y<sub>1</sub>'<sup>2</sup>) + 1/2m<sub>2</sub>(x<sub>2</sub>'<sup>2</sup>+y<sub>2</sub>'<sup>2</sup>)</p>
@@ -201,20 +203,73 @@
       <p class="equation space">ML<sub>1</sub>Θ<sub>1</sub>'' + m<sub>2</sub>L<sub>2</sub>Θ<sub>2</sub>''cos∆Θ+m<sub>2</sub>L<sub>2</sub>Θ'<sup>2</sup>sin∆Θ+MgsinΘ<sub>1</sub> = 0</p>
       <p class="equation space">L<sub>1</sub>Θ<sub>1</sub>''cos∆Θ+L<sub>2</sub>Θ<sub>2</sub>''-L<sub>1</sub>Θ<sub>1</sub><sup>2</sup>sin∆Θ+gsinΘ<sub>2</sub>=0</p>
       <p>These equations cannot be solved like a linear equation. We can break it down by setting m2=0, L2=0 and Θ1 = Θ2. After rearranging, we can get the angular acceleration for both theta values. </p>
-      <p class="equation space">Θ<sub>1</sub>''=[-sin∆Θ(m<sub>2</sub>L<sub>2</sub>Θ<sub>1</sub>'<sup>2</sup>cos∆Θ+m<sub>2</sub>L2Θ<sub>2</sub><sup>2</sup>)-g(MsinΘ<sub>1</sub>-m<sub>2</sub>sinΘ<sub>2</sub>cos∆Θ)]/L<sub>1</sub>ɑ</p>
+      <p class="equation space">Θ<sub>1</sub>''=[-sin∆Θ(m<sub>2</sub>L<sub>2</sub>Θ<sub>1</sub>'<sup>2</sup>cos∆Θ+m<sub>2</sub>L<sub>2</sub>Θ<sub>2</sub><sup>2</sup>)-g(MsinΘ<sub>1</sub>-m<sub>2</sub>sinΘ<sub>2</sub>cos∆Θ)]/L<sub>1</sub>ɑ</p>
       <p class="equation space">Θ<sub>2</sub>'' = [+sin∆Θ(ML<sub>1</sub>Θ<sub>1</sub>’<sup>2</sup>+m<sub>2</sub>L<sub>2</sub>Θ<sub>2</sub>'<sup>2</sup>cos∆Θ)+g(MsinΘ<sub>1</sub>cos∆Θ-MsinΘ<sub>2</sub>)]/L<sub>2</sub>ɑ</p>
       <p>where ɑ = m<sub>1</sub> + m<sub>2</sub>sin<sup>2</sup>∆Θ</p>
       <p>These are now all the equations that were used for the program, with the primary being the Euler-Lagrange equations for the angular acceleration.</p>
-      <h2>How my Program Works</h2>
+      <h2>My Program</h2>
+      <p>This project simulates the motion of a double pendulum using JavaScript and the p5.js library.
+        The program is built around the physical model of a double pendulum: two rods connected end-to-end, swinging under the influence of gravity. To calculate the motion, I used the standard equations for a double pendulum's angular accelerations.
+        </p>
+        
+      <h3>Input Handling:</h3>
+      <p> The program uses sliders to collect user input for:</p>
+      <p class="center space">Lengths of the rods (L<sub>1</sub>, L<sub>2</sub>)</p>
+      <p class="center">Masses of the pendulums (m<sub>1</sub>, m<sub>2</sub>)</p>
+      <h3>Pendulum Class:</h3>
+      <p> These values are passed into a <b>Pendulum class</b>, which initializes the angular positions:</p>
+      <p class="center padding-top">Θ₁ is set to π/2 radians (90°)</p>
+      <p class="center space">Θ₂ is set to π/4 radians (45°)</p>
+      <p>For each new Pendulum object created, Θ₁ is slightly offset by <b>0.001 degrees</b> to visualize how small differences in starting conditions can lead to dramatically different motion — a feature of chaotic systems.</p>
+      <h3>Calculating Motion:</h3>
+      <p> Inside the class, I calculate the angular acceleration (Θ″) based on the current positions and velocities. Then, at every frame:</p>
+        <p class="center">Update angular velocity (Θ′) by adding the angular acceleration</p>
+        <p class="center space">Update angular position (Θ) by adding the angular velocity</p>
+        <p class="center">Use the updated Θ₁ and Θ₂ to compute the (x, y) positions:</p>
+        <p class="center space">(x₁, y₁) for the first mass</p>
+        <p class="center">(x₂, y₂) for the second mass</p>
+      <h3>Visualization: </h3>
+      <p> Using <b>p5.js</b>, I draw lines connecting:</p>
+      <p class="center space">The fixed point (x₀, y₀) to the first mass (x₁, y₁)</p>
+      <p class = "center">The first mass (x₁, y₁) to the second mass (x₂, y₂)</p>
+      <p class="padding-top">This real-time drawing creates a smooth animation of the double pendulum swinging chaotically over time.
+        We are able to see the trail of the pendulum by changing the opacity of the background, which results in more frames being needed to cover up previous drawings. 
+        </p>
+        <p class="padding-top">Note: A double pendulum experiences air resistance and friction at the pivots, resulting in imperfect energy transfer and gradual energy loss over time.
+          This program models the idealized case, focusing solely on the pendulum’s motion without accounting for these dissipative effects.
+        </p>
+
+
+
 
 
   <h2 class="center">Applications of Chaos Theory</h2>
   <p>The findings in Chaos Theory have many real world applications. 
     Many of the systems we use in our day-to-day lives are chaotic, unpredictable, and 
     reliant on initial conditions. Examples include weather patterns, economics, and artificial 
-    intelligence. The goal of using Chaos Theory in these fields is to find order in messy systems 
-    (Geeks for Geeks).</p>
-</body>
+    intelligence. The goal of using Chaos Theory in these fields is to find order in messy systems.</p>
+    <h3>Weather and Climate Predictions</h3>
+    <img class ="floatImage" src="../Images/forecastModel.gif"   alt="Weather Forecast">
+
+    <p>As the Lorenz Attractor demonstrates, weather patterns are extremely sensitive to changes in initial conditions, and small errors can snowball into vastly different weather outcomes. This sensitivity has shaped how meteorologists predict weather today. Forecasts have a limited window of accuracy, typically about 10 days, because small measurement errors compound over time. Beyond that window, predictions become increasingly unreliable, and new calculations based on updated measurements must be made. For long-term weather forecasting, meteorologists rely more on statistical models based on historical data. For example, by analyzing temperature averages from the past 10 years, we can estimate what conditions might be like six months from now. However, such predictions are broad trends rather than precise forecasts, and they are refined as the specific date approaches and more current data becomes available (Buizza).</p>
+    <h3>Machine Learning Models</h3>
+    <p>Although Chaos Theory can connect to a vast number of fields, the last one I want to dive into is Machine Learning (I have a bias toward this topic). When reading about Chaos Theory, I was surprised that a machine learning model could even fall into the realm of deterministic chaos. After all, is it really deterministic? How can we consistently determine an output if we do not fully understand how a neural network reacts to an input, even when we have an expected output?
+    </p>
+    <img class ="floatImage" src="../Images/lossLandscape.png"   alt="Loss Landscape">
+
+    <p class="padding-top">This brings me back to Lorenz’s famous quote: “When the present determines the future, but the approximate present does not approximately determine the future.” Even if we know the present (the input), can we definitively understand what happens inside the complex inner workings of a large-scale machine learning model? This uncertainty is especially true during the training process.
+    </p>
+    <p class="padding-top">While exploring this idea, I found a visual representation of a <b>loss landscape</b>. The loss landscape maps the model’s error during training: peaks represent high levels of error, and valleys represent low levels of error. (It looks like it could appear in a National Geographic magazine!) During training, the goal is to navigate this landscape and reach the valleys of low error, often by following <b>gradient vectors</b>, which point toward the steepest descent. However, even slight changes or errors in the data can steer the model along a different path, potentially trapping it in a suboptimal valley. This process can be considered chaotic, as small changes early on can dramatically alter the model’s eventual performance (Salinas).
+    </p>
+    <p class="padding-top">Extending beyond training, once a machine learning model is fully trained and consistently accurate, it tends to behave more deterministically (this is ignoring models that intentionally produce some randomness). In this case, inputs produce consistent outputs with little variance, and the model’s behavior no longer appears chaotic. However, Chaos Theory remains important in this field because it highlights the consequences of improper training; it reinforces the idea that we want to avoid models that are overly sensitive to their inputs. </p>
+
+    <h2>Conclusion/Reflection</h2>
+    <p class="padding-bottom">Chaos Theory is deeply tied with many complex systems we rely on daily. It not only helps us predict and understand chaotic behavior, but also plays a crucial role in preventing the development of unstable models, such as certain machine learning systems. Through the two projects I completed, I gained valuable insight into the fascinating mathematics underlying these models. I especially enjoyed observing how a tiny change, just 0.001, in the input could lead to a drastically different output. This project has significant potential for further exploration; I’m particularly interested in diving into topics like the Arnold Cat Map next.</p>
+
+
+
+
+  </body>
 
 
 
