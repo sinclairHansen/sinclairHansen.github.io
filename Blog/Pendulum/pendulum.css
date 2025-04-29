@@ -1,6 +1,7 @@
 body{
-    background-color: #4a4e4d;
-    font-family: 'Courier New', Courier, monospace;
+  background-image: url('../../Images/blueGradient.jpg');
+
+    font-family:'Calibri', 'Lucida Grande', sans-serif;
     h1{
       padding-top:5%;
     }
@@ -9,61 +10,26 @@ body{
     margin-left:25%;
     float:center;
   }
-    .simBox{
-        float:left;
-        width: 500px;
-        border: 15px solid #3da4ab;
-        margin-left:10%;
-        align-items: center;
-        background-color: white;
-      }
 
       .valueBox{
-        float:right;
-        width: 40%;
+        float: center;
+        margin:auto;
+        width: 90%;
         height:30%;
-        border: 15px solid #fe8a71;
+        border: 15px solid #70aec8;
         padding-bottom:2%;
         align-items: center;
         background-color: white;
       }
-      /* This is going to change the sizing and orientation of boxes based on
-      screen size */
-      @media screen and (max-width: 1150px) {
-        .simBox{
-          width: 500px;
-          float:center;
-          
-        }
-        .valueBox{
-          width:90%;
-          float:left;
-          padding-left:5%;
 
-        }
-      }
-      @media screen and (max-width: 1000px) {
-        .simBox{
-          width:100%;
-          align-items:left;
-          width: 0px;
-          float:left;
-          border:none;
-          padding-right:10%;
-          padding-left:0%;
-          
-        }
-        .cancelBox{
-          display:none;
-        }
-
-      }
       h2{
         text-align: center;
-        color: #4a4e4d;
+        color: #000000;
+        padding-top:2%;
+        padding-bottom: 2%;
       }
       h3{margin-left: 2%;
-      color: #4a4e4d;}
+      color: #000000;}
       .button {
         background-color: #3da4ab;
         border: none;
@@ -80,7 +46,9 @@ body{
         align-items: center;
       }
       .slidecontainer {
-        width: 100%; /* Width of the outside container */
+        width: 80%; /* Width of the outside container */
+        float:center;
+        margin:auto;
       }
       
       /* The slider itself */
@@ -94,15 +62,17 @@ body{
         opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
         -webkit-transition: .2s; /* 0.2 seconds transition on hover */
         transition: opacity .2s;
+
       }
       @media screen and (max-width: 800px) {
 
           .slider{
             height: 3rem;
+            width:98%;
 
           }
           .slidercontainer{
-            width:90%;
+            width:100%;
           }
           h3{
             font-size: 30px;
@@ -141,9 +111,19 @@ body{
 header{
     text-align: center;
   h1{
-        color: white;
+        color: rgb(0, 0, 0);
         padding-bottom:5%;
     }
   }
+  canvas {
+    padding-top:3%;
+    padding-bottom:3%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 800px;
+}
   
       }
