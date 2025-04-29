@@ -115,16 +115,18 @@ header{
         padding-bottom:5%;
     }
   }
-  canvas {
-    align-items: center;
-    padding-top:3%;
-    padding-bottom:3%;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: 800px;
-}
-  
+
+
       }
+
+      canvas {
+        align-items: center;
+        padding-top:3%;
+        padding-bottom:3%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 800px;
+    }
