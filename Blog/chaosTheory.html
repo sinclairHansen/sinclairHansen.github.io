@@ -130,10 +130,10 @@
       <p class = "equation">y<sub>2</sub> = y<sub>1</sub> - L<sub>2</sub>cosΘ<sub>2</sub></p>
       <p>Now we will need the derivatives of each coordinate. Derivative is denoted with a dot:
       </p>
-      <p class="equation">x&#x0307;<sub>1</sub> = L<sub>1</sub>θ&#x0307;cosΘ<sub>1</sub></p>
-      <p class="equation">y&#x0307;<sub>1</sub> = L<sub>1</sub>θ&#x0307;sinΘ<sub>1</sub></p>
-      <p class="equation">x&#x0307;<sub>2</sub> = x&#x0307;<sub>1</sub> + L<sub>2</sub>θ&#x0307;cosΘ<sub>2</sub></p>
-      <p class="equation">y&#x0307;<sub>2</sub> = y&#x0307;<sub>1</sub> +  L<sub>2</sub>θ&#x0307;sinΘ<sub>2</sub></p>
+      <p class="equation">x&#x0307;<sub>1</sub> = L<sub>1</sub>θ&#x0307;<sub>1</sub>cosΘ<sub>1</sub></p>
+      <p class="equation">y&#x0307;<sub>1</sub> = L<sub>1</sub>θ&#x0307;<sub>1</sub>sinΘ<sub>1</sub></p>
+      <p class="equation">x&#x0307;<sub>2</sub> = x&#x0307;<sub>1</sub> + L<sub>2</sub>θ&#x0307;<sub>2</sub>cosΘ<sub>2</sub></p>
+      <p class="equation">y&#x0307;<sub>2</sub> = y&#x0307;<sub>1</sub> +  L<sub>2</sub>θ&#x0307;<sub>2</sub>sinΘ<sub>2</sub></p>
       <p>To calculate the change in the Θ values, we are going to be using a <b>Lagrangian</b>. The Lagrangian describes a system in terms of its kinetic and potential energy and is founded on the principle of least action. The formula for the Lagrangian is written as:</p>
       <p class="equation"><b>L = T - V</b></p>
       <p>In other words, the Lagrangian equals the kinetic energy (T) minus the potential energy (V) within the system. This means the next step is to solve for T and V:</p>
@@ -159,12 +159,12 @@
 
 
 
-      <p>We will now apply the Euler-Lagrange equations with respect to Θ1 and Θ2. This will allow us to get the angular acceleration. This equation will be one of the most important components of the program. </p>
+      <p>We will now apply the Euler-Lagrange equations with respect to Θ<sub>1</sub> and Θ<sub>2</sub>. This will allow us to get the angular acceleration. This equation will be one of the most important components of the program. </p>
 
 
       <p class="equation space">(m<sub>1</sub> + m<sub>2</sub>)L<sub>1</sub>θ&#x0308;<sub>1</sub> + m<sub>2</sub>L<sub>2</sub>θ&#x0308;<sub>2</sub>cos(θ<sub>1</sub> - θ<sub>2</sub>) + m<sub>2</sub>L<sub>2</sub>θ&#x0307;<sub>2</sub><sup>2</sup>sin(θ<sub>1</sub> - θ<sub>2</sub>) + (m<sub>1</sub> + m<sub>2</sub>)gsinθ<sub>1</sub> = 0</p>
       <p class="equation space">m<sub>2</sub>L<sub>2</sub>θ&#x0308;<sub>2</sub><sup>2</sup> + m<sub>2</sub>L<sub>1</sub>θ&#x0308;<sub>1</sub>cos(θ<sub>1</sub> - θ<sub>2</sub>) + m<sub>2</sub>L<sub>1</sub>θ&#x0307;<sub>1</sub><sup>2</sup>sin(θ<sub>1</sub> - θ<sub>2</sub>) + m<sub>2</sub>gsinθ<sub>2</sub> = 0</p>
-      <p>These equations cannot be solved like a linear equation. We can break it down by setting m2 = 0, L2 = 0 and Θ1 = Θ2. After rearranging, we can get the angular acceleration for both theta values. </p>
+      <p>These equations cannot be solved like a linear equation. We can break it down by setting m2 = 0, L2 = 0 and Θ<sub>1</sub> = Θ<sub>2</sub>. After rearranging, we can get the angular acceleration for both theta values. </p>
       
       <!--THETA 1 AND THETA 2 ACCELERATIONS-->
       <p>
@@ -252,7 +252,8 @@
   <p class="hang">2. Halton, C. (n.d.). Chaos theory: What it is, history, and example. Investopedia.</p>
   <p class="hang">3. Wikimedia Foundation. (2025b, April 22). Lorenz System. Wikipedia. https://en.wikipedia.org/wiki/Lorenz_system</p>
   <p class="hang">4. Kastorf, J. (n.d.). The Lorenz Attractor Explained. YouTube. https://www.youtube.com/watch?v=VjP90rwpBwU</p>
-  <p class="hang">5. Double Pendulum. Double pendulum. (n.d.). https://physics.umd.edu/hep/drew/pendulum2.html</p>
+  <p class="hang">5. Good Vibrations with Freeball. (n.d.). Equations of Motion for the Double Pendulum (2DOF) Using Lagrange’s Equations.</p>
+  <p class="indent">YouTube. https://www.youtube.com/watch?v=tc2ah-KnDXw </p>
   <p class="hang">6. Buizza, R., & Chessa, P. (2002). Prediction of the U.S. storm of 24–26 January 2000 with the ECMWF Ensemble Prediction System. Monthly Weather Review, 130(6), 1531–1551.</p>
   <p class="hang">7. Salinas, A., & Morstatter, F. (2024, April 1). The butterfly effect of altering prompts: How small changes and jailbreaks affect large language model performance. arXiv.org. https://arxiv.org/abs/2401.03729</p>
 
@@ -260,6 +261,8 @@
   <p class="hang">Buizza, R., & Chessa, P. (2002). Prediction of the U.S. storm of 24–26 January 2000 with the ECMWF Ensemble Prediction System. Monthly Weather Review, 130(6), 1531–1551.</p>
   <p class="indent">https://doi.org/10.1175/1520-0493(2002)130&lt;1531:potuss&gt;2.0.co;2 </p>
   <p class="hang">Double Pendulum. Double pendulum. (n.d.). https://physics.umd.edu/hep/drew/pendulum2.html </p>
+  <p class="hang">Good Vibrations with Freeball. (n.d.). Equations of Motion for the Double Pendulum (2DOF) Using Lagrange’s Equations.</p>
+  <p class="indent">YouTube. https://www.youtube.com/watch?v=tc2ah-KnDXw </p>
   <p class="hang">Halton, C. (n.d.). Chaos theory: What it is, history, and example. Investopedia.  </p>
   <p class="indent">https://www.investopedia.com/terms/c/chaostheory.asp</p>
   <p class="hang">Kastorf, J. (n.d.). The Lorenz Attractor Explained. YouTube. https://www.youtube.com/watch?v=VjP90rwpBwU </p>
