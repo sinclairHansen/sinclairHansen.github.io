@@ -146,6 +146,7 @@
       background-image: url("blueGradient.jpg");
       background-size:cover;
       background-repeat: no-repeat;
+      
       p{
         width: 60%;
         float:center;
@@ -292,6 +293,11 @@
           .padding-bottom{
             padding-bottom: 3%;
           }
+          @media screen and (min-width: 1150px) and (max-width: 1650px){
+            .bigEq{
+              font-size:1em;
+              }
 
     
     }
+  }

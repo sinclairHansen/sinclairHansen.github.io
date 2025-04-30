@@ -158,16 +158,22 @@
 
 
 
+      <img class ="floatImage" src="../Images/EulerLagrange.png"   alt="EULER"
+      height="200px"
+      width="300px">
 
-      <p>We will now apply the Euler-Lagrange equations with respect to Θ<sub>1</sub> and Θ<sub>2</sub>. This will allow us to get the angular acceleration. This equation will be one of the most important components of the program. </p>
+      <p>We will now apply the Euler-Lagrange equations with respect to Θ<sub>1</sub> and Θ<sub>2</sub>. The formula states that total time derivative of how the Lagrangian depends on velocity
+        minus
+        how it depends on position
+        must equal zero. This will allow us to get the angular acceleration. This equation will be one of the most important components of the program. </p>
 
 
       <p class="equation space">(m<sub>1</sub> + m<sub>2</sub>)L<sub>1</sub>θ&#x0308;<sub>1</sub> + m<sub>2</sub>L<sub>2</sub>θ&#x0308;<sub>2</sub>cos(θ<sub>1</sub> - θ<sub>2</sub>) + m<sub>2</sub>L<sub>2</sub>θ&#x0307;<sub>2</sub><sup>2</sup>sin(θ<sub>1</sub> - θ<sub>2</sub>) + (m<sub>1</sub> + m<sub>2</sub>)gsinθ<sub>1</sub> = 0</p>
       <p class="equation space">m<sub>2</sub>L<sub>2</sub>θ&#x0308;<sub>2</sub><sup>2</sup> + m<sub>2</sub>L<sub>1</sub>θ&#x0308;<sub>1</sub>cos(θ<sub>1</sub> - θ<sub>2</sub>) + m<sub>2</sub>L<sub>1</sub>θ&#x0307;<sub>1</sub><sup>2</sup>sin(θ<sub>1</sub> - θ<sub>2</sub>) + m<sub>2</sub>gsinθ<sub>2</sub> = 0</p>
-      <p>These equations cannot be solved like a linear equation. We can break it down by setting m2 = 0, L2 = 0 and Θ<sub>1</sub> = Θ<sub>2</sub>. After rearranging, we can get the angular acceleration for both theta values. </p>
+      <p>The last step is to get the explicit equations for θ&#x0308;<sub>1</sub> and θ&#x0308;<sub>2</sub> using the Euler-Lagrange equations.</sub>  </p>
       
       <!--THETA 1 AND THETA 2 ACCELERATIONS-->
-      <p>
+      <p class="bigEq">
         $$ 
         \ddot{\theta}_1 = \frac{
           -\sin(\Delta\theta)\left(m_2 L_1 \dot{\theta}_1^2 \cos(\Delta\theta) + m_2 L_2 \dot{\theta}_2^2 \right)
@@ -177,7 +183,7 @@
         }
         $$
       </p>
-      <p>
+      <p class="bigEq">
         $$
         \ddot{\theta}_2 = \frac{
           \sin(\Delta\theta) \left((m_1 + m_2)L_1 \dot{\theta}_1^2 + m_2 L_2 \dot{\theta}_2^2 \cos(\Delta\theta)\right)
@@ -239,7 +245,7 @@
     </p>
     <p class="padding-top">Although machine learning models are not typically considered deterministic chaotic systems, the concepts from Chaos Theory offer valuable insights into their training dynamics. Being mindful of overly sensitive models, and recognizing how minor changes in data or initialization can impact training, is essential for building robust and generalizable systems.</p>
 
-    <h2 class="center padding-bottom">Conclusion/Reflection</h2>
+    <h3 class="center padding-bottom">Conclusion/Reflection</h3>
     <p class="padding-bottom">Chaos Theory is deeply tied with many complex systems we rely on daily. It not only helps us predict and understand chaotic behavior, but also plays a crucial role in preventing the development of unstable models, such as certain machine learning systems. Through the two projects I completed, I gained valuable insight into the fascinating mathematics underlying these models. I especially enjoyed observing how a tiny change, just 0.001, in the input could lead to a drastically different output. This project has significant potential for further exploration; I’m particularly interested in diving into topics like  Arnold's Cat Map next.</p>
 
 
