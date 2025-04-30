@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sinclair Hansen </title>
   <link rel="icon" type="image/x-icon" href="../Images/Favicon.png">
-
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
   <meta name="description" content="Sinclair Hansen's Epic Portfolio">
   <script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/addons/p5.sound.min.js"></script>
@@ -125,31 +128,66 @@
       <p class="equation">y<sub>1</sub> = -L<sub>1</sub>cosΘ<sub>1</sub></p>
       <p class="equation">x<sub>2</sub> = x<sub>1</sub> + L<sub>2</sub>sinΘ<sub>2</sub></p>
       <p class = "equation">y<sub>2</sub> = y<sub>1</sub> - L<sub>2</sub>cosΘ<sub>2</sub></p>
-      <p>Now we will need the derivatives of each coordinate. Derivative is denoted with an apostrophe:
+      <p>Now we will need the derivatives of each coordinate. Derivative is denoted with a dot:
       </p>
-      <p class="equation">x&#x0307;<sub>1</sub> = L<sub>1</sub>cosΘ<sub>1</sub></p>
-      <p class="equation">y&#x0307;<sub>1</sub> = L<sub>1</sub>sinΘ<sub>1</sub></p>
-      <p class="equation">x&#x0307;<sub>2</sub> = x&#x0307;<sub>1</sub> + L<sub>2</sub>cosΘ<sub>2</sub></p>
-      <p class="equation">y&#x0307;<sub>2</sub> = y&#x0307;<sub>1</sub> +  L<sub>2</sub>sinΘ<sub>2</sub></p>
+      <p class="equation">x&#x0307;<sub>1</sub> = L<sub>1</sub>θ&#x0307;cosΘ<sub>1</sub></p>
+      <p class="equation">y&#x0307;<sub>1</sub> = L<sub>1</sub>θ&#x0307;sinΘ<sub>1</sub></p>
+      <p class="equation">x&#x0307;<sub>2</sub> = x&#x0307;<sub>1</sub> + L<sub>2</sub>θ&#x0307;cosΘ<sub>2</sub></p>
+      <p class="equation">y&#x0307;<sub>2</sub> = y&#x0307;<sub>1</sub> +  L<sub>2</sub>θ&#x0307;sinΘ<sub>2</sub></p>
       <p>To calculate the change in the Θ values, we are going to be using a <b>Lagrangian</b>. The Lagrangian describes a system in terms of its kinetic and potential energy and is founded on the principle of least action. The formula for the Lagrangian is written as:</p>
       <p class="equation"><b>L = T - V</b></p>
       <p>In other words, the Lagrangian equals the kinetic energy (T) minus the potential energy (V) within the system. This means the next step is to solve for T and V:</p>
-      <p class="equation space">T = 1/2m<sub>1</sub>(x&#x0307;<sub>1</sub><sup>2</sup>+y&#x0307;<sub>1</sub><sup>2</sup>) + 1/2m<sub>2</sub>(x&#x0307;<sub>2</sub><sup>2</sup> + y&#x0307;<sub>2</sub><sup>2</sup>)</p>
-      <p class="space">Simplify.</p>
-      <p class="equation">T = 1/2ML<sub>1</sub><sup>2</sup>θ&#x0307;<sub>1</sub><sup>2</sup> + 1/2m<sub>2</sub> L<sub>2</sub><sup>2</sup>θ&#x0307;<sub>2</sub><sup>2</sup> + m<sub>2</sub>L<sub>1</sub>L<sub>2</sub>θ&#x0307;<sub>1</sub>θ&#x0307;<sub>2</sub>cos∆Θ</p>
-      <p class="equation space">where M = m<sub>1</sub> + m<sub>2</sub> and ∆Θ = Θ<sub>1</sub> - Θ<sub>2</sub></p>
+      <p class="equation space">T = <sup>1</sup>&frasl;<sub>2</sub>m<sub>1</sub>(x&#x0307;<sub>1</sub><sup>2</sup>+y&#x0307;<sub>1</sub><sup>2</sup>) + <sup>1</sup>&frasl;<sub>2</sub>m<sub>2</sub>(x&#x0307;<sub>2</sub><sup>2</sup> + y&#x0307;<sub>2</sub><sup>2</sup>)</p>
+      <p class="space">Expand.</p>
+      <p class="equation">T = <sup>1</sup>&frasl;<sub>2</sub>m<sub>1</sub>[L<sub>1</sub><sup>2</sup>θ&#x0307;<sub>1</sub><sup>2</sup>(cos<sup>2</sup>θ<sub>1</sub> + sin<sup>2</sup>θ<sub>1</sub>)] + <sup>1</sup>&frasl;<sub>2</sub>m<sub>2</sub>[(L<sub>1</sub>θ&#x0307;<sub>1</sub>cosθ<sub>1</sub> + L<sub>2</sub>θ&#x0307;<sub>2</sub>cosθ<sub>2</sub>)<sup>2</sup> + (L<sub>1</sub>θ&#x0307;<sub>1</sub>sinθ<sub>1</sub> + L<sub>2</sub>θ&#x0307;<sub>2</sub>sinθ<sub>2</sub>)<sup>2</sup>]</p>
+      <p>Simplify. Key Identities: sin<sup>2</sup>θ + cos<sup>2</sup>θ = 1 and cosθ<sub>1</sub>cosθ<sub>2</sub> + sinθ<sub>1</sub>sinθ<sub>2</sub> = cos(θ<sub>1</sub> - θ<sub>2)</sub></p>
+
+
+      <p class="equation center"><b>T = <sup>1</sup>&frasl;<sub>2</sub>m<sub>1</sub>L<sub>1</sub><sup>2</sup>θ&#x0307;<sub>1</sub><sup>2</sup> + <sup>1</sup>&frasl;<sub>2</sub>m<sub>2</sub>(L<sub>1</sub>θ&#x0307;<sub>1</sub><sup>2</sup> + L<sub>2</sub><sup>2</sup>θ&#x0307;<sub>2</sub><sup>2</sup> + 2L<sub>1</sub>L<sub>2</sub>θ&#x0307;<sub>1</sub>θ&#x0307;<sub>2</sub>cos(θ<sub>1</sub> - θ<sub>2</sub>))</p></b>
+
+
+
       <p class="equation">V = m<sub>1</sub>gy<sub>1</sub> + m<sub>2</sub>gy<sub>2</sub></p>
-      <p>This reduces to:</p>
-      <p class="equation">V = -MgL<sub>1</sub>cosΘ<sub>1</sub> - m<sub>2</sub>gL<sub>2</sub>cosΘ<sub>2</sub></p>
+
+      <p>This can be rewritten as:</p>
+      <p class="equation"><b>V = -(m<sub>1</sub> + m<sub>2</sub>)gL<sub>1</sub>cosθ<sub>1</sub> - m<sub>2</sub>gL<sub>2</sub>cosθ<sub>2</sub></p></b>
       <p>Now lets sub this information into the Lagrangian (L = T - V):</p>
-      <p class="equation space">L =  1/2ML<sub>1</sub><sup>2</sup>θ&#x0307;<sub>1</sub><sup>2</sup> + 1/2m<sub>2</sub>L<sub>2</sub><sup>2</sup>θ&#x0307;<sub>2</sub><sup>2</sup> + m<sub>2</sub>L<sub>1</sub>L<sub>2</sub>θ&#x0307;<sub>1</sub>θ&#x0307;<sub>2</sub>cos∆Θ + MgL<sub>1</sub>cosΘ<sub>1</sub>  + m<sub>2</sub>gL<sub>2</sub>cosΘ<sub>2</sub> </p>
+
+
+      <p class="equation space">L = <sup>1</sup>&frasl;<sub>2</sub>m<sub>1</sub>L<sub>1</sub><sup>2</sup>θ&#x0307;<sub>1</sub><sup>2</sup> + <sup>1</sup>&frasl;<sub>2</sub>m<sub>2</sub>(L<sub>1</sub>θ&#x0307;<sub>1</sub><sup>2</sup> + L<sub>2</sub><sup>2</sup>θ&#x0307;<sub>2</sub><sup>2</sup> + 2L<sub>1</sub>L<sub>2</sub>θ&#x0307;<sub>1</sub>θ&#x0307;<sub>2</sub>cos(θ<sub>1</sub> - θ<sub>2</sub>)) + (m<sub>1</sub> + m<sub>2</sub>)gL<sub>1</sub>cosθ<sub>1</sub> + m<sub>2</sub>gL<sub>2</sub>cosθ<sub>2</sub></p>
+
+
+
+
       <p>We will now apply the Euler-Lagrange equations with respect to Θ1 and Θ2. This will allow us to get the angular acceleration. This equation will be one of the most important components of the program. </p>
-      <p class="equation space">ML<sub>1</sub>θ&#x0308;<sub>1</sub> + m<sub>2</sub>L<sub>2</sub>θ&#x0308;<sub>2</sub>cos∆Θ + m<sub>2</sub>L<sub>2</sub>θ&#x0307;<sup>2</sup>sin∆Θ + MgsinΘ<sub>1</sub> = 0</p>
-      <p class="equation space">L<sub>1</sub>θ&#x0308;<sub>1</sub>cos∆Θ + L<sub>2</sub>θ&#x0308;<sub>2</sub> - L<sub>1</sub>θ&#x0307;<sub>1</sub><sup>2</sup>sin∆Θ + gsinΘ<sub>2</sub> = 0</p>
-      <p>These equations cannot be solved like a linear equation. We can break it down by setting m2=0, L2=0 and Θ1 = Θ2. After rearranging, we can get the angular acceleration for both theta values. </p>
-      <p class="equation space">θ&#x0308;<sub>1</sub> =[-sin∆Θ(m<sub>2</sub>L<sub>1</sub>θ&#x0307;<sub>1</sub><sup>2</sup>cos∆Θ + m<sub>2</sub>L<sub>2</sub>θ&#x0307;<sub>2</sub><sup>2</sup>) - g(MsinΘ<sub>1</sub> - m<sub>2</sub>sinΘ<sub>2</sub>cos∆Θ)]/L<sub>1</sub>ɑ</p>
-      <p class="equation space">θ&#x0308;<sub>2</sub> = [+sin∆Θ(ML<sub>1</sub>θ&#x0307;<sub>1</sub><sup>2</sup> + m<sub>2</sub>L<sub>2</sub>θ&#x0307;<sub>2</sub><sup>2</sup>cos∆Θ)+g(MsinΘ<sub>1</sub>cos∆Θ - MsinΘ<sub>2</sub>)]/L<sub>2</sub>ɑ</p>
-      <p>where ɑ = m<sub>1</sub> + m<sub>2</sub>sin<sup>2</sup>∆Θ</p>
+
+
+      <p class="equation space">(m<sub>1</sub> + m<sub>2</sub>)L<sub>1</sub>θ&#x0308;<sub>1</sub> + m<sub>2</sub>L<sub>2</sub>θ&#x0308;<sub>2</sub>cos(θ<sub>1</sub> - θ<sub>2</sub>) + m<sub>2</sub>L<sub>2</sub>θ&#x0307;<sub>2</sub><sup>2</sup>sin(θ<sub>1</sub> - θ<sub>2</sub>) + (m<sub>1</sub> + m<sub>2</sub>)gsinθ<sub>1</sub> = 0</p>
+      <p class="equation space">m<sub>2</sub>L<sub>2</sub>θ&#x0308;<sub>2</sub><sup>2</sup> + m<sub>2</sub>L<sub>1</sub>θ&#x0308;<sub>1</sub>cos(θ<sub>1</sub> - θ<sub>2</sub>) + m<sub>2</sub>L<sub>1</sub>θ&#x0307;<sub>1</sub><sup>2</sup>sin(θ<sub>1</sub> - θ<sub>2</sub>) + m<sub>2</sub>gsinθ<sub>2</sub> = 0</p>
+      <p>These equations cannot be solved like a linear equation. We can break it down by setting m2 = 0, L2 = 0 and Θ1 = Θ2. After rearranging, we can get the angular acceleration for both theta values. </p>
+      
+      <!--THETA 1 AND THETA 2 ACCELERATIONS-->
+      <p>
+        $$ 
+        \ddot{\theta}_1 = \frac{
+          -\sin(\Delta\theta)\left(m_2 L_1 \dot{\theta}_1^2 \cos(\Delta\theta) + m_2 L_2 \dot{\theta}_2^2 \right)
+          - g \left((m_1 + m_2)\sin\theta_1 - m_2 \sin\theta_2 \cos(\Delta\theta)\right)
+        }{
+          L_1 \left(m_1 + m_2 \sin^2(\Delta\theta)\right)
+        }
+        $$
+      </p>
+      <p>
+        $$
+        \ddot{\theta}_2 = \frac{
+          \sin(\Delta\theta) \left((m_1 + m_2)L_1 \dot{\theta}_1^2 + m_2 L_2 \dot{\theta}_2^2 \cos(\Delta\theta)\right)
+          + g \left((m_1 + m_2)\sin\theta_1 \cos(\Delta\theta) - (m_1 + m_2) \sin\theta_2\right)
+        }{
+          L_2 \left(m_1 + m_2 \sin^2(\Delta\theta)\right)
+        }
+        $$
+      </p>
+      <p>Where ∆Θ = Θ<sub>1</sub> - Θ<sub>2</sub></p>
       <p>These are now all the equations used for the program, with the primary being the Euler-Lagrange equations for the angular acceleration.</p>
       <h2>My Program</h2>
       <p>This project simulates the motion of a double pendulum using JavaScript and the p5.js library. The program is built around the physical model of a double pendulum: two rods connected end-to-end, swinging under the influence of gravity. To calculate the motion, I used the standard equations for a double pendulum's angular accelerations.
