@@ -74,7 +74,7 @@
   <h2>Introduction to Chaos Theory</h2>
   <h3>“The flap of a butterfly’s wings in Brazil can lead to a hurricane in Texas.”</h3>
   <p>While not meant to be taken literally, this metaphor captures the essence of <b>Chaos Theory</b>: small changes in a system's initial conditions can lead to large and unpredictable outcomes. This idea, often called the butterfly effect, lies at the heart of chaos theory and highlights the sensitive dependence on initial conditions seen in many natural and mathematical systems.</p>
-  <p class="space">Chaos Theory states that "within the apparent randomness of chaotic, complex systems, there are underlying patterns, interconnectedness, constant feedback loops, repetition, self-similarity, fractals, and self-organization"<sup>[1]</sup>. In simple terms, even though these systems may appear unpredictable, they follow deeper rules. Small changes in initial conditions can lead to drastically different outcomes as time progresses, making long-term prediction extremely difficult.</p>
+  <p class="space">Chaos Theory states that "within the apparent randomness of chaotic, complex systems, there are underlying patterns, interconnectedness, constant feedback loops, repetition, self-similarity, fractals, and self-organization."<sup>[1]</sup> In simple terms, even though these systems may appear unpredictable, they follow deeper rules. Small changes in initial conditions can lead to drastically different outcomes as time progresses, making long-term prediction extremely difficult.</p>
   <p>One common example of a chaotic system is a double pendulum. A double pendulum’s position can be found using deterministic equations. When given a set of initial values, we can predict where it will be at any given time. So why is it an example of a chaotic system? A double pendulum is an example of <b>deterministic chaos</b>. We can consistently calculate its position if exact data is available, but that can be hard to come by. The position of the double pendulum is extremely sensitive, and a change in significant figures can completely change its trajectory. This can be shown in the double pendulum at the top of the article (you can refresh the page to reset the simulation). Ten pendulums are displayed, with the only difference is each theta value increases by 0.001º. Within a few seconds, all the pendulums break off into completely different pathways. A quote that describes this well comes from Edward Lorenz, a mathematician who laid the foundations of chaos theory:</p>
 
 
@@ -93,7 +93,7 @@
     <p class="center"><b>y' = x(ρ - z) - y</b></p>
     <p class="center"><b>z' = xy - ßz</b> </p>
   </div>
-<p>The purpose of these equations is to "relate the properties of a two-dimensional fluid layer uniformly warmed from below and cooled from above"<sup>[3]</sup>. x is proportional to the rate of convection, y is proportional to the horizontal temperature variation, and z is proportional to the vertical temperature variation.<sup>[3]</sup> </p>
+<p>The purpose of these equations is to "relate the properties of a two-dimensional fluid layer uniformly warmed from below and cooled from above."<sup>[3]</sup> x is proportional to the rate of convection, y is proportional to the horizontal temperature variation, and z is proportional to the vertical temperature variation.<sup>[3]</sup> </p>
 
   <p>The values <b>σ </b>(sigma),  <b>ρ </b>(rho), and <b>ß</b> (beta), 
     are constants that can be changed, but picking random numbers
@@ -162,7 +162,7 @@
       height="200px"
       width="300px">
 
-      <p>We will now apply the Euler-Lagrange equations with respect to Θ<sub>1</sub> and Θ<sub>2</sub>. We will now apply the Euler–Lagrange equations with respect to Θ₁ and Θ₂. The formula states that the total time derivative of the Lagrangian’s partial derivative with respect to velocity, minus its partial derivative with respect to position, must equal zero. This will allow us to get the angular acceleration for both theta values. This equation will be one of the most important components of the program. </p>
+      <p> We will now apply the Euler–Lagrange equations with respect to Θ₁ and Θ₂. The formula states that the total time derivative of the Lagrangian’s partial derivative with respect to velocity, minus its partial derivative with respect to position, must equal zero. This will allow us to get the angular acceleration for both theta values. This equation will be one of the most important components of the program. </p>
 
 
       <p class="equation space">(m<sub>1</sub> + m<sub>2</sub>)L<sub>1</sub>θ&#x0308;<sub>1</sub> + m<sub>2</sub>L<sub>2</sub>θ&#x0308;<sub>2</sub>cos(θ<sub>1</sub> - θ<sub>2</sub>) + m<sub>2</sub>L<sub>2</sub>θ&#x0307;<sub>2</sub><sup>2</sup>sin(θ<sub>1</sub> - θ<sub>2</sub>) + (m<sub>1</sub> + m<sub>2</sub>)gsinθ<sub>1</sub> = 0</p>
@@ -238,7 +238,7 @@
     <img class ="floatImage" src="../Images/lossLandscape.png"   alt="Loss Landscape">
 
  
-    <p class="padding-top">While exploring this idea, I came across a visual representation of a <b>loss landscape</b>, which maps a model’s error during training: peaks represent high error, and valleys represent low error. The training process involves navigating this landscape using gradient descent, seeking paths that lead to the valleys of minimal error. However, even slight variations in input data or initialization can steer the model along a different trajectory, potentially causing it to settle in a suboptimal local minimum. This process bears a resemblance to chaotic systems, where small shifts can dramatically alter outcomes.
+    <p class="padding-top">While exploring this idea, I came across a visual representation of a <b>loss landscape</b> from The University of Maryland, which maps a model’s error during training: peaks represent high error, and valleys represent low error. The training process involves navigating this landscape using gradient descent, seeking paths that lead to the valleys of minimal error. However, even slight variations in input data or initialization can steer the model along a different trajectory, potentially causing it to settle in a suboptimal local minimum. This process bears a resemblance to chaotic systems, where small shifts can dramatically alter outcomes.
     </p>
     <p class="padding-top">Although machine learning models are not typically considered deterministic chaotic systems, the concepts from Chaos Theory offer valuable insights into their training dynamics. Being mindful of overly sensitive models, and recognizing how minor changes in data or initialization can impact training, is essential for building robust and generalizable systems.</p>
 
