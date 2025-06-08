@@ -59,9 +59,7 @@
     <h1>How Many Ways Can You Scramble a Rubik's Cube?</h1>
     <h3>The math behind rubik’s cube scrambles</h3>
 
-    <h3>The Rubik’s Cube is one of the most popular puzzles in the world. People’s experiences with this toy range from solving it in under three seconds to scrambling it and leaving it on a shelf because it's too difficult. Whether or not you can solve it, there's a lot of fascinating math behind this puzzle.
-        I've been solving Rubik’s Cubes since I was ten years old and sometimes I would sit in one spot and solve the cube hundreds of times. This got to the point where I was at one point worried that I would run through all the possibilities. 
-        This brings up an interesting question: How many possible scrambles are there?
+    <h3>Invented in the 70s and widely distributed around the world in the 80s, the Rubik’s Cube has become one of the most popular toys of all time. The puzzle is known for being conceptually easy to understand; all you need to do is put one color on each side! After turning it a few times it becomes apparent the puzzle is more difficult than a few random turns. Some people spend years memorizing algorithms to learn how to solve the cube efficiently. As someone who has been obsessed with this puzzle for the past decade, I have solved the cube tens of thousands of times. When I was younger I started to get worried that I would run out of new scrambles. This eventually led to the question of the day: How many Rubik’s Cube scrambles are there? 
         </h3>
     <img class ="floatImage" src="../Images/2x2Image.webp"   alt="2x2 Image">
 
@@ -70,7 +68,7 @@
         A 2x2 Rubik’s Cube consists of eight corner pieces, but most models have one fixed piece attached to the core. This means that only seven corners can be moved freely. When placing these seven corners, the first piece has seven available slots, the second has six, the third has five, and so on. This follows the factorial pattern, giving us:
         </h3>
         <h3 class="center">7! = 7 × 6 × 5 × 4 × 3 × 2 × 1 = 5,040</h3> 
-    <h3>However, placing the pieces isn’t enough—we also need to consider orientation. Each of the seven movable corner pieces can be twisted into three different orientations. This gives us:</h3>
+    <h3>However, placing the pieces isn’t enough, we also need to consider orientation. Each of the seven movable corner pieces can be twisted into three different orientations. This gives us:</h3>
 
     <h3 class="center">3<sup>7</sup> = 2,187</h3>
 
@@ -88,7 +86,7 @@
       <h3>If you've ever solved a Rubik’s Cube, 
         you may know how frustrating it is when a single corner 
         piece twists out of place. That’s because a valid scramble cannot 
-        have just one incorrectly rotated corner—twisting one corner requires 
+        have just one incorrectly rotated corner, twisting one corner requires 
         another to twist as well. Because of this restriction, the last corner's 
         orientation is determined by the previous seven, meaning it has only one valid state.</h3>
       <h3>This reduces the number of orientations from 3<sup>7</sup> to 3<sup>6</sup>, giving us the corrected number of possible scrambles for a 2x2 Rubik’s Cube:</h3>
@@ -111,8 +109,8 @@
     <h2>Limitations of the 3x3</h2>
     <h3>Just like the 2x2, not 
         every arrangement is solvable.
-         Some configurations—such as a cube with just one flipped 
-         edge—are impossible to reach through legal moves. These restrictions 
+         Some configurations, such as a cube with just one flipped 
+         edge, are impossible to reach through legal moves. These restrictions 
          slightly reduce the total count, ensuring that all scrambles are achievable 
          from a solved state. On top of the corner rule, a Rubik’s Cube is unsolvable if 
          1 or 2 edge pieces are flipped. This results in the exponent for corner orientations
