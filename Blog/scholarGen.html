@@ -64,7 +64,7 @@
     async function loadArticles() {
       try {
         console.log("Loading JSON...");
-        const res = await fetch("cleaned_articles.json");
+        const res = await fetch("all_articles.json");
         if (!res.ok) {
           throw new Error("HTTP status " + res.status);
         }
