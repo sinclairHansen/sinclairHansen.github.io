@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sinclair Hansen </title>
+  <link rel="icon" type="image/x-icon" href="../Images/Favicon.png">
+
+  <meta name="description" content="Sinclair Hansen's Epic Portfolio">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="tumorDetection.css">
+</head>
+
+
+<header2 class = "header2">
+
+  <ul>
+    <li><a class="active" href="../index.html">Home</a></li>
+    <li><a href="../experience.html">Experience</a></li>
+    <li><a href="../projects.html">Projects</a></li>
+    <li><a href="boredomBlog.html">Boredom Blog</a></li>
+    <li></a></li>
+  </ul>
+
+</header2>
+
+
+
+<header>
+  <!-- Top Navigation Menu -->
+  <div class="topnav">
+    <a href="../index.html" class="active">Sinclair's Portfolio</a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+      <a href="../experience.html">Experience</a>
+      <a href="../projects.html">Projects</a>
+      <a href="boredomBlog.html">Boredom Blog</a>
+    </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+   </a>
+  </div>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+       x.style.display = "block";
+      }
+    }
+    </script>
+</header>
+
+<h1>Journal Article Generator</h1>
+<h2>Click at your own risk</h2>
+
+
+<div id="categories">
+  <h2><button class="category-btn" data-file="medicine_1000.json">Medicine</button><h2\>
+  <button class="category-btn" data-file="chemistry_1000.json">Chemistry</button>
+  <button class="category-btn" data-file="biology_1000.json">Biology</button>
+  <button class="category-btn" data-file="physics_1000.json">Physics</button>
+  <button class="category-btn" data-file="computer_science_1000.json">Computer Science</button>
+  <button  class="category-btn" data-file="mathematics_1000.json">Mathematics</button>
+  <button class="category-btn" data-file="engineering_1000.json">Engineering</button>
+  <button class="category-btn" data-file="materials_science_1000.json">Materials Science</button>
+  <button class="category-btn" data-file="earth_sciences_1000.json">Earth Sciences</button>
+  <button class="category-btn" data-file="energy_1000.json">Energy</button>
+</div>
+
+
+
+<h2><button id="random-btn" class = "button">Give me an article</button><h2\>
+<div id="result"></div>
+
+<script>
+  let articles = [];
+  let currentFile = null;
+
+  async function loadArticles(fileName) {
+    try {
+      document.getElementById("result").textContent = "Loading articles...";
+      const res = await fetch(fileName);
+      if (!res.ok) {
+        throw new Error("HTTP " + res.status);
+      }
+      const data = await res.json();
+      articles = data;
+      currentFile = fileName;
+
+      // Optional: show which subject is active
+      document.getElementById("current-subject").textContent =
+        "Current subject: " + fileName.replace("_1000.json", "").replace(/_/g, " ");
+
+      document.getElementById("result").textContent =
+        "Loaded " + articles.length + " articles. Click 'Give me an article'.";
+    } catch (err) {
+      console.error("Error loading JSON:", err);
+      document.getElementById("result").textContent =
+        "Error loading articles: " + err.message;
+    }
+  }
+
+  function showRandomArticle() {
+    if (!articles.length) {
+      document.getElementById("result").textContent =
+        "Pick a subject first so I can load some articles.";
+      return;
+    }
+
+    const index = Math.floor(Math.random() * articles.length);
+    const a = articles[index];
+
+    const container = document.getElementById("result");
+    container.innerHTML = `
+      <p>${a.Title}</p>
+      <p>${a.Author}</p>
+      <p><a href="${a.Article_Link}" target="_blank" rel="noopener noreferrer">
+        Open in Journal
+      </a></p>
+      <p><small>Subject: ${a.Subject || "Unknown"}</small></p>
+    `;
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    // Category buttons
+    document.querySelectorAll(".category-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const fileName = btn.dataset.file; // e.g. "medicine_1000.json"
+        loadArticles(fileName);
+      });
+    });
+
+    // Random article button
+    document.getElementById("random-btn")
+      .addEventListener("click", showRandomArticle);
+
+  });
+</script>
+
+
+
+
+
+
