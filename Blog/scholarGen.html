@@ -90,19 +90,16 @@
       const index = Math.floor(Math.random() * articles.length);
       const article = articles[index];
 
-      // Use the actual keys from your JSON:
-      // Title, Author, Description, Article_Link, Cited_by, All_versions, Related_articles_Link
       const container = document.getElementById("result");
       container.innerHTML = `
         <p>${article.Title}</p>
         <p>${article.Author}</p>
         <p><a href="${article.Article_Link}" target="_blank" rel="noopener noreferrer">
-          Open in Google Scholar
+          Open Article
         </a></p>
       `;
     }
 
-    // Ensure DOM is ready, then wire things up
     window.addEventListener("DOMContentLoaded", () => {
       document
         .getElementById("random-btn")
