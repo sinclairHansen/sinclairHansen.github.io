@@ -59,11 +59,12 @@ section div h2{
 
 }
 
+
 .button{
   padding-top:10%;
   display: inline-block;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   text-decoration: none;
   background-color: #70aec8;
   padding: 1px 32px;
@@ -155,7 +156,7 @@ main{
 
 .overlay-text2 {
   left: 50%; 
-  padding-top:10%;
+  padding-top:3%;
   font-size:2rem;
   color: rgb(0, 0, 0);
   font-style: bold;
@@ -248,16 +249,29 @@ li a:hover:not(.active) {
 
 
 .aboutImage{
-  height: 30%;
-  width: 30%;
+  height: 90%;
+  width: 90%;
 
   padding-top: 10%;
   align-items: center;
   margin-left: 25%;
   margin-right: 25%;
-
+}
+/* Hide the about image on small screens */
+@media (max-width: 700px) {
+  .aboutImage {
+    display: none;
+  }
+}
+.highlightImage{
+  max-width: 90%;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 10 auto;  
 
 }
+
 
 .active {
   background-color: #70aec8;
