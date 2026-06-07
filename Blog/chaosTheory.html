@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Embrace the Chaos | Sinclair Hansen</title>
+  <link rel="icon" type="image/x-icon" href="../Images/Favicon.png">
+  <meta name="description" content="Sinclair Hansen's article on chaos theory and the double pendulum">
+
+  <link rel="stylesheet" href="chaosTheory.css">
+  <script defer src="../site.js"></script>
+</head>
+
+<body>
+  <div class="header2">
+    <ul>
+      <li><a class="active" href="../index.html">Home</a></li>
+      <li><a href="../projects.html">Projects</a></li>
+      <li><a href="boredomBlog.html">Boredom Blog</a></li>
+    </ul>
+  </div>
+
+  <header>
+    <div class="topnav">
+      <a href="../index.html" class="active">Sinclair's Portfolio</a>
+
+      <div id="myLinks">
+        <a href="../projects.html">Projects</a>
+        <a href="boredomBlog.html">Boredom Blog</a>
+      </div>
+
+      <button aria-expanded="false" aria-label="Open navigation" class="nav-toggle icon" type="button">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="article-hero">
+      <h1>Embrace the Chaos</h1>
+      <h3>How a 0.001° Shift Changes Everything</h3>
+
+      <canvas class="simulation" height="400" id="pendulumCanvas" width="400">
+        Double pendulum animation.
+      </canvas>
+
+      <div class="hero-actions">
+        <a class="button" href="Pendulum/pendulum.html" target="_blank" rel="noopener noreferrer">Pendulum Simulator</a>
+        <a class="button" href="https://github.com/sinclairHansen/doublePendulum" target="_blank" rel="noopener noreferrer">Pendulum Repository</a>
+      </div>
+    </section>
+
+    <article class="article">
+      <h2>Introduction to Chaos Theory</h2>
+
+      <h3>“The flap of a butterfly’s wings in Brazil can lead to a hurricane in Texas.”</h3>
+
+      <p>
+        While not meant to be taken literally, this metaphor captures the essence of <b>Chaos Theory</b>:
+        small changes in a system's initial conditions can lead to large and unpredictable outcomes.
+        This idea, often called the butterfly effect, lies at the heart of chaos theory and highlights
+        the sensitive dependence on initial conditions seen in many natural and mathematical systems.
+      </p>
+
+      <p>
+        Chaos Theory states that "within the apparent randomness of chaotic, complex systems, there are
+        underlying patterns, interconnectedness, constant feedback loops, repetition, self-similarity,
+        fractals, and self-organization."<sup>[1]</sup> In simple terms, even though these systems may
+        appear unpredictable, they follow deeper rules. Small changes in initial conditions can lead to
+        drastically different outcomes as time progresses, making long-term prediction extremely difficult.
+      </p>
+
+      <p>
+        One common example of a chaotic system is a double pendulum. A double pendulum’s position can be
+        found using deterministic equations. When given a set of initial values, we can predict where it
+        will be at any given time. So why is it an example of a chaotic system? A double pendulum is an
+        example of <b>deterministic chaos</b>. We can consistently calculate its position if exact data is
+        available, but that can be hard to come by.
+      </p>
+
+      <p>
+        The position of the double pendulum is extremely sensitive, and a change in significant figures can
+        completely change its trajectory. This can be shown in the double pendulum at the top of the article.
+        Ten pendulums are displayed, with the only difference being that each theta value is increased by
+        a tiny amount. Within a few seconds, all the pendulums break off into completely different pathways.
+        A quote that describes this well comes from Edward Lorenz, a mathematician who laid the foundations
+        of chaos theory:
+      </p>
+
+      <blockquote>
+        Chaos: When the present determines the future but the approximate present does not approximately determine the future.
+      </blockquote>
+
+      <h2>The History of Chaos Theory</h2>
+
+      <p>
+        The idea of Chaos Theory stems from the previously mentioned mathematician and meteorologist Edward
+        Lorenz in the 1960s. Throughout his work as a meteorologist, he concluded that weather patterns are
+        nonlinear and can be volatile. This was enforced when one day he decided to go back and recreate a
+        past weather sequence. When he initially made the calculations a year prior, he used six significant
+        figures, but when running through them again he used three. One would expect this decimal change to
+        be insignificant, but that was far from the truth. The two weather sequences were vastly different,
+        showing that seemingly negligible factors can completely change outcomes.<sup>[2]</sup>
+      </p>
+
+      <h2>The Lorenz Attractor</h2>
+
+      <div class="center-actions">
+        <a class="button" href="LorenzAttractor/lorenz.html" target="_blank" rel="noopener noreferrer">3D Lorenz Attractor</a>
+      </div>
+
+      <img class="floatImage" src="../Images/lorenzAttractor.gif" alt="Lorenz Attractor">
+
+      <p>
+        Lorenz is well known for the famous Lorenz Attractor, a model often associated with the Butterfly
+        Effect. This model was developed by Lorenz with the help of Ellen Fetter and Margaret Hamilton.<sup>[3]</sup>
+        These equations show a simplified model of atmospheric convection, and what makes this set of equations
+        notable is its extreme sensitivity to initial conditions.
+      </p>
+
+      <p>The three differential equations are:</p>
+
+      <div class="simple-equations">
+        <p><b>x' = σ(y − x)</b></p>
+        <p><b>y' = x(ρ − z) − y</b></p>
+        <p><b>z' = xy − βz</b></p>
+      </div>
+
+      <p>
+        The purpose of these equations is to "relate the properties of a two-dimensional fluid layer uniformly
+        warmed from below and cooled from above."<sup>[3]</sup> x is proportional to the rate of convection,
+        y is proportional to the horizontal temperature variation, and z is proportional to the vertical
+        temperature variation.<sup>[3]</sup>
+      </p>
+
+      <p>
+        The values <b>σ</b> sigma, <b>ρ</b> rho, and <b>β</b> beta are constants that can be changed, but
+        picking random numbers will likely result in the particles flying towards infinity. The most common
+        constants, picked by Lorenz himself, are:
+      </p>
+
+      <div class="simple-equations">
+        <p><b>σ = 10</b></p>
+        <p><b>ρ = 28</b></p>
+        <p><b>β = 8/3</b></p>
+      </div>
+
+      <p>
+        Starting from an arbitrary point, future points are calculated based on the previous. It is important
+        to note that not all inputs in this equation result in a chaotic output. For example, having initial
+        values (0,0,0) will result in all derivatives equaling 0. The point will forever stay at the origin.
+        On the flip side, inputting large values will result in the particle shooting towards infinity. The
+        most interesting behavior happens when we pick starting points in a certain "sweet spot."
+      </p>
+
+      <p>
+        As part of my research, I programmed a 3D model of the Lorenz Attractor, viewable through the button
+        above. I initialized the point at (0.01, 0, 0) to ensure non-zero derivatives and a true chaotic
+        attractor. What’s fascinating about this model is that the trajectory never exactly retraces its steps.
+        If it did, the motion would no longer be chaotic; it would become periodic or predictable. Even more
+        interestingly, if we start 100 points close together, some will diverge to infinity, and some will
+        stay trapped in the attractor’s general shape. Even though they follow similar patterns, no two paths
+        are identical. A tiny difference in starting points leads to drastically different futures.<sup>[4]</sup>
+      </p>
+
+      <h2>Math Behind the Double Pendulum<sup>[5]</sup></h2>
+
+      <img class="floatImage" src="../Images/dbl_pendulum_Image.gif" alt="Double pendulum diagram">
+
+      <p>
+        The orientation of a double pendulum can be shown in the diagram. When doing calculations, we have
+        several variables we will be working with:
+      </p>
+
+      <div class="variable-list">
+        <p><b>L<sub>1</sub></b>: Length of the first string</p>
+        <p><b>L<sub>2</sub></b>: Length of the second string</p>
+        <p><b>θ<sub>1</sub></b>: The angle between L<sub>1</sub> and a line perpendicular to the ground</p>
+        <p><b>θ<sub>2</sub></b>: The angle between L<sub>2</sub> and a line perpendicular to the ground</p>
+        <p><b>m<sub>1</sub></b>: Mass of the first ball</p>
+        <p><b>m<sub>2</sub></b>: Mass of the second ball</p>
+      </div>
+
+      <p>
+        We can also state that the location of the first ball is (x<sub>1</sub>, y<sub>1</sub>) and the
+        location of the second ball is (x<sub>2</sub>, y<sub>2</sub>). The point the pendulum is hanging
+        from is (x<sub>0</sub>, y<sub>0</sub>). We are also going to assume that x<sub>0</sub>, y<sub>0</sub> = 0.
+        Using basic trigonometry, we are able to write these points as the following:
+      </p>
+
+      <div class="simple-equations">
+        <p>x<sub>1</sub> = L<sub>1</sub>sin(θ<sub>1</sub>)</p>
+        <p>y<sub>1</sub> = −L<sub>1</sub>cos(θ<sub>1</sub>)</p>
+        <p>x<sub>2</sub> = x<sub>1</sub> + L<sub>2</sub>sin(θ<sub>2</sub>)</p>
+        <p>y<sub>2</sub> = y<sub>1</sub> − L<sub>2</sub>cos(θ<sub>2</sub>)</p>
+      </div>
+
+      <p>Now we need the derivatives of each coordinate. A derivative is denoted with a dot:</p>
+
+      <div class="simple-equations">
+        <p>x&#775;<sub>1</sub> = L<sub>1</sub>θ&#775;<sub>1</sub>cos(θ<sub>1</sub>)</p>
+        <p>y&#775;<sub>1</sub> = L<sub>1</sub>θ&#775;<sub>1</sub>sin(θ<sub>1</sub>)</p>
+        <p>x&#775;<sub>2</sub> = x&#775;<sub>1</sub> + L<sub>2</sub>θ&#775;<sub>2</sub>cos(θ<sub>2</sub>)</p>
+        <p>y&#775;<sub>2</sub> = y&#775;<sub>1</sub> + L<sub>2</sub>θ&#775;<sub>2</sub>sin(θ<sub>2</sub>)</p>
+      </div>
+
+      <p>
+        To calculate the change in the θ values, we are going to use a <b>Lagrangian</b>. The Lagrangian
+        describes a system in terms of its kinetic and potential energy and is founded on the principle of
+        least action. The formula for the Lagrangian is written as:
+      </p>
+
+      <div class="simple-equations">
+        <p><b>L = T − V</b></p>
+      </div>
+
+      <p>
+        In other words, the Lagrangian equals the kinetic energy T minus the potential energy V within the
+        system. This means the next step is to solve for T and V:
+      </p>
+
+      <div class="wide-equation">
+        T =
+        <span class="small-frac"><sup>1</sup>&frasl;<sub>2</sub></span>m<sub>1</sub>
+        (x&#775;<sub>1</sub><sup>2</sup> + y&#775;<sub>1</sub><sup>2</sup>)
+        +
+        <span class="small-frac"><sup>1</sup>&frasl;<sub>2</sub></span>m<sub>2</sub>
+        (x&#775;<sub>2</sub><sup>2</sup> + y&#775;<sub>2</sub><sup>2</sup>)
+      </div>
+
+      <p>Simplifying with trigonometric identities gives:</p>
+
+      <div class="wide-equation">
+        <b>
+          T =
+          <span class="small-frac"><sup>1</sup>&frasl;<sub>2</sub></span>m<sub>1</sub>L<sub>1</sub><sup>2</sup>θ&#775;<sub>1</sub><sup>2</sup>
+          +
+          <span class="small-frac"><sup>1</sup>&frasl;<sub>2</sub></span>m<sub>2</sub>
+          [L<sub>1</sub><sup>2</sup>θ&#775;<sub>1</sub><sup>2</sup>
+          + L<sub>2</sub><sup>2</sup>θ&#775;<sub>2</sub><sup>2</sup>
+          + 2L<sub>1</sub>L<sub>2</sub>θ&#775;<sub>1</sub>θ&#775;<sub>2</sub>cos(θ<sub>1</sub> − θ<sub>2</sub>)]
+        </b>
+      </div>
+
+      <div class="simple-equations">
+        <p>V = m<sub>1</sub>gy<sub>1</sub> + m<sub>2</sub>gy<sub>2</sub></p>
+      </div>
+
+      <p>This can be rewritten as:</p>
+
+      <div class="wide-equation">
+        <b>
+          V = −(m<sub>1</sub> + m<sub>2</sub>)gL<sub>1</sub>cos(θ<sub>1</sub>)
+          − m<sub>2</sub>gL<sub>2</sub>cos(θ<sub>2</sub>)
+        </b>
+      </div>
+
+      <p>Now we substitute this information into the Lagrangian:</p>
+
+      <div class="wide-equation">
+        L = T − V
+      </div>
+
+      <img class="floatImage" src="../Images/EulerLagrange.png" alt="Euler-Lagrange equation">
+
+      <p>
+        We will now apply the Euler–Lagrange equations with respect to θ<sub>1</sub> and θ<sub>2</sub>.
+        The formula states that the total time derivative of the Lagrangian’s partial derivative with
+        respect to velocity, minus its partial derivative with respect to position, must equal zero. This
+        allows us to get the angular acceleration for both theta values.
+      </p>
+
+      <div class="wide-equation">
+        (m<sub>1</sub> + m<sub>2</sub>)L<sub>1</sub>θ&#776;<sub>1</sub>
+        + m<sub>2</sub>L<sub>2</sub>θ&#776;<sub>2</sub>cos(θ<sub>1</sub> − θ<sub>2</sub>)
+        + m<sub>2</sub>L<sub>2</sub>θ&#775;<sub>2</sub><sup>2</sup>sin(θ<sub>1</sub> − θ<sub>2</sub>)
+        + (m<sub>1</sub> + m<sub>2</sub>)gsin(θ<sub>1</sub>) = 0
+      </div>
+
+      <div class="wide-equation">
+        m<sub>2</sub>L<sub>2</sub>θ&#776;<sub>2</sub>
+        + m<sub>2</sub>L<sub>1</sub>θ&#776;<sub>1</sub>cos(θ<sub>1</sub> − θ<sub>2</sub>)
+        − m<sub>2</sub>L<sub>1</sub>θ&#775;<sub>1</sub><sup>2</sup>sin(θ<sub>1</sub> − θ<sub>2</sub>)
+        + m<sub>2</sub>gsin(θ<sub>2</sub>) = 0
+      </div>
+
+      <p>
+        The last step is to get the explicit equations for θ&#776;<sub>1</sub> and θ&#776;<sub>2</sub>
+        using the Euler-Lagrange equations.
+      </p>
+
+      <div class="equation-box">
+        <p class="equation-title">Angular acceleration for θ<sub>1</sub></p>
+
+        <div class="display-equation">
+          <span class="lhs">θ&#776;<sub>1</sub></span>
+          <span class="equals">=</span>
+
+          <span class="fraction">
+            <span class="numerator">
+              −sin(Δθ)
+              <span class="group">
+                [
+                m<sub>2</sub>L<sub>1</sub>θ&#775;<sub>1</sub><sup>2</sup>cos(Δθ)
+                +
+                m<sub>2</sub>L<sub>2</sub>θ&#775;<sub>2</sub><sup>2</sup>
+                ]
+              </span>
+              −
+              g
+              <span class="group">
+                [
+                (m<sub>1</sub> + m<sub>2</sub>)sin(θ<sub>1</sub>)
+                −
+                m<sub>2</sub>sin(θ<sub>2</sub>)cos(Δθ)
+                ]
+              </span>
+            </span>
+
+            <span class="denominator">
+              L<sub>1</sub>
+              <span class="group">
+                [
+                m<sub>1</sub> + m<sub>2</sub>sin<sup>2</sup>(Δθ)
+                ]
+              </span>
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <div class="equation-box">
+        <p class="equation-title">Angular acceleration for θ<sub>2</sub></p>
+
+        <div class="display-equation">
+          <span class="lhs">θ&#776;<sub>2</sub></span>
+          <span class="equals">=</span>
+
+          <span class="fraction">
+            <span class="numerator">
+              sin(Δθ)
+              <span class="group">
+                [
+                (m<sub>1</sub> + m<sub>2</sub>)L<sub>1</sub>θ&#775;<sub>1</sub><sup>2</sup>
+                +
+                m<sub>2</sub>L<sub>2</sub>θ&#775;<sub>2</sub><sup>2</sup>cos(Δθ)
+                ]
+              </span>
+              +
+              g
+              <span class="group">
+                [
+                (m<sub>1</sub> + m<sub>2</sub>)sin(θ<sub>1</sub>)cos(Δθ)
+                −
+                (m<sub>1</sub> + m<sub>2</sub>)sin(θ<sub>2</sub>)
+                ]
+              </span>
+            </span>
+
+            <span class="denominator">
+              L<sub>2</sub>
+              <span class="group">
+                [
+                m<sub>1</sub> + m<sub>2</sub>sin<sup>2</sup>(Δθ)
+                ]
+              </span>
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <p class="equation-note">
+        Where Δθ = θ<sub>1</sub> − θ<sub>2</sub>.
+      </p>
+
+      <p>
+        These are now all the equations used for the program, with the primary equations being the
+        Euler-Lagrange equations for angular acceleration.
+      </p>
+
+      <h2>My Program</h2>
+
+      <p>
+        This project simulates the motion of a double pendulum using JavaScript and an HTML canvas. The
+        program is built around the physical model of a double pendulum: two rods connected end-to-end,
+        swinging under the influence of gravity. To calculate the motion, I used the standard equations
+        for a double pendulum's angular accelerations.
+      </p>
+
+      <h3>Input Handling</h3>
+
+      <p>The program uses sliders to collect user input for:</p>
+
+      <div class="simple-equations">
+        <p>Lengths of the rods: L<sub>1</sub>, L<sub>2</sub></p>
+        <p>Masses of the pendulums: m<sub>1</sub>, m<sub>2</sub></p>
+      </div>
+
+      <h3>Pendulum Class</h3>
+
+      <p>
+        These values are passed into a <b>Pendulum class</b>, which initializes the angular positions:
+      </p>
+
+      <div class="simple-equations">
+        <p>θ<sub>1</sub> is set to π/2 radians, or 90°</p>
+        <p>θ<sub>2</sub> is set to π/4 radians, or 45°</p>
+      </div>
+
+      <p>
+        For each new Pendulum object created, θ<sub>1</sub> is slightly offset to visualize how small
+        differences in starting conditions can lead to dramatically different motion — a feature of chaotic systems.
+      </p>
+
+      <h3>Calculating Motion</h3>
+
+      <p>
+        Inside the class, I calculate the angular acceleration based on the current positions and velocities.
+        Then, at every frame:
+      </p>
+
+      <div class="simple-equations">
+        <p>Update angular velocity by adding the angular acceleration</p>
+        <p>Update angular position by adding the angular velocity</p>
+        <p>Use the updated θ<sub>1</sub> and θ<sub>2</sub> values to compute the x and y positions</p>
+      </div>
+
+      <h3>Visualization</h3>
+
+      <p>Using an <b>HTML canvas</b>, I draw lines connecting:</p>
+
+      <div class="simple-equations">
+        <p>The fixed point to the first mass</p>
+        <p>The first mass to the second mass</p>
+      </div>
+
+      <p>
+        This real-time drawing creates a smooth animation of the double pendulum swinging chaotically over time.
+        We are able to see the trail of the pendulum by changing the opacity of the background, which results
+        in more frames being needed to cover up previous drawings.
+      </p>
+
+      <p>
+        Note: A double pendulum experiences air resistance and friction at the pivots, resulting in imperfect
+        energy transfer and gradual energy loss over time. This program models the idealized case, focusing
+        solely on the pendulum’s motion without accounting for these dissipative effects.
+      </p>
+
+      <h2>Applications of Chaos Theory</h2>
+
+      <p>
+        The findings in Chaos Theory have many real-world applications. Many of the systems we use in our
+        day-to-day lives are chaotic, unpredictable, and reliant on initial conditions. Examples include
+        weather patterns, economics, and artificial intelligence. The goal of using Chaos Theory in these
+        fields is to find order in messy systems.
+      </p>
+
+      <img class="floatImage" src="../Images/forecastModel.gif" alt="Weather forecast model">
+
+      <h3>Weather Prediction</h3>
+
+      <p>
+        As the Lorenz Attractor demonstrates, weather patterns are extremely sensitive to changes in initial
+        conditions, and small errors can snowball into vastly different weather outcomes. This sensitivity
+        has shaped how meteorologists predict weather today. Forecasts have a limited window of accuracy,
+        typically about 10 days because small measurement errors compound over time. Beyond that window,
+        predictions become increasingly unreliable, and new calculations based on updated measurements must
+        be made. For long-term weather forecasting, meteorologists rely more on statistical models based on
+        historical data. For example, by analyzing temperature averages from the past 10 years, we can estimate
+        what conditions might be like six months from now. However, such predictions are broad trends rather
+        than precise forecasts, and they are refined as the specific date approaches and more current data
+        becomes available.<sup>[6]</sup>
+      </p>
+
+      <h3>Machine Learning Models</h3>
+
+      <p>
+        Although Chaos Theory connects to a vast number of fields, the last one I want to explore is Machine
+        Learning. When reading about Chaos Theory, I was surprised to learn that a machine learning model
+        could even fall under its umbrella. While these models are not chaotic in the classical sense, since
+        they are not fully deterministic, the principles of Chaos Theory still have relevance in how we develop
+        and train them. Large machine learning models can exhibit sensitivities to their initial weights or
+        input prompts, and even small alterations may lead to drastically different outputs.<sup>[7]</sup>
+      </p>
+
+      <img class="floatImage" src="../Images/lossLandscape.png" alt="Loss landscape">
+
+      <p>
+        While exploring this idea, I came across a visual representation of a <b>loss landscape</b>, which maps
+        a model’s error during training: peaks represent high error, and valleys represent low error. The
+        training process involves navigating this landscape using gradient descent, seeking paths that lead to
+        the valleys of minimal error. However, even slight variations in input data or initialization can steer
+        the model along a different trajectory, potentially causing it to settle in a suboptimal local minimum.
+        This process bears a resemblance to chaotic systems, where small shifts can dramatically alter outcomes.
+      </p>
+
+      <p>
+        Although machine learning models are not typically considered deterministic chaotic systems, the concepts
+        from Chaos Theory offer valuable insights into their training dynamics. Being mindful of overly sensitive
+        models, and recognizing how minor changes in data or initialization can impact training, is essential
+        for building robust and generalizable systems.
+      </p>
+
+      <h3>Conclusion / Reflection</h3>
+
+      <p>
+        Chaos Theory is deeply tied to many complex systems we rely on daily. It not only helps us predict and
+        understand chaotic behavior, but also plays a crucial role in preventing the development of unstable
+        models, such as certain machine learning systems. Through the two projects I completed, I gained valuable
+        insight into the fascinating mathematics underlying these models. I especially enjoyed observing how a
+        tiny change in the input could lead to a drastically different output. This project has significant
+        potential for further exploration; I’m particularly interested in diving into topics like Arnold's Cat Map next.
+      </p>
+
+      <section class="references">
+        <h2>Notes</h2>
+        <p class="hang">1. What is chaos theory?. Fractal Foundation. https://fractalfoundation.org/resources/what-is-chaos-theory/</p>
+        <p class="hang">2. Halton, C. Chaos theory: What it is, history, and example. Investopedia.</p>
+        <p class="hang">3. Wikimedia Foundation. Lorenz System. Wikipedia. https://en.wikipedia.org/wiki/Lorenz_system</p>
+        <p class="hang">4. Kastorf, J. The Lorenz Attractor Explained. YouTube. https://www.youtube.com/watch?v=VjP90rwpBwU</p>
+        <p class="hang">5. Good Vibrations with Freeball. Equations of Motion for the Double Pendulum (2DOF) Using Lagrange’s Equations. YouTube. https://www.youtube.com/watch?v=tc2ah-KnDXw</p>
+        <p class="hang">6. Buizza, R., &amp; Chessa, P. (2002). Prediction of the U.S. storm of 24–26 January 2000 with the ECMWF Ensemble Prediction System. Monthly Weather Review, 130(6), 1531–1551.</p>
+        <p class="hang">7. Salinas, A., &amp; Morstatter, F. (2024). The butterfly effect of altering prompts: How small changes and jailbreaks affect large language model performance. arXiv. https://arxiv.org/abs/2401.03729</p>
+
+        <h2>Works Cited</h2>
+        <p class="hang">Buizza, R., &amp; Chessa, P. (2002). Prediction of the U.S. storm of 24–26 January 2000 with the ECMWF Ensemble Prediction System. Monthly Weather Review, 130(6), 1531–1551. https://doi.org/10.1175/1520-0493(2002)130&lt;1531:potuss&gt;2.0.co;2</p>
+        <p class="hang">Double Pendulum. https://physics.umd.edu/hep/drew/pendulum2.html</p>
+        <p class="hang">Good Vibrations with Freeball. Equations of Motion for the Double Pendulum (2DOF) Using Lagrange’s Equations. YouTube. https://www.youtube.com/watch?v=tc2ah-KnDXw</p>
+        <p class="hang">Halton, C. Chaos theory: What it is, history, and example. Investopedia. https://www.investopedia.com/terms/c/chaostheory.asp</p>
+        <p class="hang">Kastorf, J. The Lorenz Attractor Explained. YouTube. https://www.youtube.com/watch?v=VjP90rwpBwU</p>
+        <p class="hang">Knight, S. Weather, Climate and chaos theory. MetLink. https://www.metlink.org/blog/weather-climate-and-chaos-theory/</p>
+        <p class="hang">Salinas, A., &amp; Morstatter, F. (2024). The butterfly effect of altering prompts: How small changes and jailbreaks affect large language model performance. arXiv. https://arxiv.org/abs/2401.03729</p>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
