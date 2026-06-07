@@ -1,94 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Double Pendulum Simulation </title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Double Pendulum Simulation | Sinclair Hansen</title>
 
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.js"></script>
-    <link rel="icon" type="image/x-icon" href="../../Images/Favicon.png">
-    <meta name="description" content="An interactive double pendulum simulator demonstrating chaotic motion and sensitivity to initial conditions through real-time physics visualization.">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/addons/p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="pendulum.css">
-    <meta charset="utf-8" />
+  <link rel="icon" type="image/x-icon" href="../../Images/Favicon.png">
+  <link rel="stylesheet" href="pendulum.css">
+</head>
 
-  </head>
-  <header>
-    <h1>Double Pendulum Simulation</h1>
-  </header>
-  
-  
-  
-  <body>
-    <main>
-    <h3>Welcome to the Double Pendulum Simulator! The goal of this program is to give a visual of the core concepts discussed in Chaos theory.
-       For every new pendulum made, the Θ₁ increases by 0.001 degrees. At 
-      first, their motion appears synchronized, but over time, their paths diverge 
-      dramatically, revealing the sensitive dependence on initial conditions that defines 
-      chaotic systems.
-    </h3>
-    <h3>To see the source code: </h3>
-    <h2><a class = "button" href = "https://github.com/sinclairHansen/doublePendulum" target="_blank" rel="noopener noreferrer">Pendulum Repository</a></h2>
-    <h3>To learn more about Chaos Theory and the math behind the double pendulum:</h3>
-    <h2><a class = "button" href = "https://sinclairhansen.github.io/Blog/chaosTheory.html" target="_blank" rel="noopener noreferrer">Embrace the Chaos</a></h2>
+<body>
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">Chaos Theory</p>
+      <h1>Double Pendulum Simulation</h1>
 
-    <h3>Instructions:</h3>
-    <h3>Use the sliders to adjust the pendulum parameters.</h3>
+      <p>
+        Welcome to the Double Pendulum Simulator. This program visualizes one of the core ideas behind
+        chaos theory: tiny differences in initial conditions can lead to dramatically different motion.
+        Each pendulum starts with a slightly different first angle, so their paths may look synchronized
+        at first before eventually separating into different trajectories.
+      </p>
 
-    <h3>Press the Run button to update the simulation and reflect the changes on the canvas.</h3>
+      <div class="button-row">
+        <a class="button" href="https://github.com/sinclairHansen/doublePendulum" target="_blank" rel="noopener noreferrer">
+          Pendulum Repository
+        </a>
 
+        <a class="button" href="../chaosTheory.html" rel="noopener noreferrer">
+          Embrace the Chaos
+        </a>
+      </div>
+    </section>
 
+    <section class="simulation-card">
+      <div class="section-heading">
+        <h2>Simulation</h2>
+        <p>
+          Use the sliders below to adjust the pendulum parameters, then press Run / Reset
+          to rebuild the simulation with the new values.
+        </p>
+      </div>
 
-    <script class="center" src="sketch.js"></script>
-    <script class="center" src="pendulum.js"></script>
+      <div id="sketch-holder"></div>
+    </section>
 
+    <section class="controls-card">
+      <h2>Change Pendulum Values</h2>
+
+      <div class="run-row">
+        <button class="button run-button" id="runButton" type="button">
+          Run / Reset
+        </button>
+      </div>
+
+      <div class="control-grid">
+        <div class="control">
+          <label for="trail">Trail Length</label>
+          <input type="range" min="0" max="100" value="30" class="slider" id="trail">
+          <p>Value: <span id="output6">30</span></p>
+          <small>Lower values leave a longer trail. 100 gives almost no trail.</small>
+        </div>
+
+        <div class="control">
+          <label for="L1">Length L1</label>
+          <input type="range" min="10" max="150" value="100" class="slider" id="L1">
+          <p>Value: <span id="output1">100</span></p>
+        </div>
+
+        <div class="control">
+          <label for="L2">Length L2</label>
+          <input type="range" min="10" max="150" value="100" class="slider" id="L2">
+          <p>Value: <span id="output2">100</span></p>
+        </div>
+
+        <div class="control">
+          <label for="m1">Mass of Ball 1</label>
+          <input type="range" min="1" max="20" value="5" class="slider" id="m1">
+          <p>Value: <span id="output3">5</span></p>
+        </div>
+
+        <div class="control">
+          <label for="m2">Mass of Ball 2</label>
+          <input type="range" min="1" max="20" value="5" class="slider" id="m2">
+          <p>Value: <span id="output4">5</span></p>
+        </div>
+
+        <div class="control">
+          <label for="num">Number of Pendulums</label>
+          <input type="range" min="1" max="150" value="10" class="slider" id="num">
+          <p>Value: <span id="output5">10</span></p>
+        </div>
+      </div>
+    </section>
   </main>
 
-<!--This div is to change the variable values-->
-<div class="valueBox">
-  <h2>Change Pendulum Values</h2>
-  <p onclick="setup()" style="text-align: center;"><input type="button" class="button" value="Run"></p>
-  <h3>Change Trail Length (100 is no trail)</h3>
-  <div class="slidecontainer">
-    <input type="range" min="0" max="100" value="30" class="slider" id="trail">
-    <p>Value: <span id="output6"></span></p>
-  </div>
-  <h3>Length L1</h3>
-  <div class="slidecontainer">
-    <input type="range" min="10" max="150" value="100" class="slider" id="L1">
-    <p>Value: <span id="output1"></span></p>
-  </div>
+  <footer class="footer">
+    <a class="button" href="https://github.com/sinclairHansen" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class="button" href="mailto:sinclairCHansen@gmail.com">Email</a>
+    <a class="button" href="https://www.linkedin.com/in/sinclair-hansen-b1b3b4310/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </footer>
 
-
-  <h3>Length L2</h3>
-  <div class="slidecontainer">
-    <input type="range" min="10" max="150" value="100" class="slider" id="L2">
-    <p>Value: <span id="output2"></span></p>
-  </div>
-
-  <h3>Mass of Ball 1</h3>
-  <div class="slidecontainer">
-    <input type="range" min="1" max="20" value="5" class="slider" id="m1">
-    <p>Value: <span id="output3"></span></p>
-  </div>
-
-  <h3>Mass of Ball 2</h3>
-  <div class="slidecontainer">
-    <input type="range" min="1" max="20" value="5" class="slider" id="m2">
-    <p>Value: <span id="output4"></span></p>
-  </div>
-  
-  <h3>Number of Pendulums</h3>
-  <div class="slidecontainer">
-    <input type="range" min="1" max="150" value="10" class="slider" id="num">
-    <p>Value: <span id="output5"></span></p>
-  </div>
-
-  
-  
-  <!--<p onclick="addPendulum()" style="text-align: center;"><input type="button" class="button" value="Add One"></p>
--->
-
-</div>
-
-
-  </body>
+  <script src="../../p5.js"></script>
+  <script src="pendulum.js"></script>
+  <script src="sketch.js"></script>
+</body>
 </html>

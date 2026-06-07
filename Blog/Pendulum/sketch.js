@@ -1,91 +1,115 @@
-let g = 1;
+const gravity = 1;
+const canvasWidth = 800;
+const canvasHeight = 560;
+
 let pendulums = [];
-let width = 500;
-let height = 500;
-//let add = 1;
-let colorPalette = ['#0e9aa7','#3da4ab','#f6cd61','#fe8a71','#07407b',
-  '#f6b26b','#e69138','#07407b'
+
+const colorPalette = [
+  "#0e9aa7",
+  "#3da4ab",
+  "#f6cd61",
+  "#fe8a71",
+  "#07407b",
+  "#f6b26b",
+  "#e69138",
+  "#70aec8"
 ];
 
+const controls = [
+  { rangeId: "L1", outputId: "output1" },
+  { rangeId: "L2", outputId: "output2" },
+  { rangeId: "m1", outputId: "output3" },
+  { rangeId: "m2", outputId: "output4" },
+  { rangeId: "num", outputId: "output5" },
+  { rangeId: "trail", outputId: "output6" }
+];
 
-//This function creates the sliders on user interface
-  function setupSlider(rangeId, outputId) {
-      var slider = document.getElementById(rangeId);
-      var output = document.getElementById(outputId);
-      output.innerHTML = slider.value;
-      slider.oninput = function() {
-        output.innerHTML = this.value;
-      };
+function setup() {
+  const canvas = createCanvas(canvasWidth, canvasHeight);
+  canvas.parent("sketch-holder");
+
+  pixelDensity(1);
+
+  setupControls();
+  resetSimulation();
+}
+
+function draw() {
+  const trail = getSliderNumber("trail", 30);
+
+  background(0, trail);
+
+  for (const pendulum of pendulums) {
+    pendulum.update();
+    pendulum.render();
+  }
+}
+
+function setupControls() {
+  for (const control of controls) {
+    const slider = document.getElementById(control.rangeId);
+    const output = document.getElementById(control.outputId);
+
+    if (!slider || !output) {
+      continue;
     }
 
+    output.textContent = slider.value;
 
-  // Setup all sliders
-  document.addEventListener("DOMContentLoaded", function () {
-    setupSlider("L1", "output1");
-    setupSlider("L2", "output2");
-    setupSlider("m1", "output3");
-    setupSlider("m2", "output4");
-    setupSlider("num", "output5");
-    setupSlider("trail", "output6");
+    slider.addEventListener("input", function () {
+      output.textContent = slider.value;
+    });
   }
 
-  );
+  const runButton = document.getElementById("runButton");
 
-    //function addPendulum()
-    //{
-      //let L1 = parseFloat(document.getElementById("L1").value);
-      ///let L2 = parseFloat(document.getElementById("L2").value);
-     // let m1 = parseFloat(document.getElementById("m1").value);
-     // let m2 = parseFloat(document.getElementById("m2").value); 
-     // let theta1 = PI/2;
-     // let theta2 = PI/4;
-     // pendulums[add] = new Pendulum(theta1,theta2, L1, L2, m1, m2);
-     // draw();
-    //}
+  if (runButton) {
+    runButton.addEventListener("click", resetSimulation);
+  }
+}
 
+function resetSimulation() {
+  pendulums = [];
 
+  const length1 = getSliderNumber("L1", 100);
+  const length2 = getSliderNumber("L2", 100);
+  const mass1 = getSliderNumber("m1", 5);
+  const mass2 = getSliderNumber("m2", 5);
+  const pendulumCount = getSliderNumber("num", 10);
 
-    function setup()
-    {
-      this.num = parseFloat(document.getElementById("num").value);
-      createCanvas(width,height);
-      for(i = 0; i<num; i++)
-        {
-          //This grabs the values the user sets in the sliders
-          let L1 = parseFloat(document.getElementById("L1").value);
-          let L2 = parseFloat(document.getElementById("L2").value);
-          let m1 = parseFloat(document.getElementById("m1").value);
-          let m2 = parseFloat(document.getElementById("m2").value); 
-          let theta1 = PI/2 + (0.001)*i;
-          let theta2 = PI/4;
-          pendulums[i] = new Pendulum(theta1,theta2, L1, L2, m1, m2);
-        }
+  background(0);
 
-    draw();
-    }
-  
+  for (let i = 0; i < pendulumCount; i += 1) {
+    const theta1 = PI / 2 + 0.001 * i;
+    const theta2 = PI / 4;
+    const pendulumColor = colorPalette[i % colorPalette.length];
 
+    pendulums.push(
+      new Pendulum(
+        theta1,
+        theta2,
+        length1,
+        length2,
+        mass1,
+        mass2,
+        pendulumColor
+      )
+    );
+  }
+}
 
-  function draw()
-  {
-    this.trail= parseFloat(document.getElementById("trail").value); 
-    //If I do background(0,30) it will make a trail along the pendulums
-    //due to it changing the transparancy
-    //Maybe make it an option later on.--> background(0,x)
-      background(0,trail);
-      for(i = 0; i<num; i++)
-        {
-          pendulums[i].update();
-          pendulums[i].display();
-        }
+function getSliderNumber(id, fallbackValue) {
+  const slider = document.getElementById(id);
 
+  if (!slider) {
+    return fallbackValue;
   }
 
+  const value = Number(slider.value);
 
+  if (Number.isNaN(value)) {
+    return fallbackValue;
+  }
 
-
-
-
-
-
-
+  return value;
+}
