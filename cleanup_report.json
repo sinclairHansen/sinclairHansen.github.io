@@ -1,0 +1,63 @@
+{
+  "removed_by_file": {
+    "boredomBlog.html": [
+      "script:function myFunction() {\n      var x = document.get",
+      "inline nav onclick replaced"
+    ],
+    "index.html": [
+      "link:https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+      "link:https://www.w3schools.com/w3css/5/w3.css",
+      "link:https://fonts.googleapis.com/css?family=Lato",
+      "link:https://fonts.googleapis.com/css?family=Montserrat",
+      "link:https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+      "script:function myFunction() {\n      var x = document.get",
+      "inline nav onclick replaced"
+    ],
+    "chaosTheory.html": [
+      "link:https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+      "script:https://polyfill.io/v3/polyfill.min.js?features=es6",
+      "script:https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js",
+      "script:https://cdn.jsdelivr.net/npm/p5@1.11.5/lib/p5.js",
+      "script:https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.3/addons/p5.sound.min.js",
+      "script:function myFunction() {\n      var x = document.get",
+      "script:Pendulum/pendulum.js",
+      "script:setup()",
+      "script://PENDULUM CODE\n  let g = 1;\n  let pendulums = [];",
+      "inline nav onclick replaced"
+    ],
+    "projects.html": [
+      "link:https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+      "script:function myFunction() {\n      var x = document.get",
+      "inline nav onclick replaced"
+    ],
+    "experience.html": [
+      "link:https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+      "script:function myFunction() {\n      var x = document.get",
+      "inline nav onclick replaced"
+    ],
+    "CubeScramble.html": [
+      "link:https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+      "script:function myFunction() {\n      var x = document.get",
+      "inline nav onclick replaced"
+    ],
+    "tumorDetection.html": [
+      "link:https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
+      "script:function myFunction() {\n      var x = document.get",
+      "inline nav onclick replaced",
+      "iframe:https://docs.google.com/presentation/d/e/2PACX-1vTEedjWJ6z7WWp4fTSWR9g",
+      "iframe:https://docs.google.com/presentation/d/e/2PACX-1vQ46B2c-nMUPXV_DroYoFm",
+      "iframe:https://docs.google.com/presentation/d/e/2PACX-1vSozsA3cCeDoUBlFT5U5mV"
+    ]
+  },
+  "checks": {
+    "auto_loaded_external_script_or_stylesheet": [],
+    "polyfill_refs": [
+      [
+        "Blog/chaosTheory.html",
+        42,
+        "<main><canvas class=\"simulation\" height=\"400\" id=\"pendulumCanvas\" width=\"400\">Double pendulum animation.</canvas><p class=\"library-note\">This animation was rewritten in plain JavaScript and canvas. It does not load p5.js, MathJax, Polyfill.io, or any CDN script.</p></main>"
+      ]
+    ],
+    "iframe_refs": []
+  }
+}

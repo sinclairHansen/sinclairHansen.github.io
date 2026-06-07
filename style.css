@@ -1,186 +1,72 @@
-
-
-/* This is for the animation after the logo */
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900&display=swap');*
-{
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-section{
-  padding-top: 10%;
-  position: relative;
-  width: 100%;
-  height: 50vh;
-  display: flex;
-  overflow: hidden;
-}
-section div
-{
-  position: relative;
-  width: 50%;
-  background: #70aec8;
-  overflow: hidden;
 
-}
-section div:nth-child(1)
-{
-  position: relative;
-  width: 50%;
-  background: url(Images/MountainPhoto.jpg);
+body {
+  background-color: rgb(255, 255, 255);
   background-size: cover;
-  overflow: hidden;
-
-}
-section div:nth-child(1) h2{
-  -webkit-text-stroke: 2px;
-  -webkit-text-stroke-color: white;
-  -webkit-text-fill-color: transparent;
-  left: 100%;
-  color: #fff;
-}
-section div h2{
-  position: absolute;
-  white-space: nowrap;
-  font-size: 6em;
-  line-height: 50vh; 
-  animation: animate 15s linear infinite;
-  color: white;
-}
-@keyframes animate
-{
-  0%
-  {
-    transform: translateX(0);
-  }
-  100%
-  {
-    transform: translateX(-100%);
-  }
-
+  background-position: center;
+  font-family: Calibri, "Lucida Grande", Arial, sans-serif;
+  color: #111;
 }
 
-
-.button{
-  padding-top:10%;
-  display: inline-block;
-  color: white;
-  font-size: 1.25rem;
-  text-decoration: none;
-  background-color: #70aec8;
-  padding: 1px 32px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 15px;
-  
+main {
+  text-align: left;
 }
 
-.section2{
-  color: white;
-  padding-top: 10%;
-  position: relative;
+/* Desktop navigation */
+.header2 {
   width: 100%;
-  height: 70vh;
-  display: flex;
+}
+
+.header2 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
-}
-.section2 div
-{
-  position: relative;
-  width: 50%;
-  background:  #70aec8;
-  overflow: hidden;
-
+  background-color: #333;
 }
 
-
-body{
-    background-color: rgb(255, 255, 255);
-    background-size:cover;
-    background-position: center;
-    font-family:'Calibri', 'Lucida Grande', sans-serif;
-    
-
-
-  .container{
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-  }
- header{
-  height: 25%;
-  width: 100%;
-  display: inline;
-  background-color: blue;
- }
-main{
-  text-align: center;
-
-
+.header2 li {
+  float: left;
+  border-right: 1px solid #bbb;
 }
 
-
-
-.image-container {
-  position: relative;
-  display: inline-block;
+.header2 li:last-child {
+  border-right: none;
 }
 
-.image-container img {
+.header2 li a {
   display: block;
-  width: 50%;
-  height: auto;
-  image-rendering: left;
-}
-
-.overlay-text {
-  padding-top: 1%;
-  padding-left: 3%;
+  color: white;
   text-align: center;
-  color: #000000; 
-  width:95%;
-  font-size: 1.25rem;
-}
-@media screen and (max-width: 950px) {
-  .overlay-text {
-    padding-top:10%;
-    text-align:center;
-    color: #000000; 
-    width:95%;
-    font-size: 1.25rem;
-
-  }
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-/*Adjusts font size based on screen size*/
-
-
-.overlay-text2 {
-  left: 50%; 
-  padding-top:3%;
-  font-size:2rem;
-  color: rgb(0, 0, 0);
-  font-style: bold;
-
+.header2 li a:hover:not(.active) {
+  background-color: #111;
 }
 
+.active {
+  background-color: #70aec8;
+  color: rgb(253, 253, 253);
+}
 
-
-
-
-/* Style the navigation menu */
+/* Mobile navigation */
 .topnav {
   width: 100%;
   overflow: hidden;
-  background-color: rgb(255, 255, 255);;
+  background-color: rgb(255, 255, 255);
   position: relative;
 }
 
-/* Hide the links inside the navigation menu (except for logo/home) */
 .topnav #myLinks {
   display: none;
 }
 
-/* Style navigation menu links */
 .topnav a {
   color: rgb(0, 0, 0);
   padding: 14px 16px;
@@ -189,135 +75,151 @@ main{
   display: block;
 }
 
-/* Style the hamburger menu */
-.topnav a.icon {
-  background: rgb(255, 145, 55);
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-/* Add a grey background color on mouse-over */
 .topnav a:hover {
   background-color: #b5b5b5;
   color: rgb(255, 255, 255);
 }
 
-/* Style the active link (or home/logo) */
-.active {
-  background-color: #70aec8;
-  color: rgb(253, 253, 253);
+/* Page sections */
+.page-section {
+  padding: 64px 16px;
 }
 
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
+.light-section {
+  background-color: #f1f1f1;
 }
 
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-li {
-  float: left;
-  border-right:1px solid #bbb;
-}
-
-li:last-child {
-  border-right: none;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover:not(.active) {
-  background-color: #111;
-}
-
-
-.aboutImage{
-  height: 90%;
-  width: 90%;
-
-  padding-top: 10%;
+.content-row {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  gap: 32px;
   align-items: center;
-  margin-left: 25%;
-  margin-right: 25%;
 }
-/* Hide the about image on small screens */
-@media (max-width: 700px) {
-  .aboutImage {
-    display: none;
-  }
+
+.content-main {
+  flex: 2;
 }
-.highlightImage{
+
+.content-side {
+  flex: 1;
+  text-align: center;
+}
+
+.content-main h1 {
+  color: #70aec8;
+  margin-bottom: 16px;
+}
+
+.content-main h5 {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  font-weight: normal;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.content-main p {
+  font-size: 1rem;
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+
+.button {
+  display: inline-block;
+  color: white;
+  font-size: 1.25rem;
+  text-decoration: none;
+  background-color: #70aec8;
+  padding: 6px 32px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.button:hover {
+  background-color: #4d91ad;
+}
+
+/* Images */
+.aboutImage {
+  max-width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.highlightImage {
   max-width: 90%;
   width: 100%;
   height: auto;
   display: block;
-  margin: 10 auto;  
-
+  margin: 10px auto;
 }
 
-
-.active {
-  background-color: #70aec8;
+/* Highlights list */
+.highlights-list {
+  list-style-type: disc;
+  margin-left: 1.25rem;
+  padding-left: 1rem;
+  background: transparent;
+  overflow: visible;
 }
 
+.highlights-list li {
+  float: none;
+  border-right: none;
+  line-height: 1.55;
+  margin-bottom: 0.85rem;
+}
 
-        @media screen and (max-width: 880px) {
-          .header2{
-            display:none;
-          }
-           
-        
-          }
-          @media screen and (min-width: 880px) {
-            header{
-              display:none;
-            }
-             
-          
-            }
-        
-        
-        
-            /* For the Home Personal Image */
-            @media screen and (max-width: 950px) {
-              .meetTheTeam {
-                margin-left: 15%;
-                margin-right: 25%;
-                text-align: left;
-                color: #000000; 
-                width:70%;
-                font-size: .9rem;
-            
-              }
+/* Footer */
+footer {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 150%;
+  color: black;
+  padding-top: 10%;
+}
 
+/* Responsive nav switching */
+@media screen and (max-width: 880px) {
+  .header2 {
+    display: none;
+  }
+}
 
-            }
-            
-footer{
-              background-color: rgb(255, 255, 255);
-              text-align: center;
-              font-size: 150%;
-              color:black;
-              padding-top: 10%;
-              
-    }
+@media screen and (min-width: 880px) {
+  header {
+    display: none;
+  }
+}
 
+/* Mobile layout */
+@media screen and (max-width: 700px) {
+  .page-section {
+    padding: 40px 16px;
+  }
 
+  .content-row {
+    display: block;
+  }
+
+  .content-side {
+    margin-top: 24px;
+  }
+
+  .aboutImage {
+    max-width: 75%;
+  }
+
+  .highlightImage {
+    max-width: 85%;
+  }
+
+  .button {
+    font-size: 1rem;
+    padding: 6px 20px;
+  }
 }

@@ -1,0 +1,54 @@
+/* No third-party UI libraries required. */
+
+.nav-toggle.icon {
+  border: 0;
+  color: rgb(0, 0, 0);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  background: rgb(255, 145, 55);
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.nav-toggle.icon:hover,
+.nav-toggle.icon:focus {
+  background-color: #b5b5b5;
+  color: rgb(255, 255, 255);
+}
+
+.bigEq {
+  white-space: pre-wrap;
+  overflow-x: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  text-align: left;
+  max-width: 95%;
+  margin: 1rem auto;
+}
+
+.simulation,
+#pendulumCanvas {
+  display: block;
+  max-width: 100%;
+  margin: 1rem auto;
+}
+
+.embed-replacement {
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.library-note {
+  max-width: 800px;
+  margin: 1rem auto;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  color: #333;
+  background: #fafafa;
+}

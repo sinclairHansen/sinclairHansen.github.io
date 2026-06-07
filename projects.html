@@ -1,134 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sinclair Hansen </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Sinclair Hansen</title>
   <link rel="icon" type="image/x-icon" href="/Images/Favicon.png">
-  <meta name="description" content="Sinclair Hansen's Epic Portfolio">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="description" content="Projects by Sinclair Hansen">
+
   <link rel="stylesheet" href="projects.css">
+  <link rel="stylesheet" href="site-hardening.css">
+  <script defer src="site.js"></script>
 </head>
 
-
-<header2 class = "header2">
-
-  <ul>
-    <li><a class="active" href="index.html">Home</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="Blog/boredomBlog.html">Boredom Blog</a></li>
-    <li></a></li>
-  </ul>
-
-</header2>
-
-
-
-<header>
-  <!-- Top Navigation Menu -->
-  <div class="topnav">
-    <a href="index.html" class="active">Sinclair's Portfolio</a>
-    <!-- Navigation links (hidden by default) -->
-    <div id="myLinks">
-      <a href="projects.html">Projects</a>
-      <a href="Blog/boredomBlog.html">Boredom Blog</a>
-    </div>
-    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-   </a>
+<body>
+  <div class="header2">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a class="active" href="projects.html">Projects</a></li>
+      <li><a href="Blog/boredomBlog.html">Boredom Blog</a></li>
+    </ul>
   </div>
-  <script>
-    function myFunction() {
-      var x = document.getElementById("myLinks");
-      if (x.style.display === "block") {
-        x.style.display = "none";
-      } else {
-       x.style.display = "block";
-      }
-    }
-    </script>
-</header>
 
+  <header>
+    <div class="topnav">
+      <a class="active" href="index.html">Sinclair's Portfolio</a>
 
-  
-    <body>
-      
-        <main>
+      <div id="myLinks">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="Blog/boredomBlog.html">Boredom Blog</a>
+      </div>
 
+      <button aria-expanded="false" aria-label="Open navigation" class="nav-toggle icon" type="button">
+        ☰
+      </button>
+    </div>
+  </header>
 
-        <section>
-          <div>
-            <h2>
-              Projects
-            </h2>
+  <main>
+    <section class="projects-hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Selected Work</p>
+        <h1>Projects</h1>
+        <p class="hero-text">
+          A collection of programming, data analysis, simulation, and machine learning projects.
+          I’m especially interested in work that connects technical tools with scientific or healthcare applications.
+        </p>
+      </div>
+    </section>
+
+    <section class="projects-section">
+      <div class="section-heading">
+        <h2>Featured Projects</h2>
+        <p>
+          These projects reflect my interests in machine learning, data visualization,
+          scientific computing, and building tools that explain complex ideas.
+        </p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card featured-card">
+          <div class="project-image-wrap">
+            <img class="project-image" src="Images/MRIlogo.jpg" alt="MRI image representing tumor detection">
           </div>
-          <div>
-            <h2>
-              Projects
-            </h2>
+
+          <div class="project-content">
+            <p class="project-type">Machine Learning · Healthcare</p>
+            <h3>Pixels to Prognosis: Tumor Detection</h3>
+            <p>
+              A machine learning project that classifies gliomas, meningiomas, and pituitary tumors
+              from MRI scans. I presented this work at STEAM @ Schoolcraft, where it received first place.
+            </p>
+
+            <div class="tag-row">
+              <span>Python</span>
+              <span>PyTorch</span>
+              <span>Medical AI</span>
+            </div>
+
+            <div class="project-actions">
+              <a class="button primary-button" href="Blog/tumorDetection.html">Read Project</a>
+              <a class="button secondary-button" href="https://github.com/sinclairHansen/TumorDetection" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
           </div>
-        </section>
+        </article>
 
-        <section2 class ="section2">
-            <h4></h4>
-            <img class ="aboutImage" src="Images/MRIlogo.jpg"   alt="Tumor Detector">
-            <p>Using the PyTorch,timm, matplotlib, and numpy libraries, I made a
-              ML program that detects gliomas, meningioma, and pituitary tumors in MRI scans. 
-              This program trains the model using over 5000 images. I presented this at the STEAM @ Schoolcraft conference, 
-              showing how AI is used to positively impact the medical field and received first place for my work.</p>
-            <a class = "button" href = "Blog/tumorDetection.html" rel="noopener noreferrer">Tumor Detection</a>
-        </section2>
-        <p></p>
-        <section2 class = "section2">
-            <img class ="aboutImage" src="Images/pendulumImage.jpg"   alt="DoUbLe PeNdUlUm">
-            <p> Built an interactive double pendulum simulator using p5.js, allowing users to input custom values for lengths (L1, L2) and masses (m1, m2), and visualize up to 150 pendulums simultaneously. This project serves as a visual companion to my research in Chaos Theory, demonstrating sensitive dependence on initial conditions and nonlinear dynamics. </p>
-            <a class = "button" href="Blog/Pendulum/pendulum.html"targets="_blank" rel="noopener noreferrer">Try it Out!</a>
-        </section2>
+        <article class="project-card">
+          <div class="project-image-wrap">
+            <img class="project-image" src="Images/pendulumImage.jpg" alt="Double pendulum visualization">
+          </div>
 
-        <section2 class = "section2">
-            <h4></h4>
-            <img class ="aboutImage" src="Images/earthPhoto.jpg"   alt="Population Logo">
-            <p> The is a data analysis project I made in Python. A world population dataset is used as input, and I 
-                utilized libraries like matplotlib, numpy, pandas, and folium to create graphs/maps of the data. 
+          <div class="project-content">
+            <p class="project-type">Simulation · Math</p>
+            <h3>Double Pendulum Simulator</h3>
+            <p>
+              An interactive visual project exploring chaos theory and sensitive dependence on initial conditions.
+              The project acts as a companion to my written explanation of nonlinear dynamics.
             </p>
-            <a class = "button" href="https://github.com/sinclairHansen/Population_Analysis"targets="_blank" rel="noopener noreferrer">Population Repo</a>
-            
-        </section2>
-              
-        <p></p>
-        
-        
-        <section2 class = "section2">
-            <img class = "aboutImage" src="Images/WeatherLogo.png"   alt="Weather Logo Logo">
-            <p> This is a weather application that I coded in Python. It uses the OpenWeather API to retrieve current weather data. After the user inputs a city, the weather is displayed with an emoji. This program introduced me to PyQt5 and APIs. My goal going forward with this project is to expand it to a 7-day forecast. It would also be fun to implement precip maps.
+
+            <div class="tag-row">
+              <span>JavaScript</span>
+              <span>Canvas</span>
+              <span>Chaos Theory</span>
+            </div>
+
+            <div class="project-actions">
+              <a class="button primary-button" href="Blog/chaosTheory.html">Read Project</a>
+              <a class="button secondary-button" href="Blog/Pendulum/pendulum.html">Try It</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image-wrap">
+            <img class="project-image" src="Images/earthPhoto.jpg" alt="Earth image representing population analysis">
+          </div>
+
+          <div class="project-content">
+            <p class="project-type">Data Analysis · Visualization</p>
+            <h3>Population Analysis</h3>
+            <p>
+              A Python data analysis project using a world population dataset to create visualizations,
+              explore trends, and map population patterns.
             </p>
-            <a class = "button" href = "https://github.com/sinclairHansen/weatherApp"target="_blank" rel="noopener noreferrer">Weather App Repository</a>
 
-        </section2>
-           
-  
-  
-  
-        
-  
-        <div class="footer">
-          <a class = "button" href="https://github.com/sinclairHansen"target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a class = "button" href="mailto:sinclairCHansen@gmail.com"target="_blank" rel="noopener noreferrer">Email</a>
-          <a class = "button" href="https://www.linkedin.com/in/sinclair-hansen-b1b3b4310/"target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
-       
+            <div class="tag-row">
+              <span>Python</span>
+              <span>Pandas</span>
+              <span>Visualization</span>
+            </div>
+
+            <div class="project-actions">
+              <a class="button primary-button" href="https://github.com/sinclairHansen/Population_Analysis" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </article>
 
 
+      </div>
+    </section>
 
+    <section class="contact-strip">
+      <h2>More work</h2>
+      <p>
+        I’m continuing to build projects around machine learning, healthcare data, and scientific computing.
+      </p>
 
-        </main>
-        
-
-
-
-    </body>
-
-
-
+      <div class="footer-actions">
+        <a class="button primary-button" href="https://github.com/sinclairHansen" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="button secondary-button" href="mailto:sinclairCHansen@gmail.com">Email</a>
+        <a class="button secondary-button" href="https://www.linkedin.com/in/sinclair-hansen-b1b3b4310/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+</body>
 </html>
