@@ -1,47 +1,149 @@
-body {
-  background-image:url('../../Images/blueGradient.jpg');
-  align-items: center;
-  float:center;
-  text-align: center;
-  align-items: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
   padding: 0;
-  font-family:'Calibri', 'Lucida Grande', sans-serif;
+}
 
+body {
+  background-image: url("../../Images/blueGradient.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #111111;
+  font-family: Calibri, "Lucida Grande", Arial, sans-serif;
+  text-align: center;
+  min-height: 100vh;
+}
 
+.page {
+  width: min(1050px, 94%);
+  margin: 0 auto;
+  padding: 72px 0 48px 0;
 }
-canvas {
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  width: 800px;
-  padding-bottom:10%;
+
+.hero {
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 18px;
+  padding: 42px 24px;
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.12);
 }
-p{
-  width:80%;
-  font-size: 1.5em;
-  margin:auto;
+
+h1 {
+  color: #315b6b;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 1;
+  margin-bottom: 24px;
 }
-h1{
-  padding-top:8%;
+
+h2 {
+  color: #315b6b;
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
-.button
-{
+
+p {
+  width: min(820px, 100%);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 0 auto 18px auto;
+}
+
+.equation-box {
+  width: min(720px, 100%);
+  margin: 30px auto;
+  padding: 20px;
+  background: #f8fcfd;
+  border: 1px solid #d8edf4;
+  border-radius: 14px;
+}
+
+.equation-box p {
+  margin-bottom: 10px;
+}
+
+.equation-box p:last-child {
+  margin-bottom: 0;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.button {
+  display: inline-block;
   color: white;
-  font-size: 25px;
+  font-size: 1.05rem;
   text-decoration: none;
   background-color: #476d7d;
-  padding: 1px 32px;
+  padding: 9px 22px;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: 10px;
-          
-        }
-        .footer {
+  border-radius: 999px;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
 
-          padding: 20px;
-          text-align: center;
-          background: #ddd;
-          margin-top: 20px;
-        }        
+.button:hover {
+  background-color: #315b6b;
+  transform: translateY(-1px);
+}
+
+.canvas-section {
+  margin-top: 36px;
+  padding: 28px 18px 42px 18px;
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 18px;
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.12);
+}
+
+.small-note {
+  font-size: 1rem;
+  color: #444444;
+  margin-bottom: 20px;
+}
+
+#sketch-holder {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  display: block;
+  width: min(800px, 94vw) !important;
+  height: auto !important;
+  margin: 24px auto 0 auto;
+  border-radius: 16px;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+  background: #000000;
+}
+
+.footer {
+  padding: 26px 18px;
+  text-align: center;
+  background: rgba(221, 221, 221, 0.92);
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  .page {
+    padding-top: 42px;
+  }
+
+  .hero {
+    padding: 32px 18px;
+  }
+
+  p {
+    font-size: 1.05rem;
+  }
+
+  .button {
+    font-size: 0.95rem;
+    padding: 8px 18px;
+  }
+}
